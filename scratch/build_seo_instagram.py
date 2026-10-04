@@ -1,0 +1,1084 @@
+# scratch/build_seo_instagram.py
+# Generates scratch/seo_data_instagram.py with complete translations for all 12 languages.
+
+import json
+import os
+
+INSTAGRAM_TRANSLATIONS = {
+    'es': {
+        'qa_title': 'Respuesta rápida: Cómo descargar videos y Reels de Instagram',
+        'qa_text': 'Para descargar un video o Reel de Instagram, copia su enlace, pégalo en el cuadro de búsqueda en la parte superior de esta página, presiona <em>Descargar video</em> y elige <strong>Video (HD)</strong> o <strong>Audio (HQ MP3)</strong>. Es 100% gratis, no requiere inicio de sesión ni app, y funciona en iPhone, Android, Windows y Mac. Solo se pueden descargar videos e historias públicas de Instagram.',
+        'h2': 'Descargador de videos de Instagram: Guarda Reels, Historias y Publicaciones en HD',
+        'intro': 'Este <strong>descargador de videos de Instagram</strong> está diseñado con un propósito principal: convertir Reels, videos, Historias y publicaciones de carrusel públicas de Instagram en archivos sin conexión permanentes. Lee las transmisiones directas de CDN, muestra todas las resoluciones disponibles y transmite tu elección directamente a tu dispositivo en formato MP4 o audio MP3. No se instala nada, no se guarda nada en nuestros servidores y nunca se solicita tu inicio de sesión de Instagram.',
+        't1_h3': 'Descargador de videos de Instagram de un vistazo',
+        't1_headers': ['Característica', 'Detalles'],
+        't1_rows': [
+            ('Contenido compatible', 'Reels públicos de Instagram, videos del Feed, Historias, Destacados, Álbumes de carrusel e IGTV'),
+            ('Enlaces aceptados', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Formatos de salida', 'Video MP4 (1080p HD y Normal), audio MP3 (192 kbps HQ y 128 kbps), fotos JPEG'),
+            ('Calidad de video', 'Resolución de subida original hasta 1080p Full HD (60fps). Sin compresión borrosa ni escalado falso'),
+            ('Precio', '<span class="badge-highlight">Gratis, descargas ilimitadas</span>'),
+            ('Cuenta o inicio de sesión', '<span class="badge-highlight">No requerido (100% anónimo)</span>'),
+            ('Marca de agua', '<span class="badge-highlight">Cero marcas de agua añadidas</span>'),
+            ('Compatibilidad', 'iPhone, iPad, Android, Windows, macOS, Linux (todos los navegadores modernos)'),
+            ('Archivos guardados por nosotros', 'Ninguno. Solo proxy de transmisión en tiempo real'),
+            ('Limitaciones', 'Solo perfiles públicos. No elude cuentas privadas. Calidad limitada por la subida original')
+        ],
+        'comp_h3': 'Por qué downsocial supera a SaveInsta, iGram e InDown',
+        'comp_p': 'Herramientas tradicionales como <em>SaveInsta (saveinsta.app)</em>, <em>iGram (igram.world)</em>, <em>SnapInsta</em> e <em>InDown (indown.io)</em> están repletas de anuncios emergentes molestos, redirecciones lentas o fallos de audio. downsocial ofrece extracción directa de alta velocidad desde CDN sin anuncios molestos, calidad 1080p auténtica y conversión instantánea a MP3.',
+        'comp_headers': ['Comparación de características', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Resolución máxima de video', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Anuncios emergentes molestos', '<span class="badge-highlight">Cero (Interfaz limpia)</span>', 'Muchos anuncios', 'Anuncios frecuentes', 'Muchos anuncios'),
+            ('Conversión de audio (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Básica', 'No disponible', 'Básica'),
+            ('Descarga anónima de Historias', '<span class="badge-highlight">100% anónimo</span>', 'Sí', 'Limitada', 'Sí'),
+            ('No requiere inicio de sesión', '<span class="badge-highlight">100% anónimo</span>', 'Sin login', 'Sin login', 'Sin login')
+        ],
+        't2_h3': '¿Qué enlaces de Instagram funcionan?',
+        't2_intro': 'Instagram utiliza múltiples formatos de URL en su app móvil y versiones web. Mientras el contenido sea público, todos los siguientes formatos son compatibles:',
+        't2_headers': ['Tipo de enlace', 'Estructura de la URL', 'Compatible cuando'],
+        't2_rows': [
+            ('Reel de Instagram', 'instagram.com/reel/... o instagram.com/reels/...', 'El Reel está en una cuenta pública'),
+            ('Video de Feed / Publicación', 'instagram.com/p/...', 'La publicación está en una cuenta pública'),
+            ('Historia pública', 'instagram.com/stories/nombreusuario/...', 'La historia está activa (dentro de las 24 horas)'),
+            ('Historia destacada (Highlight)', 'instagram.com/stories/highlights/...', 'El destacado es público'),
+            ('Álbum de carrusel', 'instagram.com/p/... (post con múltiples fotos/videos)', 'La publicación es pública (extrae todas las diapositivas)'),
+            ('Enlace móvil compartido', 'instagram.com/share/...', 'El contenido de destino es público')
+        ],
+        'copy_h3': 'Cómo copiar el enlace de un video de Instagram',
+        'copy_items': [
+            '<strong>App móvil de Instagram (iPhone o Android):</strong> toca el <strong>icono de Compartir</strong> (avión de papel) debajo del Reel o publicación, luego toca <strong>Copiar enlace</strong>. Para Historias, toca los tres puntos en la esquina y selecciona <em>Copiar enlace</em>.',
+            '<strong>Navegador web en computadora:</strong> haz clic en el icono de tres puntos de cualquier publicación y elige <strong>Copiar enlace</strong>, o copia la URL completa de la barra de direcciones de tu navegador.',
+            '<strong>WhatsApp o apps de mensajería:</strong> si alguien compartió un enlace de Instagram contigo, mantén presionado el mensaje y copia la URL.'
+        ],
+        'device_h3': 'Cómo descargar videos de Instagram en iPhone, Android y computadora',
+        'ios': '<strong>En iPhone y iPad:</strong> abre downsocial.net en Safari, pega tu enlace y toca <em>Descargar video</em>. Toca <em>Video (HD)</em> y confirma la descarga. El archivo se guarda en la sección Descargas de Safari en la app Archivos. Abre el archivo, toca el icono Compartir y selecciona <em>Guardar video</em> para guardarlo en la app Fotos.',
+        'android': '<strong>En Android:</strong> abre downsocial.net en Chrome o Samsung Internet, pega el enlace y toca <em>Descargar video</em>. Selecciona <em>Video (HD)</em>. El archivo MP4 se descarga directamente al almacenamiento de tu dispositivo y aparece en tu Galería o app Google Fotos.',
+        'pc': '<strong>En Windows o Mac:</strong> pega la URL copiada de Instagram en el cuadro de búsqueda, haz clic en <em>Descargar video</em> y elige tu formato. El archivo se descarga directamente en la carpeta de Descargas predeterminada de tu navegador sin software de terceros.',
+        'priv_h3': '¿Se pueden descargar videos privados de Instagram?',
+        'priv_p': 'No. downsocial solo descarga videos que cualquiera puede ver sin necesidad de una cuenta. Los perfiles privados, publicaciones restringidas solo para seguidores y mensajes de grupos privados no se pueden extraer. Nunca solicitaremos tu contraseña de Instagram, cookies de sesión o tokens de acceso. Si necesitas un archivo de una cuenta privada, pídele directamente al creador que te envíe el video.',
+        'qual_h3': 'Calidad de video de Instagram: 1080p Full HD original',
+        'qual_p': 'Instagram codifica los Reels y videos subidos en varios perfiles de tasa de bits. <strong>Video (HD)</strong> obtiene la transmisión de mayor resolución disponible en la red de entrega de contenido de Instagram (habitualmente 1080x1920 a 60fps para Reels). <strong>Video (Normal)</strong> es una transmisión ligera ideal para conexiones de datos móviles más lentas. downsocial nunca escala artificialmente los videos, preservando la fidelidad original.',
+        'mp3_h3': 'Convertir Reels de Instagram a audio MP3',
+        'mp3_p': 'Si te gusta una canción de fondo viral, discurso o pista de audio de un Reel de Instagram, elige <strong>Audio (HQ MP3)</strong> para 192 kbps o <strong>Audio (Normal MP3)</strong> para 128 kbps. Nuestro motor FFmpeg en tiempo real extrae la pista de audio pura y la transcodifica directamente en un archivo MP3 reproducible en cualquier reproductor.',
+        'trouble_h3': 'Por qué un video de Instagram podría no descargarse',
+        'trouble_headers': ['Síntoma', 'Causa probable', 'Solución recomendada'],
+        'trouble_rows': [
+            ('"No se pudo extraer el video"', 'La cuenta es privada, la publicación fue eliminada o tiene restricción de edad', 'Abre el enlace en una ventana de incógnito. Si requiere inicio de sesión, no se puede descargar'),
+            ('Fallo al obtener la Historia', 'La historia expiró tras 24 horas', 'Las historias desaparecen tras 24 horas; asegúrate de que la historia siga activa'),
+            ('No pasa nada al pegar', 'La URL apunta a un perfil de cuenta en lugar de a un video', 'Navega hasta el Reel o publicación específica y copia ese enlace directo'),
+            ('Audio desincronizado', 'Fallo de caché del navegador', 'Descarga usando Video (HD) y reproduce con VLC o la galería estándar del teléfono'),
+            ('Velocidad de descarga lenta', 'Tráfico de red intenso o álbum de múltiples diapositivas grande', 'Prueba Video (Normal) o conéctate a una red Wi-Fi de alta velocidad')
+        ],
+        'use_h3': 'Razones comunes para guardar videos de Instagram',
+        'use_items': [
+            'Hacer una copia de seguridad de tus propios Reels e Historias de Instagram antes de archivar o eliminar tu cuenta.',
+            'Ver rutinas de entrenamiento, recetas, guías de viajes y tutoriales educativos sin conexión.',
+            'Compartir Reels divertidos con amigos y familiares en WhatsApp, Telegram o SMS.',
+            'Extraer pistas de audio libres de derechos para edición de video y creación de contenido.'
+        ],
+        'safe_h3': '¿Es seguro y legal descargar videos de Instagram?',
+        'safe_p': '<strong>Seguro:</strong> downsocial funciona completamente dentro de tu navegador web. No se requiere instalación de software, extensiones ni contraseñas de Instagram. <strong>Legal:</strong> descargar medios de acceso público para archivo personal y visualización sin conexión es una práctica estándar. Sin embargo, los derechos de autor pertenecen al creador original. No debes vender ni redistribuir contenido sin permiso. downsocial es una plataforma independiente y no está afiliada ni respaldada por Instagram o Meta Platforms, Inc.',
+        'tips_h3': 'Consejos para la mejor experiencia de descarga',
+        'tips_items': [
+            'Copia siempre el enlace desde el botón <em>Compartir</em> de la propia publicación para obtener la URL directa más confiable.',
+            'Usa <strong>Video (HD)</strong> al guardar contenido para ver en una TV, tableta o monitor de alta resolución.',
+            'Usa <strong>Audio (HQ MP3)</strong> cuando solo desees guardar el clip de sonido o la canción de fondo.',
+            'Si un enlace falla, verifica que el perfil del usuario sea completamente público.'
+        ],
+        'sister_h3': 'Explora nuestros descargadores dedicados para otras plataformas',
+        'sister_p': '¿Quieres guardar contenido de otras redes? Prueba nuestras herramientas gratuitas para <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> y nuestro <a href="../index.html">Descargador Todo en Uno Universal</a>.',
+        'last_updated': 'Última actualización: 3 de octubre de 2026. ¿Tienes preguntas o encontraste un enlace roto? <a href="contact.html">Contacta a nuestro equipo de soporte</a>.'
+    },
+
+    'pt': {
+        'qa_title': 'Resposta rápida: Como baixar vídeos e Reels do Instagram',
+        'qa_text': 'Para baixar um vídeo ou Reel do Instagram, copie o link, cole-o na barra de pesquisa no topo desta página, clique em <em>Baixar vídeo</em> e escolha <strong>Vídeo (HD)</strong> ou <strong>Áudio (HQ MP3)</strong>. É 100% gratuito, não requer login nem aplicativo e funciona no iPhone, Android, Windows e Mac. Apenas vídeos e stories públicos podem ser baixados.',
+        'h2': 'Baixador de vídeos do Instagram: Salve Reels, Stories e Publicações em HD',
+        'intro': 'Este <strong>baixador de vídeos do Instagram</strong> foi desenvolvido com um propósito primordial: converter Reels, vídeos do feed, Stories e postagens em carrossel públicas do Instagram em arquivos de mídia permanentes no seu dispositivo. Ele lê transmissões diretas da CDN, exibe todas as resoluções disponíveis e envia sua escolha diretamente para o seu aparelho em MP4 ou áudio MP3.',
+        't1_h3': 'Visão geral do baixador de vídeos do Instagram',
+        't1_headers': ['Recurso', 'Detalhes'],
+        't1_rows': [
+            ('Conteúdo suportado', 'Reels públicos do Instagram, vídeos do Feed, Stories, Destaques, Álbuns de carrossel e IGTV'),
+            ('Links aceitos', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Formatos de saída', 'Vídeo MP4 (1080p HD e Normal), áudio MP3 (192 kbps HQ e 128 kbps), fotos JPEG'),
+            ('Qualidade de vídeo', 'Resolução original até 1080p Full HD (60fps). Sem compressão borrada ou upscaling artificial'),
+            ('Preço', '<span class="badge-highlight">Grátis, downloads ilimitados</span>'),
+            ('Conta ou login', '<span class="badge-highlight">Nenhum necessário (100% anônimo)</span>'),
+            ('Marca d’água', '<span class="badge-highlight">Zero marcas d’água adicionadas</span>'),
+            ('Compatibilidade', 'iPhone, iPad, Android, Windows, macOS, Linux (todos os navegadores modernos)'),
+            ('Arquivos armazenados', 'Nenhum. Apenas proxy de transmissão em tempo real'),
+            ('Limitações', 'Apenas perfis públicos. Não ignora contas privadas. Qualidade limitada pelo upload original')
+        ],
+        'comp_h3': 'Por que o downsocial supera SaveInsta, iGram e InDown',
+        'comp_p': 'Ferramentas antigas como <em>SaveInsta (saveinsta.app)</em>, <em>iGram (igram.world)</em>, <em>SnapInsta</em> e <em>InDown (indown.io)</em> são repletas de anúncios pop-up invasivos, redirecionamentos lentos ou filas com áudio quebrado. O downsocial oferece extração direta via CDN sem propagandas invasivas, qualidade 1080p real e conversão instantânea para MP3.',
+        'comp_headers': ['Comparação de recursos', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Resolução máxima de vídeo', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Anúncios pop-up invasivos', '<span class="badge-highlight">Zero (Interface limpa)</span>', 'Muitos anúncios', 'Anúncios frequentes', 'Muitos anúncios'),
+            ('Conversão de áudio (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Básico', 'Não disponível', 'Básico'),
+            ('Salvar Stories anonimamente', '<span class="badge-highlight">100% anônimo</span>', 'Sim', 'Limitado', 'Sim'),
+            ('Nenhum login necessário', '<span class="badge-highlight">100% anônimo</span>', 'Sem login', 'Sem login', 'Sem login')
+        ],
+        't2_h3': 'Quais links do Instagram funcionam?',
+        't2_intro': 'O Instagram usa vários formatos de URL em seus aplicativos móveis e navegadores. Desde que o conteúdo seja público, todos os seguintes formatos são suportados:',
+        't2_headers': ['Tipo de link', 'Estrutura da URL', 'Suportado quando'],
+        't2_rows': [
+            ('Instagram Reel', 'instagram.com/reel/... ou instagram.com/reels/...', 'O Reel está em conta pública'),
+            ('Vídeo do Feed / Post', 'instagram.com/p/...', 'O post está em conta pública'),
+            ('Story público', 'instagram.com/stories/nomedeusuario/...', 'A Story está ativa (dentro de 24 horas)'),
+            ('Destaque (Highlight)', 'instagram.com/stories/highlights/...', 'O Destaque é público'),
+            ('Álbum em carrossel', 'instagram.com/p/... (post com várias fotos/vídeos)', 'O post é público (extrai todas as mídias)'),
+            ('Link compartilhado móvel', 'instagram.com/share/...', 'O conteúdo de destino é público')
+        ],
+        'copy_h3': 'Como copiar o link de um vídeo do Instagram',
+        'copy_items': [
+            '<strong>App do Instagram (iPhone ou Android):</strong> toque no <strong>ícone de Compartilhar</strong> (aviãozinho de papel) abaixo do Reel ou post e clique em <strong>Copiar link</strong>. Para Stories, toque nos três pontinhos no canto e escolha <em>Copiar link</em>.',
+            '<strong>Navegador no computador:</strong> clique no menu de três pontos de qualquer publicação e escolha <strong>Copiar link</strong>, ou copie o link direto da barra de endereços do navegador.',
+            '<strong>WhatsApp ou apps de mensagem:</strong> se alguém enviou um link do Instagram, pressione a mensagem e copie a URL.'
+        ],
+        'device_h3': 'Como baixar vídeos do Instagram no iPhone, Android e computador',
+        'ios': '<strong>No iPhone e iPad:</strong> abra o downsocial.net no Safari, cole o link e toque em <em>Baixar vídeo</em>. Escolha <em>Vídeo (HD)</em> e confirme o download. O arquivo fica salvo no app Arquivos na pasta Downloads. Abra-o, toque em Compartilhar e selecione <em>Salvar vídeo</em> para enviá-lo ao app Fotos.',
+        'android': '<strong>No Android:</strong> abra o downsocial.net no Chrome ou Samsung Internet, cole o link e toque em <em>Baixar vídeo</em>. Selecione <em>Vídeo (HD)</em>. O MP4 será baixado na memória do celular e aparecerá na Galeria ou no Google Fotos.',
+        'pc': '<strong>No Windows ou Mac:</strong> cole a URL copiada do Instagram na barra de busca, clique em <em>Baixar vídeo</em> e escolha seu formato. O arquivo será baixado para a pasta Downloads do seu navegador.',
+        'priv_h3': 'É possível baixar vídeos privados do Instagram?',
+        'priv_p': 'Não. O downsocial baixa exclusivamente conteúdos que qualquer pessoa pode visualizar sem precisar de conta. Perfis fechados, posts restritos a seguidores e conversas privadas não são suportados. Nunca solicitamos sua senha ou cookies de acesso.',
+        'qual_h3': 'Qualidade dos vídeos do Instagram: 1080p Full HD original',
+        'qual_p': 'O Instagram codifica vídeos em diferentes níveis de qualidade. <strong>Vídeo (HD)</strong> entrega a melhor resolução disponível na rede de servidores do Instagram (comum em 1080x1920 a 60fps para Reels). <strong>Vídeo (Normal)</strong> é um arquivo mais leve que economiza dados móveis. Não fazemos upscaling artificial.',
+        'mp3_h3': 'Converter Reels do Instagram para áudio MP3',
+        'mp3_p': 'Se você adorou uma música viral, fala, som de comédia ou áudio motivacional de um Reel, escolha <strong>Áudio (HQ MP3)</strong> para 192 kbps ou <strong>Áudio (Normal MP3)</strong> para 128 kbps. Nossa conversão FFmpeg em tempo real gera um MP3 compatível com qualquer tocador de música.',
+        'trouble_h3': 'Por que um vídeo do Instagram pode falhar ao baixar',
+        'trouble_headers': ['Sintoma', 'Causa provável', 'Solução recomendada'],
+        'trouble_rows': [
+            ('"Não foi possível extrair o vídeo"', 'Conta privada, post excluído ou com restrição de idade', 'Abra o link em uma janela anônima. Se exigir login, não pode ser baixado'),
+            ('Falha ao carregar Story', 'A Story expirou após 24 horas', 'Stories somem após 24 horas; verifique se ela ainda está disponível'),
+            ('Nada acontece após colar', 'A URL é de um perfil em vez de um vídeo específico', 'Acesse o Reel ou vídeo exato e copie aquele link direto'),
+            ('Áudio fora de sincronia', 'Falha no cache do navegador', 'Baixe em Vídeo (HD) e reproduza com o VLC ou galeria padrão do celular'),
+            ('Velocidade lenta', 'Tráfego intenso ou álbum com muitas fotos/vídeos', 'Experimente Vídeo (Normal) ou conecte-se a um Wi-Fi mais rápido')
+        ],
+        'use_h3': 'Motivos frequentes para salvar vídeos do Instagram',
+        'use_items': [
+            'Fazer backup de seus próprios Reels e Stories antes de arquivar ou excluir seu perfil.',
+            'Assistir tutoriais, receitas, treinos e dicas de viagem sem precisar de internet.',
+            'Compartilhar Reels engraçados com amigos e familiares pelo WhatsApp ou Telegram.',
+            'Extrair trilhas de áudio livres de direitos para edição de vídeos e criação de conteúdo.'
+        ],
+        'safe_h3': 'Baixar vídeos do Instagram é seguro e legal?',
+        'safe_p': '<strong>Seguro:</strong> funciona 100% pelo navegador, sem necessidade de programas, extensões ou senhas. <strong>Legal:</strong> salvar mídias públicas para uso pessoal e offline é aceito, respeitando sempre os direitos autorais do criador. Não revenda ou redistribua sem autorização. O downsocial é uma ferramenta independente sem vínculo com a Meta Platforms, Inc.',
+        'tips_h3': 'Dicas para a melhor experiência de download',
+        'tips_items': [
+            'Copie sempre o link através do botão <em>Compartilhar</em> da publicação para garantir a URL correta.',
+            'Selecione <strong>Vídeo (HD)</strong> para assistir em telas grandes ou na TV.',
+            'Escolha <strong>Áudio (HQ MP3)</strong> quando desejar apenas o áudio ou trilha sonora.',
+            'Se houver falha, verifique se o perfil de origem é completamente público.'
+        ],
+        'sister_h3': 'Conheça nossos outros baixadores dedicados',
+        'sister_p': 'Quer baixar mídias de outras redes? Conheça nossas ferramentas para <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> e nosso <a href="../index.html">Baixador Universal Tudo-em-Um</a>.',
+        'last_updated': 'Última atualização: 3 de outubro de 2026. Tem alguma dúvida ou encontrou um link com erro? <a href="contact.html">Fale com nosso suporte</a>.'
+    },
+
+    'fr': {
+        'qa_title': 'Réponse rapide : Comment télécharger des vidéos et Reels Instagram',
+        'qa_text': 'Pour télécharger une vidéo ou un Reel Instagram, copiez son lien, collez-le dans la zone de recherche en haut de cette page, appuyez sur <em>Télécharger la vidéo</em> et choisissez <strong>Vidéo (HD)</strong> ou <strong>Audio (HQ MP3)</strong>. C\'est 100% gratuit, sans inscription ni application, et compatible iPhone, Android, Windows et Mac. Seules les vidéos et stories publiques peuvent être téléchargées.',
+        'h2': 'Téléchargeur de vidéos Instagram : Enregistrez Reels, Stories et Publications en HD',
+        'intro': 'Ce <strong>téléchargeur de vidéos Instagram</strong> est conçu pour une mission essentielle : convertir les Reels, vidéos de flux, Stories et carrousels publics en fichiers multimédias permanents sur votre appareil. Il lit les flux directs du CDN Instagram et télécharge directement votre choix en MP4 ou audio MP3 sans enregistrement ni publicité intrusive.',
+        't1_h3': 'Aperçu du téléchargeur de vidéos Instagram',
+        't1_headers': ['Fonctionnalité', 'Détails'],
+        't1_rows': [
+            ('Contenu pris en charge', 'Reels publics, vidéos de publication, Stories, À la une (Highlights), Albums carrousels et IGTV'),
+            ('Liens acceptés', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Formats de sortie', 'Vidéo MP4 (1080p HD et Normal), audio MP3 (192 kbps HQ et 128 kbps), photos JPEG'),
+            ('Qualité vidéo', 'Résolution originale jusqu\'à 1080p Full HD (60fps). Aucun flou de recompression ni upscaling artificiel'),
+            ('Prix', '<span class="badge-highlight">Gratuit, téléchargements illimités</span>'),
+            ('Compte ou connexion', '<span class="badge-highlight">Aucun requis (100% anonyme)</span>'),
+            ('Filigrane', '<span class="badge-highlight">Zéro filigrane ajouté</span>'),
+            ('Appareils compatibles', 'iPhone, iPad, Android, Windows, macOS, Linux (tous navigateurs)'),
+            ('Fichiers stockés', 'Aucun. Proxy de flux en temps réel uniquement'),
+            ('Restrictions', 'Profils publics uniquement. Ne contourne pas les comptes privés.')
+        ],
+        'comp_h3': 'Pourquoi downsocial surpasse SaveInsta, iGram et InDown',
+        'comp_p': 'Les outils historiques tels que <em>SaveInsta (saveinsta.app)</em>, <em>iGram (igram.world)</em>, <em>SnapInsta</em> et <em>InDown (indown.io)</em> regorgent de fenêtres publicitaires intempestives et de lenteurs. downsocial offre une vitesse CDN maximale, une interface épurée sans publicité intrusive et une extraction MP3 instantanée.',
+        'comp_headers': ['Comparaison des fonctionnalités', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Résolution vidéo max', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Publicités intempestives', '<span class="badge-highlight">Zéro (Interface propre)</span>', 'Beaucoup de pubs', 'Pubs fréquentes', 'Beaucoup de pubs'),
+            ('Conversion audio (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Basique', 'Indisponible', 'Basique'),
+            ('Téléchargement anonyme de Stories', '<span class="badge-highlight">100% anonyme</span>', 'Oui', 'Limité', 'Oui'),
+            ('Aucune connexion requise', '<span class="badge-highlight">100% anonyme</span>', 'Sans compte', 'Sans compte', 'Sans compte')
+        ],
+        't2_h3': 'Quels liens Instagram sont pris en charge ?',
+        't2_intro': 'Instagram utilise plusieurs variantes d\'adresses URL. Si le contenu est public, tous les formats suivants sont acceptés :',
+        't2_headers': ['Type de lien', 'Structure de l\'URL', 'Pris en charge quand'],
+        't2_rows': [
+            ('Instagram Reel', 'instagram.com/reel/... ou instagram.com/reels/...', 'Le Reel est sur un compte public'),
+            ('Vidéo / Post de flux', 'instagram.com/p/...', 'La publication est sur un compte public'),
+            ('Story publique', 'instagram.com/stories/utilisateur/...', 'La Story est active (moins de 24h)'),
+            ('À la une (Highlight)', 'instagram.com/stories/highlights/...', 'L\'élément à la une est public'),
+            ('Album carrousel', 'instagram.com/p/... (post multi-médias)', 'Le post est public (extrait tous les éléments)'),
+            ('Lien de partage mobile', 'instagram.com/share/...', 'Le contenu ciblé est public')
+        ],
+        'copy_h3': 'Comment copier le lien d\'une vidéo Instagram',
+        'copy_items': [
+            '<strong>Application mobile Instagram (iPhone ou Android) :</strong> appuyez sur l\'icône <strong>Partager</strong> (avion en papier) sous le Reel ou le post, puis sur <strong>Copier le lien</strong>. Pour les Stories, appuyez sur les trois points en coin.',
+            '<strong>Navigateur sur ordinateur :</strong> cliquez sur les trois points du post et choisissez <strong>Copier le lien</strong>, ou copiez l\'URL de la barre d\'adresse.',
+            '<strong>WhatsApp ou applications de messagerie :</strong> appuyez longuement sur le message contenant le lien Instagram et copiez l\'adresse.'
+        ],
+        'device_h3': 'Comment télécharger des vidéos Instagram sur iPhone, Android et ordinateur',
+        'ios': '<strong>Sur iPhone et iPad :</strong> ouvrez downsocial.net dans Safari, collez le lien et appuyez sur <em>Télécharger la vidéo</em>. Sélectionnez <em>Vidéo (HD)</em> et confirmez. Le fichier est enregistré dans Téléchargements de l\'application Fichiers. Ouvrez-le, touchez Partager et sélectionnez <em>Enregistrer la vidéo</em> pour l\'ajouter à Photos.',
+        'android': '<strong>Sur Android :</strong> ouvrez downsocial.net dans Chrome, collez le lien et choisissez <em>Vidéo (HD)</em>. Le fichier MP4 arrive dans le dossier Téléchargements et s\'affiche dans votre Galerie.',
+        'pc': '<strong>Sur Windows ou Mac :</strong> collez l\'URL dans le champ de recherche, cliquez sur <em>Télécharger la vidéo</em> et choisissez votre format. Le fichier se télécharge dans le dossier de téléchargement habituel.',
+        'priv_h3': 'Peut-on télécharger des vidéos Instagram privées ?',
+        'priv_p': 'Non. downsocial télécharge uniquement les vidéos accessibles sans compte utilisateur. Les profils privés, les comptes restreints et les messages directs ne peuvent pas être récupérés. Nous ne vous demanderons jamais votre mot de passe.',
+        'qual_h3': 'Qualité vidéo Instagram : 1080p Full HD d\'origine',
+        'qual_p': 'Instagram propose les vidéos dans plusieurs profils d\'encodage. <strong>Vidéo (HD)</strong> extrait le flux le plus net fourni par Instagram (couramment 1080x1920 à 60fps pour les Reels). <strong>Vidéo (Normal)</strong> est plus légère pour économiser vos données mobiles.',
+        'mp3_h3': 'Convertir des Reels Instagram en audio MP3',
+        'mp3_p': 'Vous souhaitez récupérer une musique tendance, un dialogue humoristique ou un discours inspirant ? Choisissez <strong>Audio (HQ MP3)</strong> à 192 kbps ou <strong>Audio (Normal MP3)</strong> à 128 kbps. Notre conversion en temps réel produit un fichier MP3 pur.',
+        'trouble_h3': 'Pourquoi une vidéo Instagram ne se télécharge pas',
+        'trouble_headers': ['Symptôme', 'Cause probable', 'Solution recommandée'],
+        'trouble_rows': [
+            ('"Impossible d\'extraire la vidéo"', 'Compte privé, publication supprimée ou soumise à restriction d\'âge', 'Ouvrez le lien en navigation privée. S\'il requiert une connexion, il ne peut être téléchargé'),
+            ('Échec sur une Story', 'La Story a expiré après 24 heures', 'Les Stories disparaissent au bout de 24h ; vérifiez qu\'elle est encore active'),
+            ('Rien ne se passe après collage', 'L\'URL pointe vers un profil et non un post précis', 'Accédez au Reel ou à la publication et copiez ce lien spécifique'),
+            ('Audio désynchronisé', 'Anomalie de cache de lecture', 'Téléchargez en Vidéo (HD) et lisez le fichier dans votre lecteur habituel'),
+            ('Vitesse lente', 'Trafic intense ou carrousel volumineux', 'Essayez Vidéo (Normal) ou privilégiez une connexion Wi-Fi')
+        ],
+        'use_h3': 'Pourquoi sauvegarder des vidéos Instagram ?',
+        'use_items': [
+            'Sauvegarder vos propres Reels et Stories avant de supprimer ou d\'archiver votre compte.',
+            'Consulter des recettes, tutoriels et séances d\'entraînement hors ligne en déplacement.',
+            'Partager des Reels captivants avec vos proches sur WhatsApp ou Telegram.',
+            'Extraire des bandes-son libres de droits pour vos propres montages vidéo.'
+        ],
+        'safe_h3': 'Le téléchargement de vidéos Instagram est-il sûr et légal ?',
+        'safe_p': '<strong>Sûr :</strong> tout fonctionne dans votre navigateur, sans extension ni identifiants. <strong>Légal :</strong> enregistrer des contenus publics pour une consultation personnelle hors ligne est courant, dans le respect du droit d\'auteur. downsocial est indépendant de Meta Platforms, Inc.',
+        'tips_h3': 'Conseils pour une expérience optimale',
+        'tips_items': [
+            'Copiez toujours le lien via l\'option <em>Partager</em> de la publication elle-même.',
+            'Choisissez <strong>Vidéo (HD)</strong> pour un affichage parfait sur tablette ou écran TV.',
+            'Sélectionnez <strong>Audio (HQ MP3)</strong> si vous souhaitez uniquement la piste musicale.',
+            'En cas d\'erreur, vérifiez que le compte est entièrement public.'
+        ],
+        'sister_h3': 'Découvrez nos autres outils dédiés',
+        'sister_p': 'Envie de télécharger sur d\'autres réseaux ? Essayez <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> et notre <a href="../index.html">téléchargeur universel</a>.',
+        'last_updated': 'Dernière mise à jour : 3 octobre 2026. Des questions ou un lien défaillant ? <a href="contact.html">Contactez notre support</a>.'
+    },
+
+    'de': {
+        'qa_title': 'Schnellantwort: So laden Sie Instagram-Videos und Reels herunter',
+        'qa_text': 'Um ein Instagram-Video oder Reel herunterzuladen, kopieren Sie den Link, fügen ihn in das Suchfeld oben auf dieser Seite ein, klicken auf <em>Video herunterladen</em> und wählen <strong>Video (HD)</strong> oder <strong>Audio (HQ MP3)</strong>. Es ist 100% kostenlos, erfordert keine Anmeldung oder App und funktioniert auf iPhone, Android, Windows und Mac. Es können nur öffentliche Videos und Storys geladen werden.',
+        'h2': 'Instagram Video Downloader: Reels, Storys und Beiträge in HD speichern',
+        'intro': 'Dieser <strong>Instagram Video Downloader</strong> wurde für einen primären Zweck entwickelt: öffentliche Reels, Feed-Videos, Storys und Karussell-Beiträge in dauerhafte Mediendateien umzuwandeln. Er liest die direkten CDN-Streams von Instagram aus und lädt Ihre Auswahl direkt als MP4-Video oder MP3-Audio auf Ihr Gerät herunter – ohne Registrierung oder störende Werbung.',
+        't1_h3': 'Instagram Video Downloader im Überblick',
+        't1_headers': ['Funktion', 'Details'],
+        't1_rows': [
+            ('Unterstützte Inhalte', 'Öffentliche Reels, Feed-Videos, Storys, Highlights, Karussell-Alben und IGTV'),
+            ('Akzeptierte Links', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Ausgabeformate', 'MP4-Video (1080p HD und Normal), MP3-Audio (192 kbps HQ und 128 kbps), JPEG-Bilder'),
+            ('Videoqualität', 'Originale Upload-Auflösung bis 1080p Full HD (60fps). Ohne zusätzliche Kompression oder falsches Upscaling'),
+            ('Preis', '<span class="badge-highlight">Kostenlos, unbegrenzte Downloads</span>'),
+            ('Konto oder Login', '<span class="badge-highlight">Nicht erforderlich (100% anonym)</span>'),
+            ('Wasserzeichen', '<span class="badge-highlight">Keine Wasserzeichen hinzugefügt</span>'),
+            ('Kompatibilität', 'iPhone, iPad, Android, Windows, macOS, Linux (alle modernen Browser)'),
+            ('Datenspeicherung', 'Keine. Nur temporärer Echtzeit-Stream-Proxy'),
+            ('Einschränkungen', 'Nur öffentliche Profile. Keine privaten Konten. Qualität hängt vom Originalupload ab')
+        ],
+        'comp_h3': 'Warum downsocial SaveInsta, iGram und InDown übertrifft',
+        'comp_p': 'Ältere Plattformen wie <em>SaveInsta (saveinsta.app)</em>, <em>iGram (igram.world)</em>, <em>SnapInsta</em> und <em>InDown (indown.io)</em> sind voll von aufdringlicher Pop-up-Werbung und langsamen Ladezeiten. downsocial garantiert blitzschnelle CDN-Downloads ohne Werbebanner, echte 1080p-Qualität und sofortige MP3-Konvertierung.',
+        'comp_headers': ['Funktionsvergleich', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Maximale Videoauflösung', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Störende Pop-up-Werbung', '<span class="badge-highlight">Keine (Saubere Benutzeroberfläche)</span>', 'Viel Werbung', 'Häufige Werbung', 'Viel Werbung'),
+            ('Audio-Transkodierung (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Einfach', 'Nicht verfügbar', 'Einfach'),
+            ('Anonymer Story-Downloader', '<span class="badge-highlight">100% anonym</span>', 'Ja', 'Eingeschränkt', 'Ja'),
+            ('Kein Login erforderlich', '<span class="badge-highlight">100% anonym</span>', 'Kein Login', 'Kein Login', 'Kein Login')
+        ],
+        't2_h3': 'Welche Instagram-Links funktionieren?',
+        't2_intro': 'Instagram verwendet in Apps und Browsern verschiedene Linkstrukturen. Sofern der Inhalt öffentlich ist, werden alle folgenden Varianten unterstützt:',
+        't2_headers': ['Link-Typ', 'URL-Struktur', 'Unterstützt wenn'],
+        't2_rows': [
+            ('Instagram Reel', 'instagram.com/reel/... oder instagram.com/reels/...', 'Reel stammt von einem öffentlichen Profil'),
+            ('Feed-Video / Beitrag', 'instagram.com/p/...', 'Beitrag stammt von einem öffentlichen Profil'),
+            ('Öffentliche Story', 'instagram.com/stories/benutzername/...', 'Story ist aktiv (innerhalb von 24 Stunden)'),
+            ('Highlight', 'instagram.com/stories/highlights/...', 'Highlight ist öffentlich sichtbar'),
+            ('Karussell-Album', 'instagram.com/p/... (Beitrag mit mehreren Medien)', 'Beitrag ist öffentlich (lädt alle Folien)'),
+            ('Mobiler Teilen-Link', 'instagram.com/share/...', 'Zielinhalt ist öffentlich')
+        ],
+        'copy_h3': 'So kopieren Sie einen Instagram-Videolink',
+        'copy_items': [
+            '<strong>Instagram-App (iPhone oder Android):</strong> Tippen Sie unter dem Reel oder Beitrag auf das <strong>Teilen-Symbol</strong> (Papierflieger) und wählen Sie <strong>Link kopieren</strong>. Bei Storys tippen Sie auf die drei Punkte.',
+            '<strong>Im Computer-Browser:</strong> Klicken Sie auf das Drei-Punkte-Symbol eines Beitrags und wählen Sie <strong>Link kopieren</strong>, oder kopieren Sie die URL direkt aus der Adresszeile.',
+            '<strong>WhatsApp oder Messenger:</strong> Halten Sie die empfangene Nachricht gedrückt und kopieren Sie den enthaltenen Link.'
+        ],
+        'device_h3': 'Instagram-Videos auf iPhone, Android und Computer herunterladen',
+        'ios': '<strong>Auf iPhone und iPad:</strong> Öffnen Sie downsocial.net in Safari, fügen Sie den Link ein und tippen Sie auf <em>Video herunterladen</em>. Wählen Sie <em>Video (HD)</em>. Die Datei landet in Dateien > Downloads. Öffnen Sie die Datei, tippen Sie auf Teilen und wählen Sie <em>Video sichern</em>, um sie in Fotos zu speichern.',
+        'android': '<strong>Auf Android:</strong> Öffnen Sie downsocial.net in Chrome, fügen Sie den Link ein und tippen Sie auf <em>Video herunterladen</em>. Wählen Sie <em>Video (HD)</em>. Die MP4-Datei wird im Download-Ordner gespeichert und erscheint in Ihrer Galerie.',
+        'pc': '<strong>Auf Windows oder Mac:</strong> Fügen Sie die URL in das Suchfeld ein, klicken Sie auf <em>Video herunterladen</em> und wählen Sie Ihr Wunschformat.',
+        'priv_h3': 'Können private Instagram-Videos heruntergeladen werden?',
+        'priv_p': 'Nein. downsocial lädt ausschließlich Inhalte herunter, die öffentlich ohne Benutzerkonto einsehbar sind. Private Profile und direkte Gruppennachrichten können nicht geladen werden. Wir fragen niemals nach Ihren Instagram-Zugangsdaten.',
+        'qual_h3': 'Instagram-Videoqualität: Originale 1080p Full HD',
+        'qual_p': 'Instagram stellt Videos in verschiedenen Bitraten bereit. <strong>Video (HD)</strong> liefert den qualitativ besten Stream des Instagram-Netzwerks (oft 1080x1920 bei 60fps für Reels). <strong>Video (Normal)</strong> spart Datenvolumen bei mobiler Nutzung.',
+        'mp3_h3': 'Instagram Reels in MP3-Audio umwandeln',
+        'mp3_p': 'Möchten Sie einen beliebten Song, Comedy-Soundtrack oder ein Zitat speichern? Wählen Sie <strong>Audio (HQ MP3)</strong> für 192 kbps oder <strong>Audio (Normal MP3)</strong> für 128 kbps. Unsere FFmpeg-Engine wandelt den Ton direkt beim Download um.',
+        'trouble_h3': 'Warum ein Download fehlschlagen könnte',
+        'trouble_headers': ['Symptom', 'Wahrscheinliche Ursache', 'Lösungsvorschlag'],
+        'trouble_rows': [
+            ('"Video konnte nicht extrahiert werden"', 'Konto ist privat, Beitrag gelöscht oder altersbeschränkt', 'Öffnen Sie den Link im privaten Modus. Wird ein Login verlangt, ist kein Download möglich'),
+            ('Story schlägt fehl', 'Story ist nach 24 Stunden abgelaufen', 'Storys verschwinden nach einem Tag; laden Sie sie rechtzeitig herunter'),
+            ('Keine Reaktion nach Einfügen', 'URL führt zu einem Profil statt zu einem Beitrag', 'Öffnen Sie das konkrete Reel oder Video und kopieren Sie diesen Direktlink'),
+            ('Ton asynchron', 'Cache-Problem des Browsers', 'Laden Sie mit Video (HD) herunter und spielen Sie die Datei mit VLC ab'),
+            ('Langsame Downloadrate', 'Hohe Netzwerkauslastung oder großes Album', 'Wählen Sie Video (Normal) oder nutzen Sie schnelles WLAN')
+        ],
+        'use_h3': 'Beliebte Gründe für das Speichern von Instagram-Videos',
+        'use_items': [
+            'Sicherung eigener Reels und Storys vor dem Löschen oder Deaktivieren des Kontos.',
+            'Offline-Nutzung von Trainingsplänen, Rezepten und Reisetipps unterwegs.',
+            'Teilen von unterhaltsamen Reels mit Freunden über Messenger.',
+            'Gewinnung von Audio-Samples für die eigene Videobearbeitung.'
+        ],
+        'safe_h3': 'Ist das Herunterladen sicher und legal?',
+        'safe_p': '<strong>Sicher:</strong> Funktioniert komplett im Browser ohne Installation oder Passworteingabe. <strong>Legal:</strong> Das Speichern öffentlich zugänglicher Inhalte für den privaten Gebrauch ist üblich. Urheberrechte verbleiben beim Ersteller. downsocial ist unabhängig von Meta Platforms, Inc.',
+        'tips_h3': 'Tipps für das beste Ergebnis',
+        'tips_items': [
+            'Kopieren Sie Links immer über das <em>Teilen</em>-Menü des jeweiligen Beitrags.',
+            'Nutzen Sie <strong>Video (HD)</strong> für Fernseher oder hochauflösende Bildschirme.',
+            'Wählen Sie <strong>Audio (HQ MP3)</strong>, wenn Sie ausschließlich die Musikspur benötigen.',
+            'Prüfen Sie bei Fehlern, ob das Zielprofil tatsächlich öffentlich ist.'
+        ],
+        'sister_h3': 'Entdecken Sie unsere weiteren Downloader',
+        'sister_p': 'Möchten Sie Videos von anderen Netzwerken speichern? Testen Sie unsere kostenlosen Tools für <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> und den <a href="../index.html">Universal All-in-One Downloader</a>.',
+        'last_updated': 'Zuletzt aktualisiert: 3. Oktober 2026. Haben Sie Fragen oder einen fehlerhaften Link entdeckt? <a href="contact.html">Support kontaktieren</a>.'
+    },
+
+    'hi': {
+        'qa_title': 'त्वरित उत्तर: इंस्टाग्राम वीडियो और रील्स कैसे डाउनलोड करें',
+        'qa_text': 'इंस्टाग्राम वीडियो या रील डाउनलोड करने के लिए, उसका लिंक कॉपी करें, इस पेज के शीर्ष सर्च बॉक्स में पेस्ट करें, <em>Download Video</em> पर क्लिक करें और <strong>Video (HD)</strong> या <strong>Audio (HQ MP3)</strong> चुनें। यह 100% मुफ्त है, किसी लॉगिन या ऐप की जरूरत नहीं है, और iPhone, Android, Windows व Mac पर काम करता है। केवल सार्वजनिक वीडियो और स्टोरीज ही डाउनलोड की जा सकती हैं।',
+        'h2': 'इंस्टाग्राम वीडियो डाउनलोडर: रील्स, स्टोरीज और पोस्ट को HD में सेव करें',
+        'intro': 'यह <strong>Instagram video downloader</strong> एक मुख्य काम के लिए तैयार किया गया है: सार्वजनिक इंस्टाग्राम रील्स, वीडियो, स्टोरीज और कैरोसेल पोस्ट को स्थायी ऑफलाइन मीडिया फाइलों में बदलना। यह डायरेक्ट सीडीएन स्ट्रीम को पढ़ता है, उपलब्ध रेजोल्यूशन दिखाता है और आपकी पसंद के अनुसार MP4 वीडियो या MP3 ऑडियो में डाउनलोड करता है।',
+        't1_h3': 'इंस्टाग्राम वीडियो डाउनलोडर एक नज़र में',
+        't1_headers': ['सुविधा', 'विवरण'],
+        't1_rows': [
+            ('समर्थित सामग्री', 'पब्लिक इंस्टाग्राम रील्स, फीड वीडियो, स्टोरीज, हाइलाइट्स, कैरोसेल एल्बम और आईजीटीवी'),
+            ('स्वीकृत लिंक', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('आउटपुट फॉर्मेट', 'MP4 वीडियो (1080p HD और Normal), MP3 ऑडियो (192 kbps HQ और 128 kbps), JPEG फोटो'),
+            ('वीडियो क्वालिटी', '1080p Full HD (60fps) तक मूल अपलोड रेजोल्यूशन। कोई नकली अपस्केलिंग नहीं'),
+            ('कीमत', '<span class="badge-highlight">मुफ्त, असीमित डाउनलोड्स</span>'),
+            ('अकाउंट या लॉगिन', '<span class="badge-highlight">कोई आवश्यकता नहीं (100% अनाम)</span>'),
+            ('वॉटरमार्क', '<span class="badge-highlight">शून्य वॉटरमार्क जोड़ा गया</span>'),
+            ('डिवाइस सपोर्ट', 'iPhone, iPad, Android, Windows, macOS, Linux (सभी आधुनिक ब्राउज़र)'),
+            ('स्टोरेज नीति', 'शून्य। केवल रीयल-टाइम स्ट्रीम प्रॉक्सी'),
+            ('सीमाएं', 'केवल सार्वजनिक प्रोफाइल। प्राइवेट अकाउंट से डाउनलोड नहीं हो सकता')
+        ],
+        'comp_h3': 'downsocial क्यों SaveInsta, iGram और InDown से बेहतर है',
+        'comp_p': 'पारंपरिक टूल्स जैसे <em>SaveInsta</em>, <em>iGram</em> और <em>InDown</em> में बहुत सारे पॉप-अप विज्ञापन और धीमे रीडायरेक्ट होते हैं। downsocial बिना विज्ञापनों के सुपर-फास्ट सीडीएन डाउनलोड और असली 1080p क्वालिटी प्रदान करता है।',
+        'comp_headers': ['फीचर तुलना', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('अधिकतम वीडियो रेजोल्यूशन', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('पॉप-अप विज्ञापन', '<span class="badge-highlight">शून्य (साफ-सुथरा इंटरफेस)</span>', 'अत्यधिक विज्ञापन', 'लगातार विज्ञापन', 'अत्यधिक विज्ञापन'),
+            ('ऑडियो कन्वर्जन (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'बेसिक', 'उपलब्ध नहीं', 'बेसिक'),
+            ('अनाम स्टोरी डाउनलोडर', '<span class="badge-highlight">100% अनाम</span>', 'हाँ', 'सीमित', 'हाँ'),
+            ('लॉगिन की आवश्यकता नहीं', '<span class="badge-highlight">100% अनाम</span>', 'बिना लॉगिन', 'बिना लॉगिन', 'बिना लॉगिन')
+        ],
+        't2_h3': 'कौन से इंस्टाग्राम लिंक काम करते हैं?',
+        't2_intro': 'इंस्टाग्राम अपने ऐप और वेब पर कई लिंक फॉर्मेट का उपयोग करता है। सामग्री सार्वजनिक होने पर ये सभी समर्थित हैं:',
+        't2_headers': ['लिंक का प्रकार', 'URL का प्रारूप', 'कब समर्थित है'],
+        't2_rows': [
+            ('इंस्टाग्राम रील', 'instagram.com/reel/... या /reels/...', 'रील पब्लिक अकाउंट पर हो'),
+            ('फीड वीडियो / पोस्ट', 'instagram.com/p/...', 'पोस्ट पब्लिक अकाउंट पर हो'),
+            ('पब्लिक स्टोरी', 'instagram.com/stories/username/...', 'स्टोरी सक्रिय हो (24 घंटे के भीतर)'),
+            ('हाइलाइट', 'instagram.com/stories/highlights/...', 'हाइलाइट सार्वजनिक हो'),
+            ('कैरोसेल एल्बम', 'instagram.com/p/... (मल्टी-आइटम पोस्ट)', 'पोस्ट सार्वजनिक हो (सभी स्लाइड निकालता है)'),
+            ('मोबाइल शेयर लिंक', 'instagram.com/share/...', 'टारगेट सामग्री सार्वजनिक हो')
+        ],
+        'copy_h3': 'इंस्टाग्राम वीडियो का लिंक कैसे कॉपी करें',
+        'copy_items': [
+            '<strong>इंस्टाग्राम मोबाइल ऐप (iPhone या Android):</strong> रील या पोस्ट के नीचे <strong>Share आइकन</strong> (कागज़ का हवाई जहाज़) दबाएं, फिर <strong>Copy Link</strong> चुनें। स्टोरी के लिए कोने में तीन बिंदुओं पर टैप करें।',
+            '<strong>कंप्यूटर ब्राउज़र पर:</strong> पोस्ट के तीन डॉट्स पर क्लिक करें और <strong>Copy link</strong> चुनें, या एड्रेस बार से URL कॉपी करें।',
+            '<strong>WhatsApp या चैट ऐप:</strong> यदि किसी ने लिंक भेजा है, तो मैसेज को दबाकर रखें और लिंक कॉपी करें।'
+        ],
+        'device_h3': 'iPhone, Android और कंप्यूटर पर इंस्टाग्राम वीडियो डाउनलोड कैसे करें',
+        'ios': '<strong>iPhone और iPad पर:</strong> Safari में downsocial.net खोलें, लिंक पेस्ट करें और <em>Download Video</em> दबाएं। <em>Video (HD)</em> चुनें। फाइल Files ऐप के Downloads फोल्डर में सेव होगी। वहां से Share दबाकर <em>Save Video</em> चुनें ताकि Photos में पहुंच जाए।',
+        'android': '<strong>Android पर:</strong> Chrome में downsocial.net खोलें, लिंक पेस्ट करें और <em>Download Video</em> दबाएं। <em>Video (HD)</em> चुनें। फाइल सीधे आपके फोन गैलरी या Downloads फोल्डर में सेव हो जाएगी।',
+        'pc': '<strong>Windows या Mac पर:</strong> लिंक पेस्ट करें, <em>Download Video</em> पर क्लिक करें और अपना फॉर्मेट चुनें।',
+        'priv_h3': 'क्या प्राइवेट इंस्टाग्राम वीडियो डाउनलोड किए जा सकते हैं?',
+        'priv_p': 'नहीं। downsocial केवल सार्वजनिक रूप से उपलब्ध वीडियो ही डाउनलोड कर सकता है। प्राइवेट प्रोफाइल या क्लोज फ्रेंड्स वाले पोस्ट डाउनलोड नहीं किए जा सकते, और हम कभी आपका पासवर्ड नहीं मांगते।',
+        'qual_h3': 'इंस्टाग्राम वीडियो क्वालिटी: असली 1080p Full HD',
+        'qual_p': 'इंस्टाग्राम कई बिटरेट में वीडियो सेव करता है। <strong>Video (HD)</strong> उपलब्ध सर्वोत्तम स्ट्रीम (रील्स के लिए आमतौर पर 1080x1920 60fps) प्रदान करता है। <strong>Video (Normal)</strong> मोबाइल डेटा बचाने के लिए हल्की फाइल है।',
+        'mp3_h3': 'इंस्टाग्राम रील्स को MP3 ऑडियो में बदलें',
+        'mp3_p': 'यदि आपको किसी रील का बैकग्राउंड संगीत, डायलॉग या प्रेरक भाषण पसंद आया है, तो 192 kbps के लिए <strong>Audio (HQ MP3)</strong> या 128 kbps के लिए <strong>Audio (Normal MP3)</strong> चुनें।',
+        'trouble_h3': 'इंस्टाग्राम वीडियो डाउनलोड न होने के सामान्य कारण',
+        'trouble_headers': ['समस्या', 'संभावित कारण', 'समाधान'],
+        'trouble_rows': [
+            ('"Could not extract video"', 'अकाउंट प्राइवेट है या पोस्ट डिलीट हो गई है', 'लिंक को इनकॉग्निटो विंडो में खोलें। अगर लॉगिन मांग रहा है तो डाउनलोड नहीं हो सकता'),
+            ('स्टोरी डाउनलोड फेल', 'स्टोरी 24 घंटे बाद समाप्त हो चुकी है', 'स्टोरी एक्टिव रहने के दौरान ही पुनः प्रयास करें'),
+            ('पेस्ट करने के बाद कुछ नहीं होता', 'लिंक पोस्ट का नहीं बल्कि प्रोफाइल का है', 'सीधे उस वीडियो या रील पर जाकर डायरेक्ट लिंक कॉपी करें'),
+            ('ऑडियो सिंक नहीं है', 'ब्राउज़र कैश की समस्या', 'Video (HD) डाउनलोड करें और वीएलसी में चलाएं'),
+            ('धीमी डाउनलोड गति', 'नेटवर्क ट्रैफिक या बड़ा एल्बम', 'Video (Normal) आज़माएं या वाई-फाई से कनेक्ट करें')
+        ],
+        'use_h3': 'लोग इंस्टाग्राम वीडियो क्यों डाउनलोड करते हैं?',
+        'use_items': [
+            'अकाउंट बंद करने से पहले अपनी रील्स और स्टोरीज का सुरक्षित बैकअप रखना।',
+            'वर्कआउट, रेसिपी और ट्यूटोरियल ऑफलाइन देखना।',
+            'व्हाट्सएप पर दोस्तों के साथ मजेदार रील्स शेयर करना।',
+            'रचनात्मक वीडियो एडिटिंग के लिए साउंडट्रैक अलग करना।'
+        ],
+        'safe_h3': 'क्या इंस्टाग्राम वीडियो डाउनलोड करना सुरक्षित और कानूनी है?',
+        'safe_p': '<strong>सुरक्षित:</strong> पूरी तरह ब्राउज़र में काम करता है, कोई सॉफ्टवेयर या पासवर्ड नहीं चाहिए। <strong>कानूनी:</strong> व्यक्तिगत ऑफ़लाइन उपयोग के लिए सामग्री सेव करना सामान्य है, बशर्ते कॉपीराइट का सम्मान किया जाए। downsocial मेटा से संबद्ध नहीं है।',
+        'tips_h3': 'सर्वश्रेष्ठ डाउनलोड अनुभव के लिए सुझाव',
+        'tips_items': [
+            'हमेशा पोस्ट के अपने <em>Share</em> बटन से लिंक कॉपी करें।',
+            'बड़ी स्क्रीन या टीवी के लिए <strong>Video (HD)</strong> चुनें।',
+            'केवल संगीत चाहिए तो <strong>Audio (HQ MP3)</strong> चुनें।',
+            'समस्या होने पर प्रोफाइल की सार्वजनिक स्थिति जांचें।'
+        ],
+        'sister_h3': 'अन्य प्लेटफॉर्म डाउनलोडर देखें',
+        'sister_p': 'अन्य सोशल नेटवर्क के लिए हमारे टूल्स आजमाएं: <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> और हमारा <a href="../index.html">ऑल-इन-वन डाउनलोडर</a>।',
+        'last_updated': 'अंतिम अपडेट: 3 अक्टूबर 2026। कोई सवाल है या लिंक काम नहीं कर रहा? <a href="contact.html">सपोर्ट टीम से संपर्क करें</a>।'
+    },
+
+    'ar': {
+        'qa_title': 'إجابة سريعة: كيفية تنزيل مقاطع فيديو وريلز إنستغرام',
+        'qa_text': 'لتنزيل أي فيديو أو ريل من إنستغرام، انسخ الرابط، وألصقه في مربع البحث أعلى هذه الصفحة، واضغط على <em>تنزيل الفيديو</em>، ثم اختر <strong>Video (HD)</strong> أو <strong>Audio (HQ MP3)</strong>. الخدمة مجانية 100%، ولا تتطلب تسجيل دخول أو تطبيقات، وتعمل على iPhone و Android و Windows و Mac. يمكن تنزيل الفيديوهات والقصص العامة فقط.',
+        'h2': 'برنامج تنزيل فيديو إنستغرام: حفظ الريلز والقصص والمنشورات بجودة HD',
+        'intro': 'تم تصميم <strong>برنامج تنزيل فيديو إنستغرام</strong> هذا لتحويل الريلز ومقاطع الفيديو والقصص العامة إلى ملفات دائمة على جهازك. يستخرج الملفات مباشرة من شبكة CDN الأصلية بجودة فائقة ودون الحاجة لتسجيل حسابك.',
+        't1_h3': 'نظرة سريعة على ميزات تنزيل فيديو إنستغرام',
+        't1_headers': ['الميزة', 'التفاصيل'],
+        't1_rows': [
+            ('المحتوى المدعوم', 'ريلز إنستغرام العامة، فيديوهات المنشورات، القصص Stories، الهايلايت، والألبومات'),
+            ('الروابط المقبولة', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('صيغ الإخراج', 'فيديو MP4 (بدقة 1080p HD وعادية)، صوت MP3 (192 kbps و 128 kbps)، صور JPEG'),
+            ('جودة الفيديو', 'الجودة الأصلية المرفوعة حتى 1080p Full HD (60fps) دون ترقية وهمية'),
+            ('السعر', '<span class="badge-highlight">مجاني بالكامل، تنزيل بلا حدود</span>'),
+            ('الحساب أو التسجيل', '<span class="badge-highlight">غير مطلوب (مجهول 100%)</span>'),
+            ('العلامة المائية', '<span class="badge-highlight">بدون أي علامات مائية</span>'),
+            ('الأجهزة المتوافقة', 'iPhone و iPad و Android و Windows و macOS و Linux'),
+            ('تخزين الملفات', 'لا نقوم بحفظ أي ملفات على خوادمنا نهائياً'),
+            ('القيود', 'الحسابات العامة فقط. لا يمكن تحميل منشورات الحسابات الخاصة')
+        ],
+        'comp_h3': 'لماذا يتفوق downsocial على SaveInsta و iGram و InDown',
+        'comp_p': 'الأدوات القديمة مثل <em>SaveInsta</em> و <em>iGram</em> و <em>InDown</em> مليئة بالإعلانات المنبثقة المزعجة والروابط المعطلة. يوفر downsocial سرعة فائقة من سيرفرات CDN دون إعلانات مزعجة وبجودة 1080p حقيقية وتحويل فوري إلى MP3.',
+        'comp_headers': ['مقارنة الميزات', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('أقصى دقة فيديو', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('إعلانات منبثقة مزعجة', '<span class="badge-highlight">صفر (واجهة نظيفة)</span>', 'إعلانات كثيرة', 'إعلانات مستمرة', 'إعلانات كثيرة'),
+            ('تحويل الصوت إلى MP3', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'بسيط', 'غير متوفر', 'بسيط'),
+            ('حفظ القصص بهوية مجهولة', '<span class="badge-highlight">100% مجهول</span>', 'نعم', 'محدود', 'نعم'),
+            ('بدون تسجيل دخول', '<span class="badge-highlight">100% مجهول</span>', 'بدون تسجيل', 'بدون تسجيل', 'بدون تسجيل')
+        ],
+        't2_h3': 'ما هي روابط إنستغرام المدعومة؟',
+        't2_intro': 'طالما أن الحساب عام، فإن جميع صيغ الروابط التالية مدعومة:',
+        't2_headers': ['نوع الرابط', 'بنية الرابط', 'يعمل عندما'],
+        't2_rows': [
+            ('ريلز Reel', 'instagram.com/reel/... أو /reels/...', 'الريل منشور في حساب عام'),
+            ('فيديو منشور / Feed', 'instagram.com/p/...', 'المنشور في حساب عام'),
+            ('قصة عامة Story', 'instagram.com/stories/username/...', 'القصة لا تزال نشطة (خلال 24 ساعة)'),
+            ('هايلايت Highlight', 'instagram.com/stories/highlights/...', 'الهايلايت متاح للعامة'),
+            ('ألبوم صور وفيديو', 'instagram.com/p/...', 'المنشور عام (يستخرج كافة الشرائح)'),
+            ('رابط مشاركة الهاتف', 'instagram.com/share/...', 'المحتوى المستهدف عام')
+        ],
+        'copy_h3': 'كيفية نسخ رابط فيديو إنستغرام',
+        'copy_items': [
+            '<strong>تطبيق إنستغرام للهاتف (iPhone أو Android):</strong> اضغط على أيقونة <strong>المشاركة</strong> (طائرة ورقية) أسفل الريل ثم اختر <strong>Copy Link (نسخ الرابط)</strong>.',
+            '<strong>متصفح الكمبيوتر:</strong> انقر على النقاط الثلاث واختر <strong>Copy link</strong>، أو انسخ الرابط من شريط العنوان.',
+            '<strong>تطبيقات المراسلة:</strong> انسخ الرابط مباشرة من الرسالة المستلمة.'
+        ],
+        'device_h3': 'طريقة تنزيل مقاطع إنستغرام على iPhone و Android والكمبيوتر',
+        'ios': '<strong>على iPhone و iPad:</strong> افتح downsocial.net في Safari، والصق الرابط واضغط على <em>تنزيل الفيديو</em>، ثم اختر <em>Video (HD)</em>. سيحفظ في مجلد التنزيلات بتطبيق الملفات، ومنه يمكنك حفظه في ألبوم الصور.',
+        'android': '<strong>على Android:</strong> افتح الموقع في Chrome، والصق الرابط واختر <em>Video (HD)</em> ليتم حفظه مباشرة في مجلد Downloads ومعرض الصور.',
+        'pc': '<strong>على Windows أو Mac:</strong> الصق الرابط واضغط تنزيل ليتم حفظ المقطع في مجلد التنزيلات بمتصفحك.',
+        'priv_h3': 'هل يمكن تنزيل فيديوهات إنستغرام الخاصة؟',
+        'priv_p': 'لا. يحفظ الموقع المحتوى المتاح للجميع فقط، ولا يمكن الوصول للحسابات المغلقة ولا نطلب كلمة سرك مطلقاً.',
+        'qual_h3': 'جودة فيديو إنستغرام: 1080p Full HD حقيقية',
+        'qual_p': 'نقدم أعلى جودة رفعها صاحب الفيديو على خوادم إنستغرام دون ضغط إضافي.',
+        'mp3_h3': 'تحويل ريلز إنستغرام إلى صوت MP3',
+        'mp3_p': 'اختر <strong>Audio (HQ MP3)</strong> بدقة 192 kbps للاستماع إلى الأغاني والمقاطع الصوتية المفضلة.',
+        'trouble_h3': 'أسباب شائعة لعدم تنزيل الفيديو',
+        'trouble_headers': ['المشكلة', 'السبب المحتمل', 'الحل'],
+        'trouble_rows': [
+            ('"تعذر استخراج الفيديو"', 'الحساب خاص أو الفيديو محذوف', 'افتح الرابط في نافذة خاصة للتأكد من أنه عام'),
+            ('فشل تنزيل القصة', 'انتهت مدة الـ 24 ساعة', 'تأكد من أن القصة لا تزال معروضة'),
+            ('لا يوجد استجابة', 'الرابط لصفحة بروفايل وليس فيديو', 'انسخ رابط المنشور مباشرة'),
+            ('عدم تزامن الصوت', 'خلل مؤقت في المتصفح', 'شغّل المقطع عبر مشغل خارجي مثل VLC'),
+            ('تنزيل بطيء', 'ضغط شبكة أو حجم كبير', 'اختر Video (Normal) أو اتصل بالواي فاي')
+        ],
+        'use_h3': 'أسباب شائعة لحفظ مقاطع إنستغرام',
+        'use_items': [
+            'الاحتفاظ بنسخة من مقاطعك وقصصك قبل حذف الحساب.',
+            'مشاهدة فيديوهات الطبخ والتمارين دون إنترنت أثناء السفر.',
+            'مشاركة الفيديوهات المسلية مع العائلة عبر واتساب.',
+            'استخراج المؤثرات الصوتية لاستخدامها في المونتاج.'
+        ],
+        'safe_h3': 'هل التنزيل آمن وقانوني؟',
+        'safe_p': '<strong>آمن:</strong> يعمل عبر المتصفح دون برامج أو أذونات. <strong>قانوني:</strong> الاستخدام الشخصي مسموح به مع احترام حقوق الملكية.',
+        'tips_h3': 'نصائح لتحقيق أفضل تجربة',
+        'tips_items': [
+            'انسخ الرابط من زر <em>مشاركة</em> الخاص بالمنشور دائماً.',
+            'اختر <strong>Video (HD)</strong> للعرض على الشاشات الكبيرة.',
+            'استخدم <strong>Audio (HQ MP3)</strong> لحفظ النغمات الصوتية فقط.',
+            'تأكد من أن صاحب الحساب لم يجعله خاصاً.'
+        ],
+        'sister_h3': 'استكشف أدواتنا لباقي المنصات',
+        'sister_p': 'جرب أدواتنا لتحميل الفيديو من <a href="../facebook-downloader/">Facebook</a> و <a href="../youtube-downloader/">YouTube</a> و <a href="../tiktok-downloader/">TikTok</a> و <a href="../snapchat-downloader/">Snapchat</a> و <a href="../threads-downloader/">Threads</a> بالإضافة إلى <a href="../index.html">البرنامج الشامل</a>.',
+        'last_updated': 'آخر تحديث: 3 أكتوبر 2026. هل لديك أي استفسار؟ <a href="contact.html">تواصل مع الدعم الفني</a>.'
+    },
+
+    'bn': {
+        'qa_title': 'দ্রুত উত্তর: কিভাবে ইনস্টাগ্রাম ভিডিও এবং রিলস ডাউনলোড করবেন',
+        'qa_text': 'ইনস্টাগ্রাম ভিডিও বা রিল ডাউনলোড করতে, লিংকটি কপি করুন, এই পেজের সার্চ বক্সে পেস্ট করুন, <em>Download Video</em> চাপুন এবং <strong>Video (HD)</strong> অথবা <strong>Audio (HQ MP3)</strong> নির্বাচন করুন। এটি সম্পূর্ণ ফ্রি, কোনো লগইন বা অ্যাপের প্রয়োজন নেই এবং iPhone, Android, Windows ও Mac-এ কাজ করে। কেবল পাবলিক ভিডিও এবং স্টোরি ডাউনলোড করা যায়।',
+        'h2': 'ইনস্টাগ্রাম ভিডিও ডাউনলোডার: রিলস, স্টোরিজ ও পোস্ট HD কোয়ালিটিতে সেভ করুন',
+        'intro': 'এই <strong>Instagram video downloader</strong> বিশেষভাবে তৈরি করা হয়েছে যেকোনো পাবলিক ইনস্টাগ্রাম রিল, ফিড ভিডিও, স্টোরি এবং ক্যারোজেল পোস্টকে সরাসরি ডিভাইসে স্থায়ীভাবে সংরক্ষণ করার জন্য। এটি ইনস্টাগ্রামের সিডিএন থেকে সরাসরি ফাইল প্রসেস করে MP4 ভিডিও বা MP3 অডিও প্রদান করে।',
+        't1_h3': 'এক নজরে ইনস্টাগ্রাম ভিডিও ডাউনলোডার',
+        't1_headers': ['ফিচার', 'বিবরণ'],
+        't1_rows': [
+            ('সমর্থিত কনটেন্ট', 'পাবলিক রিলস, ফিড ভিডিও, স্টোরিজ, হাইলাইটস, ক্যারোজেল অ্যালবাম ও আইজিটিভি'),
+            ('গ্রহণযোগ্য লিংক', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('আউটপুট ফরম্যাট', 'MP4 ভিডিও (1080p HD ও Normal), MP3 অডিও (192 kbps ও 128 kbps), JPEG ছবি'),
+            ('ভিডিও কোয়ালিটি', '1080p Full HD (60fps) পর্যন্ত আসল আপলোড কোয়ালিটি। কোনো ভুয়া আপস্কেলিং নেই'),
+            ('মূল্য', '<span class="badge-highlight">সম্পূর্ণ ফ্রি, আনলিমিটেড ডাউনলোড</span>'),
+            ('লগইন বা অ্যাকাউন্ট', '<span class="badge-highlight">কোনো লগইন লাগবে না (১০০% বেনামী)</span>'),
+            ('ওয়াটারমার্ক', '<span class="badge-highlight">কোনো ওয়াটারমার্ক যুক্ত হয় না</span>'),
+            ('ডিভাইস সাপোর্ট', 'iPhone, iPad, Android, Windows, macOS, Linux (যেকোনো ব্রাউজার)'),
+            ('সার্ভার স্টোরেজ', 'শূন্য। কোনো ফাইল সার্ভারে সংরক্ষণ করা হয় না'),
+            ('সীমাবদ্ধতা', 'শুধুমাত্র পাবলিক প্রোফাইল। প্রাইভেট অ্যাকাউন্ট থেকে ডাউনলোড হয় না')
+        ],
+        'comp_h3': 'কেন downsocial অন্যান্য টুল (SaveInsta, iGram) থেকে সেরা',
+        'comp_p': 'পুরানো টুলগুলোতে অতিরিক্ত পপ-আপ বিজ্ঞাপন ও স্লো স্পিড থাকে। downsocial কোনো বিরক্তিকর বিজ্ঞাপন ছাড়াই সরাসরি হাই-স্পিড সিডিএন ডাউনলোড ও ইনস্ট্যান্ট MP3 কনভার্সন অফার করে।',
+        'comp_headers': ['ফিচার তুলনা', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('সর্বোচ্চ ভিডিও রেজোলিউশন', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('বিরক্তিকর পপ-আপ বিজ্ঞাপন', '<span class="badge-highlight">শূন্য (ক্লিন ইন্টারফেস)</span>', 'প্রচুর বিজ্ঞাপন', 'ঘন ঘন বিজ্ঞাপন', 'প্রচুর বিজ্ঞাপন'),
+            ('অডিও কনভার্সন (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'সাধারণ', 'উপলব্ধ নয়', 'সাধারণ'),
+            ('বেনামী স্টোরি ডাউনলোডার', '<span class="badge-highlight">১০০% বেনামী</span>', 'হ্যাঁ', 'সীমিত', 'হ্যাঁ'),
+            ('লগইন প্রয়োজন নেই', '<span class="badge-highlight">১০০% বেনামী</span>', 'লগইন ছাড়া', 'লগইন ছাড়া', 'লগইন ছাড়া')
+        ],
+        't2_h3': 'কোন কোন ইনস্টাগ্রাম লিংক কাজ করে?',
+        't2_intro': 'কনটেন্টটি পাবলিক হলে নিচের সব ফরম্যাটের লিংক কাজ করে:',
+        't2_headers': ['লিংকের ধরন', 'লিংকের স্ট্রাকচার', 'কখন কাজ করে'],
+        't2_rows': [
+            ('ইনস্টাগ্রাম রিল', 'instagram.com/reel/... বা /reels/...', 'রিলটি পাবলিক অ্যাকাউন্টে থাকলে'),
+            ('ফিড ভিডিও / পোস্ট', 'instagram.com/p/...', 'পোস্টটি পাবলিক অ্যাকাউন্টে থাকলে'),
+            ('পাবলিক স্টোরি', 'instagram.com/stories/username/...', 'স্টোরি সক্রিয় থাকলে (২৪ ঘণ্টার মধ্যে)'),
+            ('হাইলাইট', 'instagram.com/stories/highlights/...', 'হাইলাইট পাবলিক হলে'),
+            ('ক্যারোজেল অ্যালবাম', 'instagram.com/p/... (একাধিক ছবি/ভিডিও)', 'পোস্টটি পাবলিক হলে'),
+            ('মোবাইল শেয়ার লিংক', 'instagram.com/share/...', 'টার্গেট কনটেন্ট পাবলিক হলে')
+        ],
+        'copy_h3': 'ইনস্টাগ্রাম ভিডিওর লিংক কপি করার নিয়ম',
+        'copy_items': [
+            '<strong>মোবাইল অ্যাপে:</strong> রিল বা পোস্টের নিচে <strong>Share আইকন</strong> (কাগজের বিমান) চাপুন, তারপর <strong>Copy Link</strong> নির্বাচন করুন।',
+            '<strong>কম্পিউটারে:</strong> পোস্টের তিনটি বিন্দুতে ক্লিক করে <strong>Copy link</strong> নিন।',
+            '<strong>মেসেঞ্জারে:</strong> কেউ লিংক পাঠালে মেসেজ থেকে লিংক কপি করুন।'
+        ],
+        'device_h3': 'iPhone, Android ও কম্পিউটারে ইনস্টাগ্রাম ভিডিও ডাউনলোড করার নিয়ম',
+        'ios': '<strong>iPhone ও iPad-এ:</strong> Safari ব্রাউজারে downsocial.net খুলুন, লিংক পেস্ট করে <em>Download Video</em> চাপুন। <em>Video (HD)</em> বেছে নিন। ফাইলটি Files অ্যাপের Downloads ফোল্ডারে সেভ হবে, সেখান থেকে Save Video দিলে Photos-এ যাবে।',
+        'android': '<strong>Android-এ:</strong> Chrome-এ downsocial.net খুলে লিংক পেস্ট করুন এবং <em>Video (HD)</em> চাপুন। ফাইলটি সরাসরি ফোন গ্যালারিতে সেভ হবে।',
+        'pc': '<strong>Windows বা Mac-এ:</strong> লিংক পেস্ট করে ফরম্যাট সিলেক্ট করুন, সাথে সাথে ব্রাউজারের ডাউনলোড ফোল্ডারে সেভ হবে।',
+        'priv_h3': 'প্রাইভেট ইনস্টাগ্রাম ভিডিও ডাউনলোড করা যায়?',
+        'priv_p': 'না। শুধুমাত্র উন্মুক্ত পাবলিক কনটেন্টই ডাউনলোড করা সম্ভব। প্রাইভেট অ্যাকাউন্টের ভিডিও ডাউনলোড করা যায় না এবং আমরা কখনোই পাসওয়ার্ড চাই না।',
+        'qual_h3': 'ভিডিও কোয়ালিটি: আসল 1080p Full HD',
+        'qual_p': 'ইনস্টাগ্রামের মূল আপলোডে যে কোয়ালিটি থাকে, আমরা সেটাই অপরিবর্তিত রেখে প্রদান করি।',
+        'mp3_h3': 'রিলস থেকে MP3 অডিও তৈরি',
+        'mp3_p': 'ভাইরাল মিউজিক বা কণ্ঠস্বর সংরক্ষণ করতে <strong>Audio (HQ MP3)</strong> নির্বাচন করুন।',
+        'trouble_h3': 'ভিডিও ডাউনলোড না হওয়ার কারণ ও সমাধান',
+        'trouble_headers': ['লক্ষণ', 'সম্ভাব্য কারণ', 'সমাধান'],
+        'trouble_rows': [
+            ('"Could not extract video"', 'অ্যাকাউন্ট প্রাইভেট বা পোস্ট মুছে ফেলা হয়েছে', 'ইনকগনিটো মোডে লিংকটি চেক করে দেখুন'),
+            ('স্টোরি ডাউনলোড ব্যর্থ', '২৪ ঘণ্টার মেয়াদ শেষ হয়ে গেছে', 'স্টোরি সক্রিয় থাকা অবস্থায় চেষ্টা করুন'),
+            ('পেস্ট করার পর কিছু হয় না', 'লিংকটি ভিডিওর নয় বরং প্রোফাইলের', 'সরাসরি ভিডিওর লিংক কপি করুন'),
+            ('অডিও সিঙ্ক নেই', 'ব্রাউজার ক্যাশ সমস্যা', 'Video (HD) ডাউনলোড করে ভিএলসিতে চালান'),
+            ('ধীরগতির ডাউনলোড', 'দুর্বল ইন্টারনেট কানেকশন', 'Video (Normal) ব্যবহার করুন')
+        ],
+        'use_h3': 'মানুষ কেন ইনস্টাগ্রাম ভিডিও ডাউনলোড করে?',
+        'use_items': [
+            'নিজের রিল ও স্টোরিজের ব্যাকআপ রাখা।',
+            'ইন্টারনেট ছাড়া অফলাইনে রান্নার রেসিপি ও ওয়ার্কআউট দেখা।',
+            'হোয়াটসঅ্যাপে বন্ধুদের সাথে মজার রিল শেয়ার করা।',
+            'ভিডিও এডিটিংয়ের জন্য ব্যাকগ্রাউন্ড মিউজিক আলাদা করা।'
+        ],
+        'safe_h3': 'ডাউনলোড কি নিরাপদ ও বৈধ?',
+        'safe_p': '<strong>নিরাপদ:</strong> কোনো সফটওয়্যার বা লগইন ছাড়াই কাজ করে। <strong>বৈধ:</strong> ব্যক্তিগত অফলাইন ব্যবহারের জন্য এটি অনুমোদিত। downsocial মেটার সাথে সম্পর্কিত নয়।',
+        'tips_h3': 'সেরা ফলাফলের জন্য কিছু টিপস',
+        'tips_items': [
+            'সবসময় পোস্টের নিজস্ব <em>Share</em> বাটন থেকে লিংক কপি করুন।',
+            'বড় পর্দায় দেখতে <strong>Video (HD)</strong> ব্যবহার করুন।',
+            'শুধুমাত্র গান চাইলে <strong>Audio (HQ MP3)</strong> নিন।',
+            'লিংক কাজ না করলে প্রোফাইলটি পাবলিক কিনা যাচাই করুন।'
+        ],
+        'sister_h3': 'অন্যান্য প্ল্যাটফর্মের জন্য ডাউনলোডার চাই?',
+        'sister_p': 'আমরা <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> এবং আমাদের <a href="../index.html">অল-ইন-ওয়ান ডাউনলোডার</a> অফার করি।',
+        'last_updated': 'সর্বশেষ আপডেট: ৩ অক্টোবর ২০২৬। কোনো প্রশ্ন আছে? <a href="contact.html">সাপোর্টে যোগাযোগ করুন</a>।'
+    },
+
+    'ru': {
+        'qa_title': 'Быстрый ответ: как скачать видео и Reels из Instagram',
+        'qa_text': 'Чтобы скачать видео или Reel из Instagram, скопируйте ссылку, вставьте ее в поле поиска вверху этой страницы, нажмите <em>Скачать видео</em> и выберите <strong>Video (HD)</strong> или <strong>Audio (HQ MP3)</strong>. Сервис на 100% бесплатен, не требует входа или приложений и работает на iPhone, Android, Windows и Mac. Загружать можно только публичные видео и истории.',
+        'h2': 'Загрузчик видео из Instagram: сохраняйте Reels, Истории и публикации в HD',
+        'intro': 'Этот <strong>загрузчик видео из Instagram</strong> создан для одной главной цели: конвертировать общедоступные Reels, публикации, Истории и карусели в постоянные медиафайлы на вашем устройстве. Он считывает потоки с CDN Instagram и сохраняет файлы в формате MP4 или MP3 без рекламы и без авторизации.',
+        't1_h3': 'Краткий обзор загрузчика Instagram',
+        't1_headers': ['Функция', 'Подробности'],
+        't1_rows': [
+            ('Поддерживаемый контент', 'Публичные Reels, видео ленты, Истории, Актуальное (Highlights), карусели и IGTV'),
+            ('Поддерживаемые ссылки', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Форматы файлов', 'MP4 видео (1080p HD и Normal), MP3 аудио (192 kbps HQ и 128 kbps), фото JPEG'),
+            ('Качество видео', 'Исходное качество до 1080p Full HD (60fps). Без размытия и ложного апскейла'),
+            ('Стоимость', '<span class="badge-highlight">Бесплатно, без ограничений по скачиванию</span>'),
+            ('Аккаунт или вход', '<span class="badge-highlight">Не требуется (100% анонимно)</span>'),
+            ('Водяные знаки', '<span class="badge-highlight">Не добавляются</span>'),
+            ('Совместимость', 'iPhone, iPad, Android, Windows, macOS, Linux (все браузеры)'),
+            ('Хранение файлов', 'Файлы не сохраняются на наших серверах'),
+            ('Ограничения', 'Только открытые профили. Не обходит настройки закрытых аккаунтов')
+        ],
+        'comp_h3': 'Почему downsocial лучше SaveInsta, iGram и InDown',
+        'comp_p': 'Устаревшие сервисы перегружены назойливой рекламой и работают медленно. downsocial обеспечивает прямую загрузку с высокой скоростью через CDN без навязчивой рекламы, честное качество 1080p и мгновенную конвертацию в MP3.',
+        'comp_headers': ['Сравнение функций', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Макс. разрешение видео', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Навязчивая реклама', '<span class="badge-highlight">Ноль (Чистый интерфейс)</span>', 'Много рекламы', 'Частая реклама', 'Много рекламы'),
+            ('Конвертация в MP3', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Базовая', 'Недоступно', 'Базовая'),
+            ('Анонимное скачивание Историй', '<span class="badge-highlight">100% анонимно</span>', 'Да', 'Ограничено', 'Да'),
+            ('Без входа в аккаунт', '<span class="badge-highlight">100% анонимно</span>', 'Без входа', 'Без входа', 'Без входа')
+        ],
+        't2_h3': 'Какие ссылки Instagram поддерживаются?',
+        't2_intro': 'Если публикация открыта для всех, поддерживаются все следующие варианты ссылок:',
+        't2_headers': ['Тип ссылки', 'Формат URL', 'Работает когда'],
+        't2_rows': [
+            ('Instagram Reel', 'instagram.com/reel/... или /reels/...', 'Reel находится в открытом профиле'),
+            ('Видео ленты / Пост', 'instagram.com/p/...', 'Публикация находится в открытом профиле'),
+            ('Публичная История', 'instagram.com/stories/username/...', 'История активна (до 24 часов)'),
+            ('Актуальное (Highlight)', 'instagram.com/stories/highlights/...', 'Подборка общедоступна'),
+            ('Альбом-карусель', 'instagram.com/p/... (несколько фото/видео)', 'Пост открыт (скачивает все слайды)'),
+            ('Ссылка "Поделиться"', 'instagram.com/share/...', 'Целевой контент общедоступен')
+        ],
+        'copy_h3': 'Как скопировать ссылку на видео в Instagram',
+        'copy_items': [
+            '<strong>В приложении Instagram (iPhone или Android):</strong> нажмите значок <strong>Поделиться</strong> (бумажный самолетик) под видео и выберите <strong>Копировать ссылку</strong>. Для Историй нажмите на три точки.',
+            '<strong>В браузере на ПК:</strong> нажмите три точки на посте и выберите <strong>Копировать ссылку</strong>, либо скопируйте адрес из строки браузера.',
+            '<strong>В мессенджерах:</strong> удерживайте сообщение с ссылкой и скопируйте ее.'
+        ],
+        'device_h3': 'Инструкция по скачиванию видео из Instagram на iPhone, Android и ПК',
+        'ios': '<strong>На iPhone и iPad:</strong> откройте downsocial.net в Safari, вставьте ссылку и нажмите <em>Скачать видео</em>. Выберите <em>Video (HD)</em>. Файл загрузится в "Файлы" > "Загрузки". Откройте его и нажмите "Сохранить видео" для переноса в галерею.',
+        'android': '<strong>На Android:</strong> откройте downsocial.net в Chrome, вставьте ссылку и выберите <em>Video (HD)</em>. Видео сохранится прямо в галерею смартфона.',
+        'pc': '<strong>На Windows или Mac:</strong> вставьте ссылку в поисковую строку, нажмите <em>Скачать видео</em> и выберите нужный формат.',
+        'priv_h3': 'Можно ли скачать видео из закрытого аккаунта Instagram?',
+        'priv_p': 'Нет. Сервис скачивает только материалы, доступные любому пользователю без входа в аккаунт. Контент закрытых профилей защищен, и мы никогда не запрашиваем ваши пароли.',
+        'qual_h3': 'Качество видео: оригинальное 1080p Full HD',
+        'qual_p': 'Мы отдаем видео именно в том максимальном качестве, в котором автор загрузил его в Instagram.',
+        'mp3_h3': 'Конвертация Instagram Reels в MP3',
+        'mp3_p': 'Если вам понравился трек или звук из ролика, выберите <strong>Audio (HQ MP3)</strong> для битрейта 192 kbps.',
+        'trouble_h3': 'Почему видео из Instagram может не загружаться',
+        'trouble_headers': ['Симптом', 'Возможная причина', 'Решение'],
+        'trouble_rows': [
+            ('"Не удалось извлечь видео"', 'Профиль закрыт или публикация удалена', 'Проверьте ссылку в режиме инкогнито'),
+            ('История не скачивается', 'Истек 24-часовой срок действия', 'Скачивайте Истории, пока они активны'),
+            ('Нет реакции после вставки', 'Ссылка ведет на профиль, а не на пост', 'Откройте конкретный Reel и скопируйте прямую ссылку'),
+            ('Рассинхрон звука', 'Ошибка кэша браузера', 'Скачайте в Video (HD) и воспроизведите через VLC'),
+            ('Медленная загрузка', 'Большой альбом или перегрузка сети', 'Попробуйте Video (Normal) или подключитесь к Wi-Fi')
+        ],
+        'use_h3': 'Зачем сохраняют видео из Instagram?',
+        'use_items': [
+            'Резервная копия своих Reels и Историй перед удалением аккаунта.',
+            'Просмотр тренировок, рецептов и обучающих видео без интернета.',
+            'Отправка забавных роликов друзьям в Telegram или WhatsApp.',
+            'Извлечение фонового аудио для монтажа собственных видео.'
+        ],
+        'safe_h3': 'Безопасно и законно ли скачивать видео?',
+        'safe_p': '<strong>Безопасно:</strong> не требуется установка программ и ввод паролей. <strong>Законно:</strong> скачивание для личного офлайн-просмотра допустимо при соблюдении авторских прав. downsocial не связан с Meta Platforms, Inc.',
+        'tips_h3': 'Советы для быстрой загрузки',
+        'tips_items': [
+            'Всегда копируйте ссылку из меню <em>Поделиться</em> самого ролика.',
+            'Выбирайте <strong>Video (HD)</strong> для экранов телевизоров и мониторов.',
+            'Используйте <strong>Audio (HQ MP3)</strong> для извлечения музыки.',
+            'При ошибках проверьте, открыт ли профиль автора.'
+        ],
+        'sister_h3': 'Другие наши загрузчики',
+        'sister_p': 'Попробуйте также инструменты для <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> и наш <a href="../index.html">универсальный загрузчик</a>.',
+        'last_updated': 'Последнее обновление: 3 октября 2026 г. Возникли вопросы? <a href="contact.html">Служба поддержки</a>.'
+    },
+
+    'id': {
+        'qa_title': 'Jawaban Cepat: Cara Mengunduh Video dan Reels Instagram',
+        'qa_text': 'Untuk mengunduh video atau Reel Instagram, salin tautannya, tempelkan ke kotak pencarian di bagian atas halaman ini, klik <em>Download Video</em>, dan pilih <strong>Video (HD)</strong> atau <strong>Audio (HQ MP3)</strong>. Layanan ini 100% gratis, tidak memerlukan login atau aplikasi tambahan, dan dapat digunakan di iPhone, Android, Windows, serta Mac. Hanya video dan cerita publik yang dapat diunduh.',
+        'h2': 'Instagram Video Downloader: Simpan Reels, Stories & Postingan Berkualitas HD',
+        'intro': '<strong>Instagram video downloader</strong> ini dirancang untuk tujuan utama: mengubah Reels, video feed, Stories, dan postingan carousel Instagram publik menjadi file media permanen di perangkat Anda. Layanan ini langsung membaca stream dari CDN Instagram dan mengunduhnya sebagai video MP4 atau audio MP3 tanpa iklan mengganggu.',
+        't1_h3': 'Sekilas Tentang Instagram Video Downloader',
+        't1_headers': ['Fitur', 'Keterangan'],
+        't1_rows': [
+            ('Konten yang didukung', 'Reels publik, video feed, Stories, Sorotan (Highlights), Carousel, dan IGTV'),
+            ('Format tautan yang diterima', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('Format output', 'Video MP4 (1080p HD dan Normal), audio MP3 (192 kbps HQ dan 128 kbps), foto JPEG'),
+            ('Kualitas video', 'Resolusi unggahan asli hingga 1080p Full HD (60fps). Tanpa kompresi buram atau upscaling palsu'),
+            ('Harga', '<span class="badge-highlight">Gratis, tanpa batasan unduhan</span>'),
+            ('Akun atau login', '<span class="badge-highlight">Tidak diperlukan (100% anonim)</span>'),
+            ('Watermark', '<span class="badge-highlight">Tanpa watermark tambahan</span>'),
+            ('Dukungan perangkat', 'iPhone, iPad, Android, Windows, macOS, Linux (semua browser modern)'),
+            ('Penyimpanan file', 'Nol. Hanya proxy aliran data secara real-time'),
+            ('Batasan', 'Hanya profil publik. Tidak dapat mengunduh dari akun privat')
+        ],
+        'comp_h3': 'Mengapa downsocial Lebih Baik dari SaveInsta, iGram, dan InDown',
+        'comp_p': 'Alat lawas seperti <em>SaveInsta</em> dan <em>iGram</em> dipenuhi pop-up iklan yang mengganggu dan server yang lambat. downsocial menyajikan unduhan berkecepatan tinggi langsung dari CDN tanpa iklan menjengkelkan, kualitas 1080p asli, dan konversi instan ke MP3.',
+        'comp_headers': ['Perbandingan Fitur', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('Resolusi Video Maksimal', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('Iklan Pop-up Mengganggu', '<span class="badge-highlight">Nol (Antarmuka Bersih)</span>', 'Banyak Iklan', 'Iklan Sering Muncul', 'Banyak Iklan'),
+            ('Konversi Audio (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'Dasar', 'Tidak Tersedia', 'Dasar'),
+            ('Pengunduh Story Anonim', '<span class="badge-highlight">100% Anonim</span>', 'Ya', 'Terbatas', 'Ya'),
+            ('Tanpa Perlu Login', '<span class="badge-highlight">100% Anonim</span>', 'Tanpa Login', 'Tanpa Login', 'Tanpa Login')
+        ],
+        't2_h3': 'Tautan Instagram Mana Saja yang Didukung?',
+        't2_intro': 'Selama konten berstatus publik, seluruh format tautan berikut didukung sepenuhnya:',
+        't2_headers': ['Jenis Tautan', 'Struktur URL', 'Didukung Saat'],
+        't2_rows': [
+            ('Instagram Reel', 'instagram.com/reel/... atau /reels/...', 'Reel berada pada akun publik'),
+            ('Video Feed / Post', 'instagram.com/p/...', 'Postingan berada pada akun publik'),
+            ('Story Publik', 'instagram.com/stories/username/...', 'Story masih aktif (dalam 24 jam)'),
+            ('Sorotan (Highlight)', 'instagram.com/stories/highlights/...', 'Sorotan bersifat publik'),
+            ('Album Carousel', 'instagram.com/p/... (postingan multi-slide)', 'Postingan publik (mengunduh semua slide)'),
+            ('Tautan Bagikan Seluler', 'instagram.com/share/...', 'Konten target bersifat publik')
+        ],
+        'copy_h3': 'Cara Menyalin Tautan Video Instagram',
+        'copy_items': [
+            '<strong>Aplikasi Instagram (iPhone atau Android):</strong> ketuk <strong>ikon Bagikan</strong> (pesawat kertas) di bawah Reel atau postingan, lalu pilih <strong>Salin Tautan</strong>. Untuk Story, ketuk tiga titik di sudut atas.',
+            '<strong>Browser Komputer:</strong> klik ikon tiga titik pada postingan dan pilih <strong>Salin tautan</strong>, atau salin URL langsung dari bilah alamat browser.',
+            '<strong>WhatsApp atau Aplikasi Obrolan:</strong> tekan lama pesan yang berisi tautan Instagram lalu salin URL-nya.'
+        ],
+        'device_h3': 'Cara Mengunduh Video Instagram di iPhone, Android, dan Komputer',
+        'ios': '<strong>Di iPhone dan iPad:</strong> buka downsocial.net di Safari, tempel tautan dan ketuk <em>Download Video</em>. Pilih <em>Video (HD)</em>. File akan tersimpan di folder Unduhan pada aplikasi File. Buka file tersebut, ketuk ikon Bagikan, dan pilih <em>Simpan Video</em> untuk memasukkannya ke Foto.',
+        'android': '<strong>Di Android:</strong> buka downsocial.net di Chrome, tempel tautan dan ketuk <em>Video (HD)</em>. File MP4 akan langsung terunduh ke memori ponsel dan muncul di Galeri Anda.',
+        'pc': '<strong>Di Windows atau Mac:</strong> tempel tautan ke kotak pencarian, klik <em>Download Video</em>, dan pilih format yang diinginkan.',
+        'priv_h3': 'Bisakah Mengunduh Video Instagram Privat?',
+        'priv_p': 'Tidak. downsocial hanya mengunduh video yang dapat dilihat siapa saja tanpa akun. Akun yang dikunci atau dibatasi tidak dapat diakses dan kami tidak pernah meminta kata sandi Anda.',
+        'qual_h3': 'Kualitas Video Instagram: 1080p Full HD Asli',
+        'qual_p': 'Kami menyajikan stream kualitas tertinggi yang diunggah kreator ke server Instagram tanpa penurunan resolusi.',
+        'mp3_h3': 'Mengubah Reel Instagram Menjadi Audio MP3',
+        'mp3_p': 'Ingin menyimpan lagu viral atau rekaman suara dari sebuah Reel? Pilih <strong>Audio (HQ MP3)</strong> pada 192 kbps atau <strong>Audio (Normal MP3)</strong> pada 128 kbps.',
+        'trouble_h3': 'Penyebab Video Instagram Gagal Diunduh',
+        'trouble_headers': ['Masalah', 'Kemungkinan Penyebab', 'Solusi yang Dianjurkan'],
+        'trouble_rows': [
+            ('"Could not extract video"', 'Akun privat atau postingan telah dihapus', 'Buka tautan di tab penyamaran untuk memastikan video berstatus publik'),
+            ('Gagal mengunduh Story', 'Story telah kedaluwarsa setelah 24 jam', 'Unduh saat Story masih aktif dan dapat dilihat'),
+            ('Tidak ada respon setelah menempel', 'Tautan mengarah ke beranda profil, bukan video spesifik', 'Salin tautan langsung dari Reel atau postingan yang ingin disimpan'),
+            ('Audio tidak sinkron', 'Gangguan cache browser', 'Unduh menggunakan Video (HD) dan putar dengan pemutar media ponsel'),
+            ('Kecepatan lambat', 'Koneksi internet tidak stabil', 'Pilih opsi Video (Normal) atau beralih ke jaringan Wi-Fi')
+        ],
+        'use_h3': 'Alasan Populer Menyimpan Video Instagram',
+        'use_items': [
+            'Cadangkan koleksi Reels dan Stories pribadi sebelum akun dihapus.',
+            'Menonton video tutorial olahraga, resep masakan, dan wisata secara offline.',
+            'Membagikan video menarik kepada keluarga lewat WhatsApp.',
+            'Mengekstrak audio bebas royalti untuk kebutuhan pembuatan video.'
+        ],
+        'safe_h3': 'Apakah Mengunduh Video Instagram Aman dan Legal?',
+        'safe_p': '<strong>Aman:</strong> berjalan sepenuhnya di browser tanpa perlu instalasi aplikasi atau kata sandi. <strong>Legal:</strong> menyimpan konten publik untuk konsumsi offline pribadi adalah hal yang lazim. downsocial adalah entitas independen dan tidak terafiliasi dengan Meta Platforms, Inc.',
+        'tips_h3': 'Tips Memperoleh Hasil Unduhan Terbaik',
+        'tips_items': [
+            'Selalu salin tautan langsung dari tombol <em>Bagikan</em> pada postingan yang bersangkutan.',
+            'Gunakan opsi <strong>Video (HD)</strong> untuk menonton di layar lebar atau TV.',
+            'Pilih <strong>Audio (HQ MP3)</strong> bila hanya menginginkan trek lagunya saja.',
+            'Jika terjadi kegagalan, pastikan akun pengunggah berstatus publik.'
+        ],
+        'sister_h3': 'Jelajahi Pengunduh Khusus Kami Lainnya',
+        'sister_p': 'Ingin mengunduh dari media sosial lain? Kunjungi alat gratis kami untuk <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a>, serta <a href="../index.html">Universal All-in-One Downloader</a>.',
+        'last_updated': 'Pembaruan terakhir: 3 Oktober 2026. Ada pertanyaan atau tautan bermasalah? <a href="contact.html">Hubungi tim bantuan kami</a>.'
+    },
+
+    'zh': {
+        'qa_title': '快速解答：如何下载 Instagram 视频与 Reels 短视频',
+        'qa_text': '下载 Instagram 视频或 Reel，只需复制其链接，粘贴到本页面顶部的搜索框中，点击<em>下载视频</em>，然后选择 <strong>Video (HD)</strong> 或 <strong>Audio (HQ MP3)</strong>。完全免费，无需登录或安装任何应用，兼容 iPhone、Android、Windows 和 Mac。仅支持下载公开的视频与快拍。',
+        'h2': 'Instagram 视频下载器：免费高清保存 Reels、快拍与帖子',
+        'intro': '这款 <strong>Instagram 视频下载器</strong> 专为将公开的 Instagram Reels 短视频、动态视频、快拍 (Stories) 及轮播相册转换为本地离线媒体文件而打造。它直接提取 Instagram CDN 原始数据流，以最高画质保存为 MP4 视频或 MP3 音频，绝无弹窗骚扰。',
+        't1_h3': 'Instagram 视频下载器一览',
+        't1_headers': ['功能特点', '详细说明'],
+        't1_rows': [
+            ('支持的内容', '公开 Instagram Reels、动态视频、快拍 Stories、精彩集锦 (Highlights)、多图轮播及 IGTV'),
+            ('支持的链接', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('输出格式', 'MP4 视频（1080p 高清与标清）、MP3 音频（192 kbps 高清与 128 kbps）、JPEG 图片'),
+            ('视频画质', '原画质最高支持 1080p Full HD (60fps)，绝不压缩画质或虚标分辨率'),
+            ('服务费用', '<span class="badge-highlight">完全免费，无限次下载</span>'),
+            ('账号要求', '<span class="badge-highlight">无需登录或注册（100% 匿名）</span>'),
+            ('水印状态', '<span class="badge-highlight">不添加任何平台水印</span>'),
+            ('适用设备', 'iPhone, iPad, Android, Windows, macOS, Linux（所有现代浏览器）'),
+            ('文件留存', '不保存任何文件，仅作为实时提取通道'),
+            ('限制条件', '仅限公开主页，无法突破私密账户权限')
+        ],
+        'comp_h3': '为什么 downsocial 显著优于 SaveInsta、iGram 和 InDown',
+        'comp_p': '诸如 <em>SaveInsta</em>、<em>iGram</em> 和 <em>InDown</em> 等老旧网站常常充斥着弹窗广告和无效跳转。downsocial 提供极速 CDN 直链下载、纯净无骚扰的界面、真正的 1080p 画质以及实时 MP3 音频提取。',
+        'comp_headers': ['特性对比', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('最高视频分辨率', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('弹窗骚扰广告', '<span class="badge-highlight">零弹窗（清爽无广告）</span>', '大量广告', '频繁弹窗', '大量广告'),
+            ('音频转码 (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', '基础音质', '不支持', '基础音质'),
+            ('匿名下载快拍', '<span class="badge-highlight">100% 匿名查看</span>', '支持', '受限', '支持'),
+            ('无需登录账户', '<span class="badge-highlight">100% 匿名使用</span>', '无需登录', '无需登录', '无需登录')
+        ],
+        't2_h3': '支持哪些 Instagram 链接格式？',
+        't2_intro': '只要目标内容处于公开状态，以下所有格式均可顺利解析：',
+        't2_headers': ['链接类型', 'URL 结构', '生效条件'],
+        't2_rows': [
+            ('Instagram Reel 短视频', 'instagram.com/reel/... 或 /reels/...', 'Reel 处于公开主页'),
+            ('动态视频 / 帖子', 'instagram.com/p/...', '帖子处于公开主页'),
+            ('公开快拍 (Story)', 'instagram.com/stories/用户名/...', '快拍处于发布 24 小时有效期内'),
+            ('精彩集锦 (Highlight)', 'instagram.com/stories/highlights/...', '集锦为公开可见状态'),
+            ('轮播帖子相册', 'instagram.com/p/... (含多张图/视频)', '帖子公开（自动提取全部幻灯片）'),
+            ('手机端分享链接', 'instagram.com/share/...', '目标内容为公开状态')
+        ],
+        'copy_h3': '如何复制 Instagram 视频链接',
+        'copy_items': [
+            '<strong>手机端 Instagram 应用程序（iPhone 或 Android）：</strong>点击 Reel 或帖子下方的<strong>分享图标</strong>（纸飞机），然后点击<strong>复制链接</strong>。快拍请点击右上角三个点复制。',
+            '<strong>电脑端网页浏览器：</strong>点击帖子右上角的三个小点选择<strong>复制链接</strong>，或者直接从地址栏复制完整网址。',
+            '<strong>微信或聊天软件：</strong>长按聊天记录中收到的 Instagram 链接并复制。'
+        ],
+        'device_h3': '在 iPhone、Android 和电脑上下载 Instagram 视频的步骤',
+        'ios': '<strong>在 iPhone 和 iPad 上：</strong>在 Safari 中打开 downsocial.net，粘贴链接并点击<em>下载视频</em>。选择 <em>Video (HD)</em> 确认下载。文件会存入“文件”App的下载目录中。打开文件点击分享按钮，选择<em>存储视频</em>即可存入系统相册。',
+        'android': '<strong>在 Android 设备上：</strong>在 Chrome 中打开 downsocial.net，粘贴链接并点击 <em>Video (HD)</em>。MP4 文件会直接保存到系统相册与下载目录中。',
+        'pc': '<strong>在 Windows 或 Mac 上：</strong>将复制的链接粘贴到搜索框中，点击<em>下载视频</em>并选择画质，文件即会直接下载到浏览器的默认下载文件夹中。',
+        'priv_h3': '是否可以下载私密 Instagram 视频？',
+        'priv_p': '不可以。downsocial 仅支持公开可访问的内容。私密账户、仅限密友可见的动态均无法下载，我们也绝不会索取您的账号密码。',
+        'qual_h3': 'Instagram 视频画质：原始 1080p Full HD',
+        'qual_p': '我们提取 Instagram 服务器所能提供的最高码率（Reels 常见为 1080x1920 60fps），绝不压缩清晰度。',
+        'mp3_h3': '将 Instagram Reels 转换为 MP3 音频',
+        'mp3_p': '如果您看中了爆款背景音乐或名人格言配乐，请选择 <strong>Audio (HQ MP3)</strong>（192 kbps），实时转码并保存到音乐库。',
+        'trouble_h3': 'Instagram 视频无法下载的排查方法',
+        'trouble_headers': ['现象', '可能原因', '建议解决方法'],
+        'trouble_rows': [
+            ('“无法提取视频”提示', '主页已设为私密或帖子已被博主删除', '在隐身窗口中打开链接，若需登录则无法下载'),
+            ('快拍无法下载', '快拍发布已超过 24 小时自然失效', '请在快拍仍在展示期间尽快保存'),
+            ('粘贴后没有响应', '链接指向的是个人主页而非单条视频', '进入具体的视频播放界面复制专属直链'),
+            ('音画不同步', '浏览器播放器缓存异常', '使用 Video (HD) 保存到本地后用常规播放器播放'),
+            ('下载速度慢', '当前网络连接不稳定', '尝试选择 Video (Normal) 或连接高速 Wi-Fi')
+        ],
+        'use_h3': '用户保存 Instagram 视频的常见用途',
+        'use_items': [
+            '备份<strong>自己</strong>的优质 Reels 和快拍，防止账号异常导致珍贵创作丢失。',
+            '离线观看旅行攻略、健身动作示范和烹饪技巧教程。',
+            '将有趣的创意视频下载后分享给微信或 QQ 好友。',
+            '提取无版权人声或配乐音轨用于二次剪辑。'
+        ],
+        'safe_h3': '下载 Instagram 视频是否安全合法？',
+        'safe_p': '<strong>安全性：</strong>完全在浏览器网页内运行，无需安装扩展程序，无需输入账号密码。<strong>合法性：</strong>保存公开视频供个人离线学习是常见行为，原作品知识产权仍归原作者所有。downsocial 与 Meta 官方无任何隶属关系。',
+        'tips_h3': '获得最佳下载体验的建议',
+        'tips_items': [
+            '始终优先通过视频下方的<em>分享</em>按钮复制直接链接。',
+            '若在大屏幕电视或平板上欣赏，强烈建议选择 <strong>Video (HD)</strong>。',
+            '若仅需要伴奏音乐，请直接选择 <strong>Audio (HQ MP3)</strong>。',
+            '如遇解析异常，请先检查目标博主的主页是否为全网公开。'
+        ],
+        'sister_h3': '探索我们的其他专用平台下载工具',
+        'sister_p': '需要保存其他社交媒体的内容？欢迎体验我们的专用免费工具：<a href="../facebook-downloader/">Facebook 视频下载器</a>、<a href="../youtube-downloader/">YouTube 视频与 Shorts 下载器</a>、<a href="../tiktok-downloader/">TikTok 视频下载器</a>、<a href="../snapchat-downloader/">Snapchat 下载器</a>、<a href="../threads-downloader/">Threads 下载器</a>以及<a href="../index.html">全能音视频下载器</a>。',
+        'last_updated': '最后更新：2026年10月3日。如有任何疑问或遇到异常链接，欢迎<a href="contact.html">联系我们的客服团队</a>。'
+    },
+
+    'ur': {
+        'qa_title': 'فوری جواب: انسٹاگرام ویڈیو اور ریلز کیسے ڈاؤن لوڈ کریں',
+        'qa_text': 'کسی بھی انسٹاگرام ویڈیو یا ریل کو ڈاؤن لوڈ کرنے کے لیے، اس کا لنک کاپی کریں، اس صفحے کے اوپری سرچ باکس میں پیسٹ کریں، <em>Download Video</em> پر کلک کریں اور <strong>Video (HD)</strong> یا <strong>Audio (HQ MP3)</strong> منتخب کریں۔ یہ 100% مفت ہے، کسی لاگ ان یا ایپ کی ضرورت نہیں ہے، اور iPhone، Android، Windows اور Mac پر کام کرتا ہے۔ صرف پبلک ویڈیوز اور اسٹوریز ہی ڈاؤن لوڈ کی جا سکتی ہیں۔',
+        'h2': 'انسٹاگرام ویڈیو ڈاؤنلوڈر: ریلز، اسٹوریز اور پوسٹس کو HD میں محفوظ کریں',
+        'intro': 'یہ <strong>Instagram video downloader</strong> ایک بنیادی مقصد کے لیے بنایا گیا ہے: پبلک انسٹاگرام ریلز، فیڈ ویڈیوز، اسٹوریز اور کیروسل البمز کو آپ کے موبائل یا کمپیوٹر پر محفوظ فائلوں میں تبدیل کرنا۔ یہ انسٹاگرام کے CDN سے براہ راست اصل کوالٹی حاصل کر کے MP4 ویڈیو یا MP3 آڈیو فراہم کرتا ہے۔',
+        't1_h3': 'انسٹاگرام ویڈیو ڈاؤنلوڈر کی نمایاں خصوصیات',
+        't1_headers': ['خصوصیت', 'تفصیل'],
+        't1_rows': [
+            ('سپورٹ شدہ مواد', 'پبلک انسٹاگرام ریلز، فیڈ ویڈیوز، اسٹوریز، ہائی لائٹس، کیروسل پوسٹس اور IGTV'),
+            ('قبول شدہ لنکس', 'instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...'),
+            ('فائل فارمیٹس', 'MP4 ویڈیو (1080p HD اور Normal)، MP3 آڈیو (192 kbps اور 128 kbps)، تصاویر'),
+            ('ویڈیو کوالٹی', '1080p Full HD (60fps) تک اصل اپ لوڈ کوالٹی۔ کوئی نقلی اضافہ نہیں'),
+            ('قیمت', '<span class="badge-highlight">بالکل مفت، لامحدود ڈاؤن لوڈز</span>'),
+            ('اکاؤنٹ یا لاگ ان', '<span class="badge-highlight">کسی لاگ ان کی ضرورت نہیں (100% گمنام)</span>'),
+            ('واٹر مارک', '<span class="badge-highlight">کوئی واٹر مارک نہیں لگایا جاتا</span>'),
+            ('ڈیوائس سپورٹ', 'iPhone, iPad, Android, Windows, macOS, Linux (تمام براؤزرز)'),
+            ('ڈیٹا پرائیویسی', 'صفر۔ ہم کوئی فائل سرور پر محفوظ نہیں کرتے'),
+            ('حدود', 'صرف پبلک پروفائلز۔ پرائیویٹ اکاؤنٹس سے ڈاؤن لوڈ نہیں ہو سکتا')
+        ],
+        'comp_h3': 'downsocial دیگر ٹولز (SaveInsta, iGram) سے کیوں بہتر ہے',
+        'comp_p': 'پرانے ٹولز میں بے شمار پاپ اپ اشتہارات اور خراب ڈاؤن لوڈ اسپیڈ ہوتی ہے۔ downsocial بغیر اشتہارات کے براہ راست تیز رفتار CDN ڈاؤن لوڈ اور اعلیٰ 1080p کوالٹی فراہم کرتا ہے۔',
+        'comp_headers': ['خصوصیات کا موازنہ', 'downsocial.net', 'SaveInsta', 'iGram', 'InDown'],
+        'comp_rows': [
+            ('زیادہ سے زیادہ ویڈیو ریزولوشن', '<span class="badge-highlight">1080p Full HD (60fps)</span>', '1080p', '720p / 1080p', '1080p'),
+            ('پاپ اپ اشتہارات', '<span class="badge-highlight">صفر (صاف ستھرا انٹرفیس)</span>', 'بہت اشتہارات', 'مسلسل اشتہارات', 'بہت اشتہارات'),
+            ('آڈیو کنورژن (MP3)', '<span class="badge-highlight">HQ 192 kbps MP3</span>', 'بنیادی', 'دستیاب نہیں', 'بنیادی'),
+            ('گمنام اسٹوری ڈاؤنلوڈر', '<span class="badge-highlight">100% گمنام</span>', 'ہاں', 'محدود', 'ہاں'),
+            ('لاگ ان کی ضرورت نہیں', '<span class="badge-highlight">100% گمنام</span>', 'بغیر لاگ ان', 'بغیر لاگ ان', 'بغیر لاگ ان')
+        ],
+        't2_h3': 'کون سے انسٹاگرام لنکس کام کرتے ہیں؟',
+        't2_intro': 'اگر مواد پبلک ہے تو درج ذیل تمام فارمیٹس کے لنکس کام کرتے ہیں:',
+        't2_headers': ['لنک کی قسم', 'لنک کی بناوٹ', 'کب کام کرتا ہے'],
+        't2_rows': [
+            ('انسٹاگرام ریل', 'instagram.com/reel/... یا /reels/...', 'ریل پبلک اکاؤنٹ پر ہو'),
+            ('فیڈ ویڈیو / پوسٹ', 'instagram.com/p/...', 'پوسٹ پبلک اکاؤنٹ پر ہو'),
+            ('پبلک اسٹوری', 'instagram.com/stories/username/...', 'اسٹوری فعال ہو (24 گھنٹے کے اندر)'),
+            ('ہائی لائٹ', 'instagram.com/stories/highlights/...', 'ہائی لائٹ پبلک ہو'),
+            ('کیروسل البم', 'instagram.com/p/... (ملٹی سلائیڈ پوسٹ)', 'پوسٹ پبلک ہو (تمام سلائیڈز نکالتا ہے)'),
+            ('موبائل شیئر لنک', 'instagram.com/share/...', 'مواد پبلک ہو')
+        ],
+        'copy_h3': 'انسٹاگرام ویڈیو کا لنک کاپی کرنے کا طریقہ',
+        'copy_items': [
+            '<strong>انسٹاگرام موبائل ایپ (iPhone یا Android):</strong> ریل یا پوسٹ کے نیچے <strong>Share آئیکن</strong> (کاغذی جہاز) دبائیں، پھر <strong>Copy Link</strong> منتخب کریں۔',
+            '<strong>کمپیوٹر براؤزر پر:</strong> پوسٹ کے تھری ڈاٹس پر کلک کر کے <strong>Copy link</strong> منتخب کریں۔',
+            '<strong>واٹس ایپ یا میسنجر:</strong> اگر کسی نے لنک بھیجا ہے تو میسج سے لنک کاپی کریں۔'
+        ],
+        'device_h3': 'iPhone، Android اور کمپیوٹر پر انسٹاگرام ویڈیو ڈاؤن لوڈ کرنے کا طریقہ',
+        'ios': '<strong>iPhone اور iPad پر:</strong> Safari میں downsocial.net کھولیں، لنک پیسٹ کریں اور <em>Download Video</em> دبائیں۔ <em>Video (HD)</em> کا انتخاب کریں۔ فائل Files ایپ میں Downloads کے اندر محفوظ ہوگی، وہاں سے Share دبا کر Save Video کریں تاکہ Photos میں محفوظ ہو جائے۔',
+        'android': '<strong>Android پر:</strong> Chrome میں downsocial.net کھولیں، لنک پیسٹ کریں اور <em>Video (HD)</em> دبائیں۔ فائل فوراً فون گیلری میں آ جائے گی۔',
+        'pc': '<strong>Windows یا Mac پر:</strong> لنک پیسٹ کریں، <em>Download Video</em> پر کلک کریں اور مطلوبہ فارمیٹ منتخب کریں۔',
+        'priv_h3': 'کیا پرائیویٹ انسٹاگرام ویڈیوز ڈاؤن لوڈ کی جا سکتی ہیں؟',
+        'priv_p': 'نہیں۔ یہ ٹول صرف پبلک ویڈیوز ہی حاصل کر سکتا ہے۔ خفیہ یا پرائیویٹ اکاؤنٹس کی ویڈیوز ڈاؤن لوڈ نہیں ہو سکتیں اور ہم کبھی پاس ورڈ نہیں مانگتے۔',
+        'qual_h3': 'ویڈیو کوالٹی: اصل 1080p Full HD',
+        'qual_p': 'انسٹاگرام کے سرورز پر جو اعلیٰ ترین کوالٹی دستیاب ہوتی ہے ہم بغیر کسی کمی کے وہی فراہم کرتے ہیں۔',
+        'mp3_h3': 'ریلز کو MP3 آڈیو میں تبدیل کریں',
+        'mp3_p': 'اگر آپ کو کوئی بیک گراؤنڈ میوزک یا آواز پسند ہے تو 192 kbps کے لیے <strong>Audio (HQ MP3)</strong> منتخب کریں۔',
+        'trouble_h3': 'ویڈیو ڈاؤن لوڈ نہ ہونے کی ممکنہ وجوہات',
+        'trouble_headers': ['علامت', 'ممکنہ وجہ', 'حل'],
+        'trouble_rows': [
+            ('"Could not extract video"', 'اکاؤنٹ پرائیویٹ ہے یا ویڈیو ڈیلیٹ ہو چکی ہے', 'لنک کو پرائیویٹ ونڈو میں چلا کر چیک کریں'),
+            ('اسٹوری ڈاؤن لوڈ نہیں ہو رہی', 'اسٹوری کا 24 گھنٹے کا وقت ختم ہو چکا ہے', 'اسٹوری فعال رہنے کے دوران کوشش کریں'),
+            ('پیسٹ کرنے کے بعد کچھ نہیں ہوتا', 'لنک ویڈیو کا نہیں بلکہ پروفائل کا ہے', 'براہ راست اس ریل یا پوسٹ کا لنک کاپی کریں'),
+            ('آڈیو آگے پیچھے ہے', 'براؤزر کیشے کا مسئلہ', 'Video (HD) ڈاؤن لوڈ کر کے فون کے میڈیا پلیئر میں چلائیں'),
+            ('ڈاؤن لوڈ سست ہے', 'کمزور انٹرنیٹ', 'Video (Normal) منتخب کریں یا وائی فائی استعمال کریں')
+        ],
+        'use_h3': 'لوگ انسٹاگرام ویڈیوز کیوں محفوظ کرتے ہیں؟',
+        'use_items': [
+            'اکاؤنٹ ختم کرنے سے پہلے اپنی ریلز اور اسٹوریز کا محفوظ بیک اپ رکھنا۔',
+            'انٹرنیٹ کے بغیر کھانا پکانے اور فٹنس کی ویڈیوز دیکھنا۔',
+            'واٹس ایپ پر فیملی اور دوستوں کے ساتھ دلچسپ ریلز شیئر کرنا۔',
+            'اپنی ویڈیو ایڈیٹنگ کے لیے میوزک اور ساؤنڈز نکالنا۔'
+        ],
+        'safe_h3': 'کیا انسٹاگرام ویڈیوز ڈاؤن لوڈ کرنا محفوظ اور قانونی ہے؟',
+        'safe_p': '<strong>محفوظ:</strong> بغیر کسی سافٹ ویئر اور بغیر لاگ ان کے چلتا ہے۔ <strong>قانونی:</strong> ذاتی استعمال کے لیے پبلک مواد محفوظ کرنا جائز ہے۔ downsocial میٹا سے وابستہ نہیں ہے۔',
+        'tips_h3': 'بہترین نتائج کے لیے تجاویز',
+        'tips_items': [
+            'لنک ہمیشہ پوسٹ کے اپنے <em>Share</em> مینو سے کاپی کریں۔',
+            'بڑی اسکرین کے لیے <strong>Video (HD)</strong> کا انتخاب کریں۔',
+            'صرف گانا چاہیے تو <strong>Audio (HQ MP3)</strong> ڈاؤن لوڈ کریں۔',
+            'خرابی کی صورت میں چیک کریں کہ پروفائل پبلک ہے۔'
+        ],
+        'sister_h3': 'دیگر پلیٹ فارمز کے ڈاؤنلوڈرز',
+        'sister_p': 'ہماری دیگر مفت سروسز آزمائیں: <a href="../facebook-downloader/">Facebook Video Downloader</a>, <a href="../youtube-downloader/">YouTube Video &amp; Shorts Downloader</a>, <a href="../tiktok-downloader/">TikTok Video Downloader</a>, <a href="../snapchat-downloader/">Snapchat Downloader</a>, <a href="../threads-downloader/">Threads Downloader</a> اور ہمارا <a href="../index.html">آل ان ون ڈاؤنلوڈر</a>۔',
+        'last_updated': 'آخری اپ ڈیٹ: 3 اکتوبر 2026۔ کوئی سوال یا مسئلہ ہے؟ <a href="contact.html">سپورٹ ٹیم سے رابطہ کریں</a>۔'
+    }
+}
+
+code = '''# scratch/seo_data_instagram.py
+# Complete 12-language Instagram SEO Article data
+import os
+
+INSTAGRAM_DATA = ''' + repr(INSTAGRAM_TRANSLATIONS) + '''
+
+def get_instagram_seo(lang):
+    if lang == 'en':
+        path = os.path.join(os.path.dirname(__file__), 'orig_seo_instagram.html')
+        with open(path, 'r', encoding='utf-8') as f:
+            return f.read()
+    
+    d = INSTAGRAM_DATA.get(lang, INSTAGRAM_DATA['es'])
+    
+    t1_th = "".join(f"<th>{h}</th>" for h in d['t1_headers'])
+    t1_tr = "".join(f"<tr><td>{r[0]}</td><td>{r[1]}</td></tr>" for r in d['t1_rows'])
+    
+    comp_th = "".join(f"<th>{h}</th>" for h in d['comp_headers'])
+    comp_tr = "".join(f"<tr><td><strong>{r[0]}</strong></td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td><td>{r[4]}</td></tr>" for r in d['comp_rows'])
+    
+    t2_th = "".join(f"<th>{h}</th>" for h in d['t2_headers'])
+    t2_tr = "".join(f"<tr><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td></tr>" for r in d['t2_rows'])
+    
+    copy_li = "".join(f"<li>{item}</li>" for item in d['copy_items'])
+    
+    trb_th = "".join(f"<th>{h}</th>" for h in d['trouble_headers'])
+    trb_tr = "".join(f"<tr><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td></tr>" for r in d['trouble_rows'])
+    
+    use_li = "".join(f"<li>{item}</li>" for item in d['use_items'])
+    tips_li = "".join(f"<li>{item}</li>" for item in d['tips_items'])
+    
+    html = f"""<article class="seo-article" id="guide">
+    <h2 id="overview">{d['h2']}</h2>
+    <p class="pro-tip quick-answer"><strong>{d['qa_title']}:</strong> {d['qa_text']}</p>
+    <p>{d['intro']}</p>
+    
+    <h3 id="at-a-glance">{d['t1_h3']}</h3>
+    <div class="seo-table-container">
+        <table class="seo-table">
+            <thead>
+                <tr>{t1_th}</tr>
+            </thead>
+            <tbody>
+                {t1_tr}
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="why-downsocial">{d['comp_h3']}</h3>
+    <p>{d['comp_p']}</p>
+    <div class="seo-table-container">
+        <table class="seo-table">
+            <thead>
+                <tr>{comp_th}</tr>
+            </thead>
+            <tbody>
+                {comp_tr}
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="supported-links">{d['t2_h3']}</h3>
+    <p>{d['t2_intro']}</p>
+    <div class="seo-table-container">
+        <table class="seo-table">
+            <thead>
+                <tr>{t2_th}</tr>
+            </thead>
+            <tbody>
+                {t2_tr}
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="how-to-copy">{d['copy_h3']}</h3>
+    <ul>
+        {copy_li}
+    </ul>
+
+    <h3 id="device-instructions">{d['device_h3']}</h3>
+    <p>{d['ios']}</p>
+    <p>{d['android']}</p>
+    <p>{d['pc']}</p>
+
+    <h3 id="private-videos">{d['priv_h3']}</h3>
+    <p>{d['priv_p']}</p>
+
+    <h3 id="video-quality">{d['qual_h3']}</h3>
+    <p>{d['qual_p']}</p>
+
+    <h3 id="mp3-audio">{d['mp3_h3']}</h3>
+    <p>{d['mp3_p']}</p>
+
+    <h3 id="troubleshooting">{d['trouble_h3']}</h3>
+    <div class="seo-table-container">
+        <table class="seo-table">
+            <thead>
+                <tr>{trb_th}</tr>
+            </thead>
+            <tbody>
+                {trb_tr}
+            </tbody>
+        </table>
+    </div>
+
+    <h3 id="use-cases">{d['use_h3']}</h3>
+    <ul>
+        {use_li}
+    </ul>
+
+    <h3 id="safety-legal">{d['safe_h3']}</h3>
+    <p>{d['safe_p']}</p>
+
+    <h3 id="tips">{d['tips_h3']}</h3>
+    <ul>
+        {tips_li}
+    </ul>
+
+    <h3 id="sister-tools">{d['sister_h3']}</h3>
+    <p>{d['sister_p']}</p>
+
+    <p><small>{d['last_updated']}</small></p>
+</article>"""
+    return html
+'''
+
+target_path = os.path.join(os.path.dirname(__file__), 'seo_data_instagram.py')
+with open(target_path, 'w', encoding='utf-8') as f:
+    f.write(code)
+print("Wrote seo_data_instagram.py successfully!")

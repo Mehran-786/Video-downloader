@@ -1,0 +1,101 @@
+# downsocial Facebook Video Downloader
+Source: https://downsocial.net/facebook-downloader/
+Last Updated: October 2, 2026
+
+## Quick Answer
+To download a Facebook video, copy its link from the Facebook app or website, paste it into the search box at downsocial.net/facebook-downloader/, click "Download Video", and select HD MP4, Normal MP4, or MP3 audio. The service is 100% free, requires no login or application installation, and works across iPhone, Android, Windows, and Mac. Only public videos can be downloaded.
+
+## Product Overview
+downsocial Facebook Video Downloader is a high-speed web utility dedicated to converting public Facebook video, Reel, Watch, and share links into downloadable media. Files are streamed in real time without permanent server-side storage, watermarks, or user account requirements.
+
+## At a Glance Specifications
+- Supported content: Public Facebook videos, Reels, Watch videos, public Stories (within 24h), and finished Live broadcasts.
+- Accepted URL formats: facebook.com, m.facebook.com, facebook.com/share, fb.watch short links.
+- Output formats: MP4 video (HD 720p/1080p and Normal), MP3 audio (192 kbps and 128 kbps).
+- Audio conversion: Real-time stereo MP3 transcoding.
+- Pricing: 100% Free with unlimited downloads.
+- Authentication: No account, password, or cookies required.
+- Watermark: None added.
+- Compatibility: Safari (iOS/macOS), Chrome (Android/Windows/macOS), Firefox, Edge.
+- File storage: Zero server storage. Technical streaming proxy only.
+- Limitations: Only public videos are supported. Cannot download private group posts, friends-only videos, or active Live streams. Quality is capped by the original uploader.
+
+## Supported Facebook Link Types
+| Link Type | Format Pattern | Status |
+| --- | --- | --- |
+| Watch video | `facebook.com/watch/?v=...` | Supported (Public) |
+| Reel | `facebook.com/reel/...` | Supported (Public) |
+| Share link | `facebook.com/share/v/...` or `/share/r/...` | Supported (Public) |
+| Short link | `fb.watch/...` | Supported (Public) |
+| Page/Profile video | `facebook.com/PageName/videos/...` | Supported (Public) |
+| Mobile link | `m.facebook.com/...` | Supported (Public) |
+| Public Group video | `facebook.com/groups/.../posts/...` | Supported (Public) |
+
+## How to Copy a Facebook Video Link
+- Facebook mobile app (iOS & Android): Tap "Share" below the video or Reel, then select "Copy Link".
+- Facebook on desktop computer: Click the three-dot menu on the post or right-click the post timestamp and choose "Copy link address".
+- Messaging apps (WhatsApp / Messenger): Long press the shared video card and select "Copy Link".
+
+## How to Download Facebook Videos by Device
+- iPhone & iPad: Open downsocial.net/facebook-downloader/ in Safari. Paste the link and tap "Download Video". Safari saves the file into the Files app (Downloads folder). Open the file, tap Share, and tap "Save Video" to move it to Photos.
+- Android: Open the page in Chrome, paste the link, and tap "Video (HD)". The MP4 file downloads straight into the Downloads folder and appears in the Gallery app.
+- Windows & Mac: Paste the link into the downloader in any browser, tap "Download Video", and click your format. The file is saved directly to your default browser downloads directory.
+
+## Private Video Policy
+downsocial only processes publicly accessible media. Friends-only videos, secret groups, and password-protected posts cannot be fetched. downsocial never requests user credentials, cookies, or account access.
+
+## Frequently Asked Questions (FAQ)
+
+### Q1. How do I download a Facebook video?
+Copy the video's link from Facebook, paste it into the box on this page, tap Download Video, then choose Video (HD), Video (Normal) or an MP3 option. The file saves to your device in seconds. No login or app is needed, and it works on phones and computers.
+
+### Q2. Is this Facebook video downloader free?
+Yes. It is free with no download limit, no subscription and no account. You only need a public Facebook video link.
+
+### Q3. Can I download Facebook Reels?
+Yes. Copy the Reel's link (facebook.com/reel/... or a share link) and paste it in. Reels download as MP4 with their original sound, or you can save just the audio as MP3.
+
+### Q4. Can I download private Facebook videos?
+No. Only videos that are publicly accessible can be downloaded. Friends-only, group-private or private videos cannot be fetched, and this tool never asks for your Facebook login. If you need a private video, ask the owner to share the file with you.
+
+### Q5. How do I download Facebook videos on iPhone?
+Open this page in Safari, paste the link and tap Download Video. Safari saves the file to Files, then Downloads. Open it, tap Share and choose Save Video to add it to your Photos app.
+
+### Q6. How do I download Facebook videos on Android?
+Open this page in Chrome or any browser, paste the link and tap Download Video. The MP4 saves to your Downloads folder and normally shows up in Gallery or the Files app.
+
+### Q7. How do I download Facebook videos on a PC or Mac?
+Paste the Facebook link into the box, click Download Video, then click Video (HD). The file goes to your browser's Downloads folder. No software or extension is required.
+
+### Q8. What quality can I download Facebook videos in?
+You get the best quality Facebook makes available for that specific video, commonly 720p or 1080p. Video (HD) is the top version and Video (Normal) is a smaller one. We never upscale, so a low-resolution upload stays low-resolution.
+
+### Q9. Can I convert a Facebook video to MP3?
+Yes. After the video loads, tap Audio (HQ MP3) for 192 kbps or Audio (Normal MP3) for 128 kbps. The sound is extracted and converted to MP3 on our server while you download.
+
+### Q10. Does the downloaded video have a watermark?
+No. We do not add any watermark, logo or overlay. The file is the video Facebook serves, without our branding.
+
+### Q11. Why is my Facebook video link not working?
+The most common reasons are that the video is private or friends-only, it was deleted, it is a Live stream still in progress, or the link points to a profile or post instead of the video itself. Open the link in a private browser window: if you cannot watch it there, the downloader cannot fetch it either.
+
+### Q12. Can I download Facebook Stories and Live videos?
+Public Stories and finished Live videos can work when the link is publicly accessible and the content is still available. Stories expire after 24 hours, and a Live stream must have ended before it can be downloaded.
+
+### Q13. Do I need to log in or share my Facebook password?
+No. We never ask for your Facebook email, password or cookies. Just paste a public link.
+
+### Q14. Is it legal to download Facebook videos?
+Downloading a public video for personal, offline viewing is generally tolerated, but the video is still owned by its creator. Do not re-upload, sell or redistribute videos you do not have rights to. You are responsible for following copyright law and Facebook's terms where you live.
+
+## Troubleshooting Common Issues
+| Issue | Primary Cause | Solution |
+| --- | --- | --- |
+| "Could not extract video" | Video is private or friends-only | Open URL in incognito window. If playback requires login, the video cannot be downloaded. |
+| Nothing happens on paste | Link points to a profile or timeline | Open the actual video post and copy URL from the Share menu. |
+| Live video fails | Broadcast is currently live | Wait until stream concludes and is saved as a recorded video. |
+| Story link fails | Story expired after 24 hours | Download must be initiated while the story is still active. |
+| Download stalls | Network timeout on large file | Switch from Video (HD) to Video (Normal) or retry on high-speed internet. |
+
+## Legal and Independence Disclaimer
+downsocial is an independent service. It is not affiliated with, authorized, maintained, sponsored, or endorsed by Meta Platforms, Inc. Facebook and the Facebook logo are registered trademarks of Meta Platforms, Inc.

@@ -1,0 +1,20 @@
+# downsocial Facebook Video Downloader
+> Free online tool to download Facebook Videos, Reels, Watch clips, and Stories in HD MP4 and MP3 without watermarks or login.
+
+## Canonical URL
+- https://downsocial.net/facebook-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/facebook-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/facebook-downloader/terms.html
+- Privacy Policy: https://downsocial.net/facebook-downloader/privacy.html
+- About Service: https://downsocial.net/facebook-downloader/about.html
+
+## Key Capabilities
+- Facebook Video Downloader (HD 1080p, 720p, SD MP4)
+- Facebook Reels Downloader with original audio
+- Facebook Watch & Live Broadcast (finished) Downloader
+- Facebook to MP3 Audio extraction (192kbps - 320kbps)
+- No account login, zero cookies, zero permanent server storage
+- No watermarks added to downloaded files
+- Fully responsive across iOS, Android, macOS, and Windows

@@ -1,0 +1,20 @@
+# downsocial — Private Video Downloader Engine (Web Page Source Method)
+> Fast, client-side, zero-login extraction of Facebook private videos, closed group media, and Instagram private Reels via browser HTML source code.
+
+## Canonical URL
+- Private Downloader Hub: https://downsocial.net/private-downloader/
+- Main Service: https://downsocial.net/
+
+## Overview & Architecture
+Due to Meta session authentication boundaries, server-side crawlers without authorization cookies cannot access private Facebook or Instagram content (HTTP 403 Forbidden). downsocial uses a zero-knowledge web-only workflow:
+1. User logs into Facebook or Instagram in their own browser where they are an approved follower or group member.
+2. User navigates to the private post and views HTML Page Source (Ctrl + U or view-source: URL prefix on mobile web).
+3. User pastes the page source into downsocial.net/private-downloader/.
+4. The client-side parser scans for authenticated CDN media tokens (`browser_native_hd_url`, `playable_url_quality_hd`, `hd_src`, `video_url`, `video_versions`).
+5. Direct HD/SD MP4 video and MP3 audio streams are generated for offline archival without requiring account passwords.
+
+## Security & Privacy Guarantee
+- Zero account passwords or cookies requested or stored.
+- Client-side DOM/regex parsing within the browser sandbox.
+- Transient CDN streaming proxy (/api/direct) with strict SSRF filtering.
+- 100% Free with zero ads or tracking.

@@ -1,0 +1,34 @@
+# downsocial Private Video Downloader — Full AI Architecture Specification
+
+## 1. System Objective
+Provide end-users who are authorized friends, followers, or group members with a completely web-browser-based, zero-installation method to extract and download high-definition (1080p Full HD) MP4 videos and MP3 audio from Facebook Private Profiles, Facebook Closed/Secret Groups, and Instagram Private Accounts without ever transmitting their account passwords, credentials, or session cookies to third-party servers.
+
+## 2. Technical Challenge & Root Cause
+Meta (Facebook & Instagram) safeguards private video assets by requiring authenticated session identifiers (e.g. `c_user`, `xs`, `sessionid`) on every HTTP GET request.
+When standard online video downloaders attempt to fetch a private URL, Meta's edge proxies return:
+- HTTP 403 Forbidden
+- HTTP 302 Found (Redirect to Login)
+
+No third-party scraper can legally or technically bypass this server-side restriction without an authenticated session.
+
+## 3. The Web Browser Page Source Solution
+When an authorized user loads the private video in their own web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, Brave, or Samsung Internet):
+1. The user's browser authenticates directly with Meta via TLS.
+2. Meta validates the user's friend/follower status and delivers the HTML response containing the temporary, signed media tokens (`fbcdn.net`, `cdninstagram.com`).
+3. The user views the HTML source code (`Ctrl + U` on desktop, or `view-source:<URL>` on mobile web browsers).
+4. The user copies this HTML and pastes it into downsocial Private Downloader.
+5. downsocial's parser regex extracts the direct signed CDN media streams.
+6. The user selects HD MP4 (1080p), SD MP4 (720p), or MP3 audio.
+7. downsocial's streaming endpoint (`/api/direct`) verifies the CDN host in its authorized whitelist and proxies the media stream with `Content-Disposition: attachment`, prompting a native browser save dialog.
+
+## 4. Supported Private Video Types
+- Facebook Personal Profile Videos (Friends Only)
+- Facebook Closed & Secret Group Videos
+- Facebook Private Watch & Live Streams (Replays)
+- Instagram Private Account Reels
+- Instagram Private Posts with Embedded Video
+
+## 5. Security & Fair Use Compliance
+- Zero Log Policy: Neither the pasted HTML nor the video files are stored on downsocial servers.
+- Zero Credential Exposure: Users never provide passwords or authentication cookies.
+- Personal Archival: Intended strictly for legitimate fair-use personal offline backup of content the user already has permission to view.

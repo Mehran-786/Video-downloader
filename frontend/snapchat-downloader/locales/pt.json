@@ -1,0 +1,926 @@
+{
+  "seo": {
+    "indexTitle": "Baixador de Vídeos de Redes Sociais HD — Tudo em Um 1080p e 4K MP4 / MP3",
+    "indexDesc": "Baixe vídeos, reels, shorts e stories do Facebook, Instagram, TikTok, YouTube, Snapchat e Threads em 1080p original, 4K e MP3 sem marcas d’água ou login.",
+    "indexKeywords": "index video downloader, download index video, downsocial index, free video downloader",
+    "indexOgTitle": "Baixador de Vídeos de Redes Sociais HD — Tudo em Um 1080p e 4K MP4 / MP3",
+    "indexOgDesc": "Baixe vídeos, reels, shorts e stories do Facebook, Instagram, TikTok, YouTube, Snapchat e Threads em 1080p original, 4K e MP3 sem marcas d’água ou login.",
+    "facebookTitle": "Baixador de Vídeos do Facebook HD — Salvar Reels, Stories e Vídeos do FB Grátis",
+    "facebookDesc": "Baixador rápido do Facebook. Baixe FB Reels, vídeos Watch, Stories e grupos em 1080p Full HD MP4 e áudio MP3 de 320kbps gratuitamente.",
+    "facebookKeywords": "facebook video downloader, download facebook video, downsocial facebook, free video downloader",
+    "facebookOgTitle": "Baixador de Vídeos do Facebook HD — Salvar Reels, Stories e Vídeos do FB Grátis",
+    "facebookOgDesc": "Baixador rápido do Facebook. Baixe FB Reels, vídeos Watch, Stories e grupos em 1080p Full HD MP4 e áudio MP3 de 320kbps gratuitamente.",
+    "instagramTitle": "Baixador do Instagram HD — Baixar Reels, Stories, Fotos e Carrossel Grátis",
+    "instagramDesc": "Baixe Reels, Stories, Fotos e Carrosséis do Instagram na resolução original e sem marca d’água. Rápido, seguro e sem login.",
+    "instagramKeywords": "instagram video downloader, download instagram video, downsocial instagram, free video downloader",
+    "instagramOgTitle": "Baixador do Instagram HD — Baixar Reels, Stories, Fotos e Carrossel Grátis",
+    "instagramOgDesc": "Baixe Reels, Stories, Fotos e Carrosséis do Instagram na resolução original e sem marca d’água. Rápido, seguro e sem login.",
+    "tiktokTitle": "Baixador do TikTok Sem Marca d’Água — Baixar Vídeos e MP3 do TikTok HD",
+    "tiktokDesc": "Baixe vídeos do TikTok sem marca d’água em HD MP4. Extraia músicas virais e áudios originais diretamente em MP3 de 320kbps.",
+    "tiktokKeywords": "tiktok video downloader, download tiktok video, downsocial tiktok, free video downloader",
+    "tiktokOgTitle": "Baixador do TikTok Sem Marca d’Água — Baixar Vídeos e MP3 do TikTok HD",
+    "tiktokOgDesc": "Baixe vídeos do TikTok sem marca d’água em HD MP4. Extraia músicas virais e áudios originais diretamente em MP3 de 320kbps.",
+    "youtubeTitle": "Baixador do YouTube e Conversor de Shorts — 1080p, 4K e Áudio MP3",
+    "youtubeDesc": "Baixador ultrarrápido do YouTube e conversor de Shorts. Baixe vídeos em 1080p, 2K, 4K UHD MP4 e áudio MP3 de estúdio a 320kbps.",
+    "youtubeKeywords": "youtube video downloader, download youtube video, downsocial youtube, free video downloader",
+    "youtubeOgTitle": "Baixador do YouTube e Conversor de Shorts — 1080p, 4K e Áudio MP3",
+    "youtubeOgDesc": "Baixador ultrarrápido do YouTube e conversor de Shorts. Baixe vídeos em 1080p, 2K, 4K UHD MP4 e áudio MP3 de estúdio a 320kbps.",
+    "snapchatTitle": "Baixador do Snapchat Spotlight e Stories — 9:16 Full HD MP4 Grátis",
+    "snapchatDesc": "Baixe clipes do Snapchat Spotlight e Stories públicos em 9:16 vertical Full HD antes de expirarem. Totalmente anônimo e sem avisos.",
+    "snapchatKeywords": "snapchat video downloader, download snapchat video, downsocial snapchat, free video downloader",
+    "snapchatOgTitle": "Baixador do Snapchat Spotlight e Stories — 9:16 Full HD MP4 Grátis",
+    "snapchatOgDesc": "Baixe clipes do Snapchat Spotlight e Stories públicos em 9:16 vertical Full HD antes de expirarem. Totalmente anônimo e sem avisos.",
+    "threadsTitle": "Baixador do Threads — Salvar Vídeos, Áudios e Fotos do Meta Threads HD",
+    "threadsDesc": "Baixe vídeos do Meta Threads, notas de voz, fotos de carrossel e áudios em 1080p Full HD original sem compressão extra ou login.",
+    "threadsKeywords": "threads video downloader, download threads video, downsocial threads, free video downloader",
+    "threadsOgTitle": "Baixador do Threads — Salvar Vídeos, Áudios e Fotos do Meta Threads HD",
+    "threadsOgDesc": "Baixe vídeos do Meta Threads, notas de voz, fotos de carrossel e áudios em 1080p Full HD original sem compressão extra ou login.",
+    "privateTitle": "Baixador de Vídeos Privados — Extrair Mídia Privada do Instagram e Facebook",
+    "privateDesc": "Baixador seguro de vídeos privados. Extraia reels privados do Instagram e vídeos de grupos fechados do Facebook via código-fonte.",
+    "privateKeywords": "private video downloader, download private video, downsocial private, free video downloader",
+    "privateOgTitle": "Baixador de Vídeos Privados — Extrair Mídia Privada do Instagram e Facebook",
+    "privateOgDesc": "Baixador seguro de vídeos privados. Extraia reels privados do Instagram e vídeos de grupos fechados do Facebook via código-fonte.",
+    "aboutTitle": "Sobre Nós — downsocial.net | Baixador de Vídeos Gratuito Tudo em Um",
+    "aboutDesc": "Saiba mais sobre o downsocial.net: nossa missão, arquitetura sem coleta de dados e downloads de alta performance.",
+    "aboutKeywords": "about video downloader, download about video, downsocial about, free video downloader",
+    "aboutOgTitle": "Sobre Nós — downsocial.net | Baixador de Vídeos Gratuito Tudo em Um",
+    "aboutOgDesc": "Saiba mais sobre o downsocial.net: nossa missão, arquitetura sem coleta de dados e downloads de alta performance.",
+    "featuresTitle": "Recursos e Capacidades da Plataforma — downsocial.net",
+    "featuresDesc": "Explore todos os recursos técnicos do downsocial: extração em 1080p/4K, transcodificação para MP3 a 320kbps e sem marcas d’água.",
+    "featuresKeywords": "features video downloader, download features video, downsocial features, free video downloader",
+    "featuresOgTitle": "Recursos e Capacidades da Plataforma — downsocial.net",
+    "featuresOgDesc": "Explore todos os recursos técnicos do downsocial: extração em 1080p/4K, transcodificação para MP3 a 320kbps e sem marcas d’água.",
+    "contactTitle": "Contato e Suporte — Central de Atendimento downsocial.net",
+    "contactDesc": "Entre em contato com a equipe de suporte do downsocial para relatar links com problemas ou dúvidas. Resposta em até 24 horas.",
+    "contactKeywords": "contact video downloader, download contact video, downsocial contact, free video downloader",
+    "contactOgTitle": "Contato e Suporte — Central de Atendimento downsocial.net",
+    "contactOgDesc": "Entre em contato com a equipe de suporte do downsocial para relatar links com problemas ou dúvidas. Resposta em até 24 horas.",
+    "privacyTitle": "Política de Privacidade — Garantia de Zero Registros downsocial.net",
+    "privacyDesc": "Política de privacidade completa: streaming temporário na memória, sem cookies de rastreamento e segurança com criptografia SSL.",
+    "privacyKeywords": "privacy video downloader, download privacy video, downsocial privacy, free video downloader",
+    "privacyOgTitle": "Política de Privacidade — Garantia de Zero Registros downsocial.net",
+    "privacyOgDesc": "Política de privacidade completa: streaming temporário na memória, sem cookies de rastreamento e segurança com criptografia SSL.",
+    "termsTitle": "Termos de Serviço — Diretrizes de Uso e Política de Uso Justo",
+    "termsDesc": "Termos de serviço do downsocial: diretrizes de uso justo e pessoal, respeito aos direitos autorais e isenção de responsabilidade.",
+    "termsKeywords": "terms video downloader, download terms video, downsocial terms, free video downloader",
+    "termsOgTitle": "Termos de Serviço — Diretrizes de Uso e Política de Uso Justo",
+    "termsOgDesc": "Termos de serviço do downsocial: diretrizes de uso justo e pessoal, respeito aos direitos autorais e isenção de responsabilidade."
+  },
+  "common": {
+    "langBtn": "Idioma",
+    "extBtn": "Extensão",
+    "soonBadge": "Em Breve",
+    "homeBtn": "Início",
+    "privateBtn": "Baixador Privado",
+    "featuresBtn": "Recursos",
+    "aboutBtn": "Sobre Nós",
+    "contactBtn": "Contato",
+    "privacyBtn": "Política de Privacidade",
+    "termsBtn": "Termos de Serviço",
+    "moreTools": "Mais Ferramentas",
+    "downloadBtn": "Baixar Vídeo",
+    "readyTitle": "Pronto para Baixar!",
+    "infoText": "Escolha a qualidade desejada abaixo.",
+    "dlVidHigh": "Vídeo (HD)",
+    "dlVidNorm": "Vídeo (Normal)",
+    "dlAudHigh": "Áudio (HQ MP3)",
+    "dlAudNorm": "Áudio (Normal MP3)",
+    "moreDetails": "Mais Detalhes",
+    "showLess": "Menos Detalhes",
+    "readMore": "Ler Mais",
+    "readLess": "Ler Menos",
+    "footerAboutTitle": "downsocial.net",
+    "footerAboutDesc": "A principal plataforma multifuncional para baixar vídeos e áudios de redes sociais. Downloads rápidos, seguros e em HD, sem marcas d’água e sem login.",
+    "footerToolsTitle": "Ferramentas de Download",
+    "footerLegalTitle": "Empresa e Legal",
+    "footerSupportTitle": "Suporte",
+    "footerCopyright": "© 2026 downsocial.net. Todos os direitos reservados.",
+    "footerDisclaimer": "Aviso Legal: downsocial é uma ferramenta técnica independente e não possui vínculo, endosso ou patrocínio de Meta, Facebook, Instagram, TikTok, ByteDance, YouTube, Google, Snapchat, Snap Inc. ou Threads. Todas as marcas registradas pertencem aos seus respectivos proprietários.",
+    "emptyLinkAlert": "Por favor, cole um link de vídeo válido primeiro!",
+    "processing": "Processando stream...",
+    "successMsg": "✅ Vídeo pronto para download!",
+    "errorServer": "Erro no servidor. Por favor, verifique a URL."
+  },
+  "notifications": {
+    "header": "Notificações",
+    "newBadge": "1 Novo",
+    "time": "Agora",
+    "extTitle": "Extensão de Navegador e Baixador Direto 🚀",
+    "content1": "Baixe vídeos diretamente do Facebook, Instagram, TikTok, YouTube, Snapchat e Threads com apenas 1 clique.",
+    "content2": "CDN em nuvem de alta velocidade garante downloads em 1080p original, 4K e áudio MP3 a 320kbps sem marcas d’água.",
+    "content3": "Extensões para Chrome, Edge e Firefox em breve com detecção inteligente de links!"
+  },
+  "index": {
+    "title": "Baixador de Vídeos de Redes Sociais",
+    "tagline": "Baixe vídeos, reels, shorts e stories do YouTube, TikTok, Instagram, Facebook, Snapchat e Threads em 1080p HD, 4K e MP3 grátis",
+    "placeholder": "Cole qualquer link de vídeo aqui (YouTube, TikTok, Instagram, Facebook, Snapchat, Threads)...",
+    "downloadBtn": "Baixar Vídeo",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Universal Social Media na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Universal Social Media",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Universal Social Media direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Universal Social Media Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Universal Social Media",
+        "desc": "Abra o Universal Social Media, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Universal Social Media quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Universal Social Media FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Universal Social Media?",
+        "a": "Sim. Baixar conteúdos públicos do Universal Social Media para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Universal Social Media vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Universal Social Media para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Universal Social Media?",
+    "quickAnswerText": "Copie o link do Universal Social Media, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<div class=\"quick-answer\" style=\"background: rgba(255,255,255,0.04); border-left: 4px solid #4dabf7; padding: 18px 22px; border-radius: 8px; margin-bottom: 30px;\">\n    <h3 style=\"margin-top: 0; color: #ffffff; font-size: 1.15rem;\"><i class=\"fas fa-bolt\" style=\"color: #4dabf7; margin-right: 8px;\"></i> Resposta Rápida: Como Baixar Vídeos de Redes Sociais Grátis</h3>\n    <p style=\"margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;\">Para baixar qualquer vídeo público do YouTube, TikTok, Instagram, Facebook, Snapchat ou Threads, copie o link no aplicativo (Compartilhar > Copiar Link), cole em <strong>downsocial.net</strong>, clique em <strong>\"Baixar Vídeo\"</strong> e escolha <strong>Vídeo (HD)</strong> ou <strong>Áudio (HQ MP3)</strong>. A ferramenta é 100% gratuita, não exige cadastro nem instalação de aplicativo, é livre de anúncios e salva no iPhone, Android e PC.</p>\n</div>\n\n<h2>O Baixador de Vídeos de Redes Sociais Definitivo e Tudo-em-Um</h2>\n<p>Antigamente, salvar vídeos exigia acessar dezenas de sites suspeitos cheios de anúncios invasivos. O <strong>downsocial.net</strong> unifica todo o ecossistema de mídias sociais em uma única plataforma web rápida, moderna e segura. Seja para baixar danças do TikTok sem marca d’água, Shorts do YouTube em 1080p, Reels do Instagram ou vídeos do Facebook, o downsocial faz tudo sem esforço.</p>\n\n<h3>Plataformas, Formatos e Especificações Suportadas</h3>\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Plataforma</th><th>Conteúdo Suportado</th><th>Qualidade Máxima de Vídeo</th><th>Extração de Áudio</th><th>Status da Marca d’Água</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong><i class=\"fab fa-youtube\" style=\"color:#ff0000; margin-right:5px;\"></i> YouTube</strong></td><td>Vídeos, Shorts, Clipes de Música</td><td>4K UHD / 1080p Full HD</td><td>MP3 a 320 kbps</td><td>Sem Marca d’Água</td></tr><tr><td><strong><i class=\"fab fa-tiktok\" style=\"color:#25F4EE; margin-right:5px;\"></i> TikTok</strong></td><td>Vídeos, Sons, Apresentações de Fotos</td><td>1080p 60fps Full HD</td><td>MP3 a 320 kbps</td><td><span class=\"badge-highlight\">100% Removida</span></td></tr><tr><td><strong><i class=\"fab fa-instagram\" style=\"color:#E1306C; margin-right:5px;\"></i> Instagram</strong></td><td>Reels, Stories, Carrosséis</td><td>1080p Full HD</td><td>MP3 a 192 kbps</td><td>Fonte Original</td></tr><tr><td><strong><i class=\"fab fa-facebook-f\" style=\"color:#1877F2; margin-right:5px;\"></i> Facebook</strong></td><td>Reels, Watch, Postagens do Feed</td><td>1080p Full HD</td><td>MP3 a 192 kbps</td><td>Fonte Original</td></tr><tr><td><strong><i class=\"fab fa-snapchat-ghost\" style=\"color:#FFFC00; margin-right:5px;\"></i> Snapchat</strong></td><td>Spotlights, Stories Públicos</td><td>1080p Full HD</td><td>MP3 a 320 kbps</td><td>Sem Marca d’Água</td></tr><tr><td><strong><i class=\"fa-brands fa-threads\" style=\"color:#ffffff; margin-right:5px;\"></i> Threads</strong></td><td>Vídeos, Áudios, Carrosséis</td><td>1080p Full HD</td><td>MP3 a 320 kbps</td><td>Fonte Original</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Por que Escolher o downsocial em vez dos Concorrentes?</h3>\n<p>Sites tradicionais como <em>SaveFrom</em>, <em>SnapTik</em> e <em>Y2Mate</em> bombardeiam os usuários com pop-ups agressivos e velocidades reduzidas. O downsocial opera através de uma rede em nuvem direta e segura, com zero propagandas invasivas.</p>\n\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Comparação de Recursos</th><th>downsocial.net</th><th>SaveFrom.net</th><th>SnapTik.app</th><th>Y2Mate.is</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Plataformas Suportadas</strong></td><td><span class=\"badge-highlight\">6 Grandes Plataformas (Tudo em Um)</span></td><td>Limitado</td><td>Apenas TikTok</td><td>Apenas YouTube</td></tr><tr><td><strong>Remoção de Marca d’Água do TikTok</strong></td><td><span class=\"badge-highlight\">100% Remoção sem Perda</span></td><td>Padrão</td><td>Sim</td><td>N/A</td></tr><tr><td><strong>Qualidade Máxima de Vídeo</strong></td><td><span class=\"badge-highlight\">Até 4K UHD e 1080p HD</span></td><td>720p (HD Cobrado)</td><td>1080p</td><td>1080p</td></tr><tr><td><strong>Conversor de MP3 em Tempo Real</strong></td><td><span class=\"badge-highlight\">FFmpeg Dedicado (320kbps)</span></td><td>128kbps</td><td>Limitado</td><td>192kbps</td></tr><tr><td><strong>Pop-ups Invasivos e Anúncios</strong></td><td><span class=\"badge-highlight\">Zero Anúncios / 100% Limpo</span></td><td>Muitos Pop-ups</td><td>Anúncios Agressivos</td><td>Muitos Anúncios</td></tr><tr><td><strong>Privacidade e Segurança</strong></td><td><span class=\"badge-highlight\">Isolamento Estrito Zero-Log</span></td><td>Rastreia IP/Cookies</td><td>Rastreamento de Anúncios</td><td>Rastreamento de Anúncios</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Guia Passo a Passo para Baixar em Qualquer Dispositivo</h3>\n<ul>\n    <li><strong>No iPhone e iPad:</strong> Abra o Safari, acesse <code>downsocial.net</code>, cole qualquer link de vídeo e toque em \"Baixar Vídeo\". Selecione \"Vídeo (HD)\" e toque em Baixar. Quando concluir, abra o arquivo no Safari Downloads, toque em Compartilhar e selecione <em>\"Salvar Vídeo\"</em> para armazenar no Fotos do iOS.</li>\n    <li><strong>No Android (Samsung, Xiaomi, Motorola):</strong> Abra o Chrome ou navegador padrão. Cole o link no downsocial, toque em \"Baixar Vídeo\" e escolha \"Vídeo (HD)\" ou \"Áudio (HQ MP3)\". O arquivo é transferido para a pasta <code>Downloads</code> e aparece na Galeria.</li>\n    <li><strong>No Windows, Mac e Chromebook:</strong> Abra o downsocial.net em qualquer navegador, cole seu link e clique em \"Baixar Vídeo\". Escolha o formato desejado para salvar diretamente no seu computador.</li>\n</ul>\n\n<h3>Download Seguro, Privado e 100% Anônimo</h3>\n<p>Sua privacidade é essencial. O downsocial funciona sob uma estrita política de zero registros. Não exigimos criação de conta, nunca pedimos senhas e não arquivamos o seu histórico. Todas as extrações são protegidas com criptografia SSL de 256 bits.</p>",
+    "mainTitle": "Baixador de Vídeos de Redes Sociais",
+    "processBtn": "Baixar Vídeo",
+    "f1Title": "Qualidade Original HD e 4K",
+    "f1Desc": "Baixe mídias do Universal Social Media na resolução original máxima, sem compressão extra ou perda visual.",
+    "f1Content": "<h4><i class=\"fas fa-film\"></i> Captura de Alta Fidelidade no Universal Social Media</h4><p>Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.</p><p>Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos.</p>",
+    "f2Title": "Sem Login e 100% Anônimo",
+    "f2Desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+    "f2Content": "<h4><i class=\"fas fa-shield-halved\"></i> Privacidade Blindada e Zero Logs</h4><p>Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.</p><p>Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término.</p>",
+    "f3Title": "Áudio MP3 de Estúdio a 320kbps",
+    "f3Desc": "Converta e extraia músicas, áudios virais e vozes do Universal Social Media direto para MP3 cristalino.",
+    "f3Content": "<h4><i class=\"fas fa-headphones\"></i> Motor de Áudio em Tempo Real</h4><p>Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.</p><p>Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser.</p>",
+    "howToSectionTitle": "Como Baixar Vídeos e Áudios do Universal Social Media Online",
+    "howToContent": "<h3>Passo 1: Copie o link do vídeo no Universal Social Media</h3><p>Abra o Universal Social Media, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".</p><ul class=\"how-to-list\"><li><i class=\"fas fa-check\"></i> O endereço da mídia já está na sua área de transferência.</li></ul><h3>Passo 2: Cole o link no campo de busca acima</h3><p>Acesse downsocial.net e insira a URL copiada no campo principal do topo.</p><ul class=\"how-to-list\"><li><i class=\"fas fa-check\"></i> Nosso sistema localiza imediatamente o fluxo de mídia correspondente.</li></ul><h3>Passo 3: Clique em \"Baixar Vídeo\"</h3><p>Pressione o botão para liberar as resoluções e opções de áudio disponíveis.</p><ul class=\"how-to-list\"><li><i class=\"fas fa-check\"></i> Os botões de formato serão exibidos em poucos segundos.</li></ul><h3>Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)</h3><p>Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.</p><ul class=\"how-to-list\"><li><i class=\"fas fa-check\"></i> Sem logos indesejados e mantendo a taxa de bits nativa.</li></ul>",
+    "howToHiddenContent": "<h3>Passo 5: Salve o arquivo em seu celular ou PC</h3><p>O download será concluído e gravado direto no armazenamento do seu dispositivo.</p><ul class=\"how-to-list\"><li><i class=\"fas fa-check\"></i> Android: O arquivo vai direto para a Galeria ou pasta Downloads.</li><li><i class=\"fas fa-check\"></i> iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".</li><li><i class=\"fas fa-check\"></i> Computador: O vídeo é salvo na sua pasta padrão de downloads.</li></ul><p class=\"pro-tip\">Dica: Baixe quantos vídeos e músicas do Universal Social Media quiser, sem limite de uso.</p>",
+    "readMoreBtn": "Ler Mais",
+    "readLessBtn": "Ler Menos",
+    "faqTitle": "Universal Social Media FAQ"
+  },
+  "facebook": {
+    "title": "Baixador de Vídeos do Facebook",
+    "tagline": "Baixe Reels do Facebook, vídeos do Watch, Stories e clipes de grupos em 1080p Full HD grátis",
+    "placeholder": "Cole o link de vídeo, Reel ou Story do Facebook aqui...",
+    "downloadBtn": "Baixar Vídeo do Facebook",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Facebook na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Facebook",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Facebook direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Facebook Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Facebook",
+        "desc": "Abra o Facebook, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Facebook quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Facebook FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Facebook?",
+        "a": "Sim. Baixar conteúdos públicos do Facebook para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Facebook vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Facebook para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Facebook?",
+    "quickAnswerText": "Copie o link do Facebook, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<article class=\"seo-article\" id=\"guide\">\n    <h2 id=\"overview\">Baixador de vídeos do Facebook: Salve qualquer vídeo público do Facebook em HD</h2>\n    <p class=\"pro-tip quick-answer\"><strong>Resposta rápida: Como baixar vídeos do Facebook:</strong> Para baixar um vídeo do Facebook, copie o link, cole-o na caixa no topo desta página, toque em <em>Baixar vídeo</em> e escolha HD, Normal ou MP3. É gratuito, não precisa de login ou app e funciona no iPhone, Android, Windows e Mac. Apenas vídeos públicos podem ser baixados.</p>\n    <p>Este <strong>baixador de vídeos do Facebook</strong> foi criado para uma função essencial: transformar um link de vídeo público, Reel ou Watch do Facebook em um arquivo para você guardar. Ele lê o vídeo público, exibe os formatos disponíveis e transfere sua escolha diretamente para o seu dispositivo em MP4 ou áudio MP3. Nada é instalado, nada é mantido em nossos servidores e sua conta do Facebook nunca é solicitada.</p>\n    \n    <h3 id=\"at-a-glance\">Visão geral do baixador de vídeos do Facebook</h3>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Recurso</th><th>Detalhes</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>Conteúdo suportado</td><td>Vídeos públicos do Facebook, Reels, vídeos Watch e Stories públicas ou transmissões ao vivo encerradas enquanto ainda disponíveis</td></tr><tr><td>Links aceitos</td><td>facebook.com, m.facebook.com, facebook.com/share, fb.watch</td></tr><tr><td>Formatos de saída</td><td>Vídeo MP4 (HD e Normal), áudio MP3 (192 kbps e 128 kbps)</td></tr><tr><td>Qualidade de vídeo</td><td>Melhor versão que o Facebook fornece para o vídeo, geralmente de 720p a 1080p. Sem upscaling artificial</td></tr><tr><td>Preço</td><td><span class=\"badge-highlight\">Grátis, sem limite de downloads</span></td></tr><tr><td>Conta ou login</td><td><span class=\"badge-highlight\">Nenhum necessário</span></td></tr><tr><td>Marca d’água</td><td><span class=\"badge-highlight\">Nenhuma adicionada</span></td></tr><tr><td>Compatibilidade</td><td>iPhone, iPad, Android, Windows, macOS, Linux (qualquer navegador moderno)</td></tr><tr><td>Arquivos armazenados</td><td>Nenhum. Os fluxos não são salvos</td></tr><tr><td>Limitações</td><td>Apenas vídeos públicos. Não ignora grupos privados ou postagens só para amigos. Qualidade limitada pelo upload original</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"supported-links\">Quais links do Facebook funcionam?</h3>\n    <p>O Facebook utiliza vários formatos de link. Se o vídeo por trás do link for público, todos estes são aceitos:</p>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Tipo de link</th><th>Aparência do link</th><th>Funciona quando</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>Vídeo Watch</td><td>facebook.com/watch/?v=...</td><td>O vídeo é público</td></tr><tr><td>Reel</td><td>facebook.com/reel/...</td><td>O Reel é público</td></tr><tr><td>Link de compartilhamento</td><td>facebook.com/share/v/... ou /share/r/...</td><td>O vídeo compartilhado é público</td></tr><tr><td>Link curto</td><td>fb.watch/...</td><td>O vídeo é público</td></tr><tr><td>Vídeo de Página ou perfil</td><td>facebook.com/NomeDaPagina/videos/...</td><td>O vídeo é público</td></tr><tr><td>Link móvel</td><td>m.facebook.com/...</td><td>O vídeo é público</td></tr><tr><td>Vídeo de grupo</td><td>facebook.com/groups/.../posts/...</td><td>O grupo é público</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"how-to-copy\">Como copiar um link de vídeo do Facebook</h3>\n    <ul>\n        <li><strong>App do Facebook (iPhone ou Android):</strong> toque em <em>Compartilhar</em> abaixo do vídeo ou Reel e depois em <em>Copiar link</em>.</li><li><strong>Facebook no computador:</strong> clique no menu de três pontos da publicação e escolha <em>Copiar link</em>, ou clique com o botão direito na data/hora do post e copie o endereço do link.</li><li><strong>Messenger ou WhatsApp:</strong> se alguém enviou um vídeo do Facebook, copie o link diretamente da mensagem.</li>\n    </ul>\n\n    <h3 id=\"device-instructions\">Como baixar vídeos do Facebook no iPhone, Android e computador</h3>\n    <p><strong>No iPhone ou iPad:</strong> abra esta página no Safari, cole o link e toque em Baixar vídeo. O arquivo é salvo no aplicativo Arquivos em Downloads. Abra-o, toque em Compartilhar e escolha Salvar vídeo para enviá-lo ao app Fotos.</p>\n    <p><strong>No Android:</strong> abra esta página no Chrome, cole o link e toque em Vídeo (HD). O MP4 vai para sua pasta de Downloads e costuma aparecer na Galeria.</p>\n    <p><strong>No Windows ou Mac:</strong> cole o link, clique em Baixar vídeo e selecione o formato desejado. O arquivo será baixado para a pasta Downloads do seu navegador.</p>\n\n    <h3 id=\"private-videos\">É possível baixar vídeos privados do Facebook?</h3>\n    <p>Não. Esta ferramenta só baixa vídeos acessíveis publicamente sem necessidade de login. Postagens exclusivas para amigos, grupos privados e vídeos com restrição de público não podem ser acessados, e nós nunca solicitamos sua senha do Facebook. O botão <em>Salvar vídeo</em> do próprio Facebook apenas guarda o link dentro da rede; não cria um arquivo no seu dispositivo. Se você precisa de um vídeo privado, peça o arquivo original a quem publicou.</p>\n\n    <h3 id=\"video-quality\">Qualidade do vídeo do Facebook: o que você realmente recebe</h3>\n    <p>O Facebook disponibiliza cada vídeo em várias versões. <strong>Vídeo (HD)</strong> é a maior resolução disponível para o clipe e <strong>Vídeo (Normal)</strong> é uma versão mais compacta, ideal para conexões móveis lentas. O upload original determina o limite: um vídeo publicado em 480p não pode virar 1080p, portanto o baixador nunca promete upscaling falso.</p>\n\n    <h3 id=\"mp3-audio\">Converter vídeo do Facebook para MP3</h3>\n    <p>Precisa apenas do áudio de uma música, entrevista, podcast ou palestra? Escolha <strong>Áudio (HQ MP3)</strong> para 192 kbps ou <strong>Áudio (Normal MP3)</strong> para 128 kbps. A conversão ocorre no servidor enquanto você baixa, sem instalar programas extras.</p>\n\n    <h3 id=\"troubleshooting\">Por que um vídeo do Facebook pode não baixar</h3>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Sintoma</th><th>Causa provável</th><th>O que tentar</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>\"Não foi possível extrair o vídeo\"</td><td>O vídeo é privado, apenas para amigos ou foi excluído</td><td>Abra o link em uma janela anônima. Se não reproduzir lá, não pode ser baixado</td></tr><tr><td>Nada acontece após colar</td><td>O link aponta para um perfil ou postagem sem vídeo</td><td>Abra o vídeo diretamente e copie o link em Compartilhar</td></tr><tr><td>Transmissão ao vivo falha</td><td>A transmissão ainda está acontecendo</td><td>Aguarde o encerramento da live e sua conversão em vídeo</td></tr><tr><td>Story falha</td><td>A Story expirou após 24 horas ou não é pública</td><td>Stories desaparecem; tente enquanto ainda estiver disponível</td></tr><tr><td>O link pede login</td><td>O conteúdo exige login para visualização</td><td>Apenas vídeos totalmente públicos são suportados</td></tr><tr><td>Muito lento ou travado</td><td>Arquivo grande ou sinal fraco</td><td>Tente Vídeo (Normal) ou teste em uma conexão mais rápida</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"use-cases\">Motivos comuns para salvar vídeos do Facebook</h3>\n    <ul>\n        <li>Guardar uma cópia dos <strong>seus próprios</strong> vídeos familiares, eventos e memórias.</li><li>Assistir tutoriais, receitas e aulas offline durante viagens.</li><li>Salvar um clipe com permissão para compartilhar com amigos no WhatsApp.</li><li>Extrair o áudio de uma palestra ou música para ouvir com frequência.</li>\n    </ul>\n\n    <h3 id=\"safety-legal\">Baixar vídeos do Facebook é seguro e legal?</h3>\n    <p><strong>Seguro:</strong> você não informa senha, não instala programas nem concede permissões. <strong>Legal:</strong> salvar um vídeo público para uso pessoal e offline é comum, mas os direitos autorais pertencem ao criador. Não revenda ou redistribua conteúdo sem autorização. O downsocial é uma ferramenta independente e não possui vínculo com a Meta Platforms, Inc.</p>\n\n    <h3 id=\"tips\">Dicas para obter o melhor resultado</h3>\n    <ul>\n        <li>Copie o link no botão <em>Compartilhar</em> do próprio vídeo, não na barra de endereços de um perfil.</li><li>Use <strong>Vídeo (HD)</strong> para assistir em telas maiores ou na TV.</li><li>Use <strong>Vídeo (Normal)</strong> ou MP3 para economizar dados de internet móvel.</li><li>Se um link falhar, teste-o antes em uma aba anônima do navegador.</li>\n    </ul>\n\n    <h3 id=\"sister-tools\">Precisa de outra rede social?</h3>\n    <p>Também disponibilizamos ferramentas para <a href=\"../instagram-downloader/\">Instagram</a>, <a href=\"../tiktok-downloader/\">TikTok</a>, <a href=\"../youtube-downloader/\">YouTube</a>, <a href=\"../snapchat-downloader/\">Snapchat</a> e <a href=\"../threads-downloader/\">Threads</a>, além do <a href=\"../index.html\">baixador tudo-em-um</a>.</p>\n\n    <p><small>Última atualização: 2 de outubro de 2026. Dúvidas ou um link com falha? <a href=\"contact.html\">Fale com o suporte</a>.</small></p>\n</article>"
+  },
+  "instagram": {
+    "title": "Baixador do Instagram",
+    "tagline": "Baixe Reels, Stories, Fotos e Carrosséis do Instagram na resolução original em HD grátis",
+    "placeholder": "Cole o link de Reel, Story ou Publicação do Instagram aqui...",
+    "downloadBtn": "Baixar Vídeo do Instagram",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Instagram na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Instagram",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Instagram direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Instagram Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Instagram",
+        "desc": "Abra o Instagram, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Instagram quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Instagram FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Instagram?",
+        "a": "Sim. Baixar conteúdos públicos do Instagram para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Instagram vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Instagram para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Instagram?",
+    "quickAnswerText": "Copie o link do Instagram, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<article class=\"seo-article\" id=\"guide\">\n    <h2 id=\"overview\">Baixador de vídeos do Instagram: Salve Reels, Stories e Publicações em HD</h2>\n    <p class=\"pro-tip quick-answer\"><strong>Resposta rápida: Como baixar vídeos e Reels do Instagram:</strong> Para baixar um vídeo ou Reel do Instagram, copie o link, cole-o na barra de pesquisa no topo desta página, clique em <em>Baixar vídeo</em> e escolha <strong>Vídeo (HD)</strong> ou <strong>Áudio (HQ MP3)</strong>. É 100% gratuito, não requer login nem aplicativo e funciona no iPhone, Android, Windows e Mac. Apenas vídeos e stories públicos podem ser baixados.</p>\n    <p>Este <strong>baixador de vídeos do Instagram</strong> foi desenvolvido com um propósito primordial: converter Reels, vídeos do feed, Stories e postagens em carrossel públicas do Instagram em arquivos de mídia permanentes no seu dispositivo. Ele lê transmissões diretas da CDN, exibe todas as resoluções disponíveis e envia sua escolha diretamente para o seu aparelho em MP4 ou áudio MP3.</p>\n    \n    <h3 id=\"at-a-glance\">Visão geral do baixador de vídeos do Instagram</h3>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Recurso</th><th>Detalhes</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>Conteúdo suportado</td><td>Reels públicos do Instagram, vídeos do Feed, Stories, Destaques, Álbuns de carrossel e IGTV</td></tr><tr><td>Links aceitos</td><td>instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/share/...</td></tr><tr><td>Formatos de saída</td><td>Vídeo MP4 (1080p HD e Normal), áudio MP3 (192 kbps HQ e 128 kbps), fotos JPEG</td></tr><tr><td>Qualidade de vídeo</td><td>Resolução original até 1080p Full HD (60fps). Sem compressão borrada ou upscaling artificial</td></tr><tr><td>Preço</td><td><span class=\"badge-highlight\">Grátis, downloads ilimitados</span></td></tr><tr><td>Conta ou login</td><td><span class=\"badge-highlight\">Nenhum necessário (100% anônimo)</span></td></tr><tr><td>Marca d’água</td><td><span class=\"badge-highlight\">Zero marcas d’água adicionadas</span></td></tr><tr><td>Compatibilidade</td><td>iPhone, iPad, Android, Windows, macOS, Linux (todos os navegadores modernos)</td></tr><tr><td>Arquivos armazenados</td><td>Nenhum. Apenas proxy de transmissão em tempo real</td></tr><tr><td>Limitações</td><td>Apenas perfis públicos. Não ignora contas privadas. Qualidade limitada pelo upload original</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"why-downsocial\">Por que o downsocial supera SaveInsta, iGram e InDown</h3>\n    <p>Ferramentas antigas como <em>SaveInsta (saveinsta.app)</em>, <em>iGram (igram.world)</em>, <em>SnapInsta</em> e <em>InDown (indown.io)</em> são repletas de anúncios pop-up invasivos, redirecionamentos lentos ou filas com áudio quebrado. O downsocial oferece extração direta via CDN sem propagandas invasivas, qualidade 1080p real e conversão instantânea para MP3.</p>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Comparação de recursos</th><th>downsocial.net</th><th>SaveInsta</th><th>iGram</th><th>InDown</th></tr>\n            </thead>\n            <tbody>\n                <tr><td><strong>Resolução máxima de vídeo</strong></td><td><span class=\"badge-highlight\">1080p Full HD (60fps)</span></td><td>1080p</td><td>720p / 1080p</td><td>1080p</td></tr><tr><td><strong>Anúncios pop-up invasivos</strong></td><td><span class=\"badge-highlight\">Zero (Interface limpa)</span></td><td>Muitos anúncios</td><td>Anúncios frequentes</td><td>Muitos anúncios</td></tr><tr><td><strong>Conversão de áudio (MP3)</strong></td><td><span class=\"badge-highlight\">HQ 192 kbps MP3</span></td><td>Básico</td><td>Não disponível</td><td>Básico</td></tr><tr><td><strong>Salvar Stories anonimamente</strong></td><td><span class=\"badge-highlight\">100% anônimo</span></td><td>Sim</td><td>Limitado</td><td>Sim</td></tr><tr><td><strong>Nenhum login necessário</strong></td><td><span class=\"badge-highlight\">100% anônimo</span></td><td>Sem login</td><td>Sem login</td><td>Sem login</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"supported-links\">Quais links do Instagram funcionam?</h3>\n    <p>O Instagram usa vários formatos de URL em seus aplicativos móveis e navegadores. Desde que o conteúdo seja público, todos os seguintes formatos são suportados:</p>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Tipo de link</th><th>Estrutura da URL</th><th>Suportado quando</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>Instagram Reel</td><td>instagram.com/reel/... ou instagram.com/reels/...</td><td>O Reel está em conta pública</td></tr><tr><td>Vídeo do Feed / Post</td><td>instagram.com/p/...</td><td>O post está em conta pública</td></tr><tr><td>Story público</td><td>instagram.com/stories/nomedeusuario/...</td><td>A Story está ativa (dentro de 24 horas)</td></tr><tr><td>Destaque (Highlight)</td><td>instagram.com/stories/highlights/...</td><td>O Destaque é público</td></tr><tr><td>Álbum em carrossel</td><td>instagram.com/p/... (post com várias fotos/vídeos)</td><td>O post é público (extrai todas as mídias)</td></tr><tr><td>Link compartilhado móvel</td><td>instagram.com/share/...</td><td>O conteúdo de destino é público</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"how-to-copy\">Como copiar o link de um vídeo do Instagram</h3>\n    <ul>\n        <li><strong>App do Instagram (iPhone ou Android):</strong> toque no <strong>ícone de Compartilhar</strong> (aviãozinho de papel) abaixo do Reel ou post e clique em <strong>Copiar link</strong>. Para Stories, toque nos três pontinhos no canto e escolha <em>Copiar link</em>.</li><li><strong>Navegador no computador:</strong> clique no menu de três pontos de qualquer publicação e escolha <strong>Copiar link</strong>, ou copie o link direto da barra de endereços do navegador.</li><li><strong>WhatsApp ou apps de mensagem:</strong> se alguém enviou um link do Instagram, pressione a mensagem e copie a URL.</li>\n    </ul>\n\n    <h3 id=\"device-instructions\">Como baixar vídeos do Instagram no iPhone, Android e computador</h3>\n    <p><strong>No iPhone e iPad:</strong> abra o downsocial.net no Safari, cole o link e toque em <em>Baixar vídeo</em>. Escolha <em>Vídeo (HD)</em> e confirme o download. O arquivo fica salvo no app Arquivos na pasta Downloads. Abra-o, toque em Compartilhar e selecione <em>Salvar vídeo</em> para enviá-lo ao app Fotos.</p>\n    <p><strong>No Android:</strong> abra o downsocial.net no Chrome ou Samsung Internet, cole o link e toque em <em>Baixar vídeo</em>. Selecione <em>Vídeo (HD)</em>. O MP4 será baixado na memória do celular e aparecerá na Galeria ou no Google Fotos.</p>\n    <p><strong>No Windows ou Mac:</strong> cole a URL copiada do Instagram na barra de busca, clique em <em>Baixar vídeo</em> e escolha seu formato. O arquivo será baixado para a pasta Downloads do seu navegador.</p>\n\n    <h3 id=\"private-videos\">É possível baixar vídeos privados do Instagram?</h3>\n    <p>Não. O downsocial baixa exclusivamente conteúdos que qualquer pessoa pode visualizar sem precisar de conta. Perfis fechados, posts restritos a seguidores e conversas privadas não são suportados. Nunca solicitamos sua senha ou cookies de acesso.</p>\n\n    <h3 id=\"video-quality\">Qualidade dos vídeos do Instagram: 1080p Full HD original</h3>\n    <p>O Instagram codifica vídeos em diferentes níveis de qualidade. <strong>Vídeo (HD)</strong> entrega a melhor resolução disponível na rede de servidores do Instagram (comum em 1080x1920 a 60fps para Reels). <strong>Vídeo (Normal)</strong> é um arquivo mais leve que economiza dados móveis. Não fazemos upscaling artificial.</p>\n\n    <h3 id=\"mp3-audio\">Converter Reels do Instagram para áudio MP3</h3>\n    <p>Se você adorou uma música viral, fala, som de comédia ou áudio motivacional de um Reel, escolha <strong>Áudio (HQ MP3)</strong> para 192 kbps ou <strong>Áudio (Normal MP3)</strong> para 128 kbps. Nossa conversão FFmpeg em tempo real gera um MP3 compatível com qualquer tocador de música.</p>\n\n    <h3 id=\"troubleshooting\">Por que um vídeo do Instagram pode falhar ao baixar</h3>\n    <div class=\"seo-table-container\">\n        <table class=\"seo-table\">\n            <thead>\n                <tr><th>Sintoma</th><th>Causa provável</th><th>Solução recomendada</th></tr>\n            </thead>\n            <tbody>\n                <tr><td>\"Não foi possível extrair o vídeo\"</td><td>Conta privada, post excluído ou com restrição de idade</td><td>Abra o link em uma janela anônima. Se exigir login, não pode ser baixado</td></tr><tr><td>Falha ao carregar Story</td><td>A Story expirou após 24 horas</td><td>Stories somem após 24 horas; verifique se ela ainda está disponível</td></tr><tr><td>Nada acontece após colar</td><td>A URL é de um perfil em vez de um vídeo específico</td><td>Acesse o Reel ou vídeo exato e copie aquele link direto</td></tr><tr><td>Áudio fora de sincronia</td><td>Falha no cache do navegador</td><td>Baixe em Vídeo (HD) e reproduza com o VLC ou galeria padrão do celular</td></tr><tr><td>Velocidade lenta</td><td>Tráfego intenso ou álbum com muitas fotos/vídeos</td><td>Experimente Vídeo (Normal) ou conecte-se a um Wi-Fi mais rápido</td></tr>\n            </tbody>\n        </table>\n    </div>\n\n    <h3 id=\"use-cases\">Motivos frequentes para salvar vídeos do Instagram</h3>\n    <ul>\n        <li>Fazer backup de seus próprios Reels e Stories antes de arquivar ou excluir seu perfil.</li><li>Assistir tutoriais, receitas, treinos e dicas de viagem sem precisar de internet.</li><li>Compartilhar Reels engraçados com amigos e familiares pelo WhatsApp ou Telegram.</li><li>Extrair trilhas de áudio livres de direitos para edição de vídeos e criação de conteúdo.</li>\n    </ul>\n\n    <h3 id=\"safety-legal\">Baixar vídeos do Instagram é seguro e legal?</h3>\n    <p><strong>Seguro:</strong> funciona 100% pelo navegador, sem necessidade de programas, extensões ou senhas. <strong>Legal:</strong> salvar mídias públicas para uso pessoal e offline é aceito, respeitando sempre os direitos autorais do criador. Não revenda ou redistribua sem autorização. O downsocial é uma ferramenta independente sem vínculo com a Meta Platforms, Inc.</p>\n\n    <h3 id=\"tips\">Dicas para a melhor experiência de download</h3>\n    <ul>\n        <li>Copie sempre o link através do botão <em>Compartilhar</em> da publicação para garantir a URL correta.</li><li>Selecione <strong>Vídeo (HD)</strong> para assistir em telas grandes ou na TV.</li><li>Escolha <strong>Áudio (HQ MP3)</strong> quando desejar apenas o áudio ou trilha sonora.</li><li>Se houver falha, verifique se o perfil de origem é completamente público.</li>\n    </ul>\n\n    <h3 id=\"sister-tools\">Conheça nossos outros baixadores dedicados</h3>\n    <p>Quer baixar mídias de outras redes? Conheça nossas ferramentas para <a href=\"../facebook-downloader/\">Facebook Video Downloader</a>, <a href=\"../youtube-downloader/\">YouTube Video &amp; Shorts Downloader</a>, <a href=\"../tiktok-downloader/\">TikTok Video Downloader</a>, <a href=\"../snapchat-downloader/\">Snapchat Downloader</a>, <a href=\"../threads-downloader/\">Threads Downloader</a> e nosso <a href=\"../index.html\">Baixador Universal Tudo-em-Um</a>.</p>\n\n    <p><small>Última atualização: 3 de outubro de 2026. Tem alguma dúvida ou encontrou um link com erro? <a href=\"contact.html\">Fale com nosso suporte</a>.</small></p>\n</article>"
+  },
+  "tiktok": {
+    "title": "Baixador de Vídeos do TikTok",
+    "tagline": "Baixe vídeos do TikTok sem marca d’água em HD MP4 e extraia áudio MP3 de 320kbps grátis",
+    "placeholder": "Cole o link do vídeo do TikTok aqui...",
+    "downloadBtn": "Baixar Vídeo do TikTok",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do TikTok na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no TikTok",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do TikTok direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do TikTok Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no TikTok",
+        "desc": "Abra o TikTok, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do TikTok quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "TikTok FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do TikTok?",
+        "a": "Sim. Baixar conteúdos públicos do TikTok para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do TikTok vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do TikTok para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do TikTok?",
+    "quickAnswerText": "Copie o link do TikTok, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<div class=\"quick-answer\" style=\"background: rgba(255,255,255,0.04); border-left: 4px solid #25F4EE; padding: 18px 22px; border-radius: 8px; margin-bottom: 30px;\">\n    <h3 style=\"margin-top: 0; color: #ffffff; font-size: 1.15rem;\"><i class=\"fas fa-bolt\" style=\"color: #25F4EE; margin-right: 8px;\"></i> Resposta Rápida: Como Baixar Vídeos do TikTok Sem Marca d’Água</h3>\n    <p style=\"margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;\">Para baixar qualquer vídeo do TikTok sem a marca d’água flutuante, copie o link do vídeo (Compartilhar > Copiar Link), cole em <strong>downsocial.net/tiktok-downloader/</strong>, clique em <strong>\"Baixar Vídeo\"</strong> e selecione <strong>Vídeo (Sem Marca d’Água)</strong> ou <strong>Áudio (HQ MP3)</strong>. A ferramenta é 100% gratuita, sem anúncios, não requer login nem app, e salva no iPhone, Android e PC.</p>\n</div>\n\n<h2>O Melhor Baixador de Vídeos do TikTok Gratuito (Sem Marca d’Água)</h2>\n<p>O TikTok é a maior rede de vídeos curtos do mundo. O <strong>downsocial.net</strong> permite baixar suas danças virais, tutoriais, memes e apresentações de fotos em resolução 1080p Full HD cristalina, sem logotipos ou nomes de usuários cobrindo o vídeo.</p>\n\n<h3>Formatos e Tipos de Links do TikTok Suportados</h3>\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Tipo de Conteúdo</th><th>Formato de Exemplo da URL</th><th>Status da Marca d’Água</th><th>Formato de Saída</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Vídeo Padrão</strong></td><td><code>tiktok.com/@user/video/...</code></td><td>100% Removida (Sem Marca)</td><td>Vídeo MP4 1080p</td></tr><tr><td><strong>Link Curto Compartilhado</strong></td><td><code>vm.tiktok.com/... ou vt.tiktok.com/...</code></td><td>100% Removida</td><td>Vídeo MP4 1080p</td></tr><tr><td><strong>Álbum de Fotos em Slideshow</strong></td><td><code>tiktok.com/@user/video/...</code></td><td>Imagens Limpas</td><td>JPGs em Full HD</td></tr><tr><td><strong>Áudio Viral do TikTok</strong></td><td><code>tiktok.com/music/...</code></td><td>Áudio Original</td><td>MP3 a 320 kbps</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Por que Escolher o downsocial em vez do SnapTik, SSSTik e MusicalDown?</h3>\n<p>Baixadores antigos como <em>SnapTik</em>, <em>SSSTik</em> e <em>MusicalDown</em> estão cheios de anúncios invasivos e lentidão. O downsocial oferece um ambiente rápido, seguro e totalmente sem anúncios com conexão direta ao CDN.</p>\n\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Comparação de Recursos</th><th>downsocial.net</th><th>SnapTik.app</th><th>SSSTik.io</th><th>MusicalDown</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Remoção de Marca d’Água</strong></td><td><span class=\"badge-highlight\">100% Limpo (Sem Logo)</span></td><td>Limpo</td><td>Limpo</td><td>Limpo</td></tr><tr><td><strong>Qualidade de Vídeo</strong></td><td><span class=\"badge-highlight\">1080p Full HD (Original)</span></td><td>1080p</td><td>720p / 1080p</td><td>Padrão</td></tr><tr><td><strong>Extração de Áudio / MP3</strong></td><td><span class=\"badge-highlight\">MP3 HQ a 320kbps</span></td><td>Limitado</td><td>MP3 Disponível</td><td>Básico</td></tr><tr><td><strong>Pop-ups Invasivos e Anúncios</strong></td><td><span class=\"badge-highlight\">Zero Anúncios / 100% Limpo</span></td><td>Muitos Anúncios</td><td>Anúncios Agressivos</td><td>Anúncios Frequentes</td></tr><tr><td><strong>Velocidade de Download</strong></td><td><span class=\"badge-highlight\">Nuvem Direta Instantânea</span></td><td>Padrão</td><td>Padrão</td><td>Lenta</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Guia Passo a Passo para Baixar em Qualquer Dispositivo</h3>\n<ul>\n    <li><strong>No iPhone e iPad:</strong> Abra o Safari, acesse <code>downsocial.net/tiktok-downloader/</code>, cole o link e toque em \"Baixar Vídeo\". Selecione \"Vídeo (Sem Marca d’Água)\". Ao concluir, salve no Fotos do iOS.</li>\n    <li><strong>No Android:</strong> Abra o Chrome, cole o link e clique em \"Baixar Vídeo\". O arquivo é salvo diretamente na sua pasta <code>Downloads</code> e aparece na Galeria.</li>\n    <li><strong>No Windows, Mac e Chromebook:</strong> Cole a URL do TikTok em qualquer navegador e baixe com resolução original sem programas adicionais.</li>\n</ul>\n\n<h3>Download Seguro, Privado e 100% Anônimo</h3>\n<p>Sua privacidade é garantida. Operamos sob uma estrita política de zero registros. Não pedimos credenciais e todo o tráfego é criptografado com SSL de 256 bits.</p>"
+  },
+  "youtube": {
+    "title": "Baixador do YouTube e Shorts",
+    "tagline": "Baixe vídeos do YouTube, Shorts e playlists em 1080p, 2K, 4K UHD e MP3 de 320kbps grátis",
+    "placeholder": "Cole o link de vídeo do YouTube ou Shorts aqui...",
+    "downloadBtn": "Baixar Vídeo do YouTube",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do YouTube na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no YouTube",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do YouTube direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do YouTube Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no YouTube",
+        "desc": "Abra o YouTube, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do YouTube quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "YouTube FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do YouTube?",
+        "a": "Sim. Baixar conteúdos públicos do YouTube para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do YouTube vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do YouTube para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do YouTube?",
+    "quickAnswerText": "Copie o link do YouTube, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<div class=\"quick-answer\" style=\"background: rgba(255,255,255,0.04); border-left: 4px solid #FF0000; padding: 18px 22px; border-radius: 8px; margin-bottom: 30px;\">\n    <h3 style=\"margin-top: 0; color: #ffffff; font-size: 1.15rem;\"><i class=\"fas fa-bolt\" style=\"color: #FF0000; margin-right: 8px;\"></i> Resposta Rápida: Como Baixar Vídeos e Shorts do YouTube</h3>\n    <p style=\"margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;\">Para baixar qualquer vídeo ou Short do YouTube, copie a URL da barra de endereços do seu navegador ou toque em Compartilhar > Copiar Link, cole em <strong>downsocial.net/youtube-downloader/</strong>, clique em <strong>\"Baixar Vídeo\"</strong> e selecione <strong>Vídeo (HD 1080p/4K)</strong> ou <strong>Áudio (HQ MP3)</strong>. A ferramenta é 100% gratuita, não requer instalação de programas nem login no Google, não possui anúncios e salva diretamente no iPhone, Android e PC.</p>\n</div>\n\n<h2>O Baixador de Vídeos e Shorts do YouTube Mais Rápido e Sem Anúncios</h2>\n<p>Aproveite a reprodução offline do YouTube sem assinaturas ou aplicativos invasivos. O <strong>downsocial.net</strong> oferece downloads diretos de fluxo de mídia para vídeos padrão do YouTube, Shorts verticais, aulas educativas e clipes de música em resoluções de até 4K UHD e áudio MP3 com qualidade de estúdio a 320kbps.</p>\n\n<h3>Formatos e Tipos de Links do YouTube Suportados</h3>\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Tipo de Conteúdo</th><th>Formato de Exemplo da URL</th><th>Resoluções Disponíveis</th><th>Qualidade de Áudio</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Vídeo Padrão</strong></td><td><code>youtube.com/watch?v=...</code></td><td>1080p, 1440p (2K), 2160p (4K UHD)</td><td>Áudio Estéreo AAC</td></tr><tr><td><strong>YouTube Shorts</strong></td><td><code>youtube.com/shorts/...</code></td><td>1080x1920 Full HD</td><td>Áudio Sincronizado</td></tr><tr><td><strong>Link Curto Compartilhado</strong></td><td><code>youtu.be/...</code></td><td>Até 4K UHD</td><td>Áudio Estéreo</td></tr><tr><td><strong>Extração de Áudio do YouTube</strong></td><td><code>youtube.com/watch?v=...</code></td><td>Faixa de Áudio Original</td><td>MP3 a 320 kbps / 192 kbps</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Por que Escolher o downsocial em vez dos Concorrentes (Y2Mate e SaveFrom)?</h3>\n<p>Sites antigos como <em>Y2Mate (y2mate.is)</em>, <em>SaveFrom (savefrom.net)</em>, <em>SSYouTube</em> e <em>KeepVid</em> são conhecidos por abrir abas pop-under indesejadas, exibir alertas falsos de vírus e bloquear resoluções mais altas com cobranças. O downsocial foi construído com infraestrutura moderna de alta velocidade para oferecer uma alternativa segura e 100% limpa.</p>\n\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Comparação de Recursos</th><th>downsocial.net</th><th>Y2Mate</th><th>SaveFrom.net</th><th>SSYouTube</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Qualidade Máxima de Vídeo</strong></td><td><span class=\"badge-highlight\">4K UHD / 1080p a 60fps</span></td><td>1080p (Lento)</td><td>720p (HD Bloqueado)</td><td>720p</td></tr><tr><td><strong>Qualidade de Áudio (MP3)</strong></td><td><span class=\"badge-highlight\">MP3 de Estúdio a 320kbps</span></td><td>128kbps</td><td>Baixa Qualidade</td><td>128kbps</td></tr><tr><td><strong>Popups Invasivos e Malwares</strong></td><td><span class=\"badge-highlight\">Zero Anúncios / 100% Limpo</span></td><td>Muitos Popups</td><td>Anúncios Falsos</td><td>Anúncios Frequentes</td></tr><tr><td><strong>Marcas d’Água Adicionadas</strong></td><td><span class=\"badge-highlight\">Nenhuma (Vídeo Original)</span></td><td>Nenhuma</td><td>Nenhuma</td><td>Nenhuma</td></tr><tr><td><strong>Conta ou Login Necessário</strong></td><td><span class=\"badge-highlight\">Nenhum Login Necessário</span></td><td>Não</td><td>Não</td><td>Não</td></tr><tr><td><strong>Velocidade de Download</strong></td><td><span class=\"badge-highlight\">Nuvem Direta Instantânea</span></td><td>Limitada</td><td>Padrão</td><td>Lenta</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Instruções Passo a Passo para Baixar em Qualquer Dispositivo</h3>\n<ul>\n    <li><strong>No iPhone e iPad:</strong> Abra o Safari, acesse <code>downsocial.net/youtube-downloader/</code>, cole o link do YouTube e toque em \"Baixar Vídeo\". Escolha a resolução desejada (1080p MP4 ou MP3 a 320kbps). Toque em Baixar. Quando concluir, toque no ícone azul de downloads do Safari, abra o arquivo, toque no ícone de Compartilhar e selecione <em>\"Salvar Vídeo\"</em> para salvar diretamente no Rolo da Câmera do iOS Fotos.</li>\n    <li><strong>No Android (Samsung, Pixel, Xiaomi, Motorola):</strong> Abra o Chrome ou navegador padrão, cole o link do vídeo ou Shorts no downsocial e clique em \"Baixar Vídeo\". Selecione \"Vídeo (HD)\" ou \"Áudio (HQ MP3)\". O arquivo é baixado direto para a pasta <code>Downloads</code> e aparece imediatamente na sua Galeria ou Google Fotos.</li>\n    <li><strong>No Windows, Mac e Chromebook:</strong> Cole a URL do YouTube no downsocial em qualquer navegador, clique em \"Baixar Vídeo\" e selecione a qualidade. O arquivo é transferido diretamente para a pasta de downloads do sistema sem necessidade de instalar programas adicionais.</li>\n</ul>\n\n<h3>Download Seguro, Privado e 100% Anônimo</h3>\n<p>Sua privacidade online é nossa prioridade absoluta. O downsocial opera sob uma rigorosa política de zero registros (zero-log). Não exigimos cadastro de conta, nunca solicitamos credenciais do Google e não monitoramos ou arquivamos suas URLs. Todas as transmissões são protegidas com criptografia SSL padrão bancário.</p>"
+  },
+  "snapchat": {
+    "title": "Baixador do Snapchat",
+    "tagline": "Baixe vídeos do Snapchat Spotlight e Stories públicas em 9:16 Full HD MP4 grátis",
+    "placeholder": "Cole o link de Snapchat Spotlight ou Story aqui...",
+    "downloadBtn": "Baixar Vídeo do Snapchat",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Snapchat na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Snapchat",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Snapchat direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Snapchat Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Snapchat",
+        "desc": "Abra o Snapchat, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Snapchat quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Snapchat FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Snapchat?",
+        "a": "Sim. Baixar conteúdos públicos do Snapchat para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Snapchat vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Snapchat para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Snapchat?",
+    "quickAnswerText": "Copie o link do Snapchat, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<div class=\"quick-answer\" style=\"background: rgba(255,255,255,0.04); border-left: 4px solid #FFFC00; padding: 18px 22px; border-radius: 8px; margin-bottom: 30px;\">\n    <h3 style=\"margin-top: 0; color: #ffffff; font-size: 1.15rem;\"><i class=\"fas fa-bolt\" style=\"color: #FFFC00; margin-right: 8px;\"></i> Resposta Rápida: Como Baixar Vídeos do Snapchat Spotlight</h3>\n    <p style=\"margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;\">Para baixar qualquer vídeo do Snapchat Spotlight ou Story pública, abra o Snapchat, toque em <strong>Compartilhar > Copiar Link</strong>, cole em <strong>downsocial.net/snapchat-downloader/</strong>, clique em <strong>\"Baixar Vídeo\"</strong> e escolha <strong>Vídeo (HD MP4)</strong> ou <strong>Áudio (HQ MP3)</strong>. A ferramenta é 100% gratuita, não envia notificações ao criador, não adiciona marcas d’água e salva no iPhone ou Android.</p>\n</div>\n\n<h2>O Melhor Baixador de Vídeos e Stories do Snapchat Spotlight</h2>\n<p>O Snapchat se transformou em uma potência para vídeos verticais virais através do <strong>Snapchat Spotlight</strong>. O <strong>downsocial.net</strong> oferece o utilitário mais rápido e seguro para baixar vídeos públicos do Spotlight diretamente no seu celular ou computador.</p>\n\n<h3>Formatos de Links do Snapchat Suportados</h3>\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Tipo de Conteúdo</th><th>Formato de Exemplo da URL</th><th>Resolução</th><th>Formato de Saída</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Vídeo do Snapchat Spotlight</strong></td><td><code>snapchat.com/spotlight/W...</code></td><td>1080p Full HD (60fps)</td><td>Vídeo MP4</td></tr><tr><td><strong>Story Pública de Criador</strong></td><td><code>story.snapchat.com/s/...</code></td><td>Qualidade Original</td><td>Vídeo MP4</td></tr><tr><td><strong>Áudio / Voz do Spotlight</strong></td><td><code>snapchat.com/spotlight/...</code></td><td>192kbps / 320kbps</td><td>Áudio MP3</td></tr><tr><td><strong>Link Curto Compartilhado</strong></td><td><code>snapchat.com/t/...</code></td><td>Qualidade Original</td><td>MP4 / MP3</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Por que o downsocial é a Melhor Alternativa a SnapVee, ScreenApp e SnapAny</h3>\n<p>Ferramentas antigas como <em>SnapVee</em> e <em>ScreenApp</em> sofrem com pop-ups invasivos e falhas de download. O downsocial oferece extração direta via CDN sem propagandas e com conversão instantânea para MP3.</p>\n\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Comparação de Recursos</th><th>downsocial.net</th><th>SnapVee</th><th>SnapAny</th><th>ScreenApp</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Qualidade Máxima de Vídeo</strong></td><td><span class=\"badge-highlight\">1080p 60fps Full HD</span></td><td>720p</td><td>720p</td><td>1080p</td></tr><tr><td><strong>Áudio do Spotlight (MP3)</strong></td><td><span class=\"badge-highlight\">320kbps HQ MP3</span></td><td>Básico</td><td>Não disponível</td><td>Apenas Vídeo</td></tr><tr><td><strong>Anúncios e Pop-ups Invasivos</strong></td><td><span class=\"badge-highlight\">Zero Anúncios / 100% Limpo</span></td><td>Muitos Pop-ups</td><td>Anúncios Frequentes</td><td>Banners Invasivos</td></tr><tr><td><strong>Marcas d’Água Adicionadas</strong></td><td><span class=\"badge-highlight\">Nenhuma (Vídeo Original)</span></td><td>Nenhuma</td><td>Marca na versão grátis</td><td>Nenhuma</td></tr><tr><td><strong>Conta ou Registro Necessário</strong></td><td><span class=\"badge-highlight\">Nenhum Login Necessário</span></td><td>Não</td><td>Exige Instalar App</td><td>Não</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Guia Passo a Passo para Baixar em Qualquer Dispositivo</h3>\n<ul>\n    <li><strong>No iPhone e iPad:</strong> Abra o Safari, acesse <code>downsocial.net/snapchat-downloader/</code>, cole o link do Spotlight e toque em \"Baixar Vídeo\". Quando terminar, salve o arquivo no Fotos do iOS.</li>\n    <li><strong>No Android:</strong> Cole o link no Chrome, clique em \"Baixar Vídeo\" e o arquivo será salvo na sua pasta <code>Downloads</code> e na Galeria.</li>\n    <li><strong>No Windows, Mac e Chromebook:</strong> Cole a URL em qualquer navegador e salve o vídeo em Full HD no seu computador.</li>\n</ul>\n\n<h3>Proteção de Privacidade com Zero Registros</h3>\n<p>Seu anonimato é absoluto. O criador do conteúdo não recebe alertas de que o vídeo foi salvo e nós não guardamos nenhum histórico das suas URLs.</p>"
+  },
+  "threads": {
+    "title": "Baixador de Vídeos do Threads",
+    "tagline": "Baixe vídeos, notas de voz, fotos de carrossel e áudios do Meta Threads em 1080p Full HD grátis",
+    "placeholder": "Cole o link da publicação do Meta Threads aqui...",
+    "downloadBtn": "Baixar Vídeo",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Threads na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Threads",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Threads direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Threads Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Threads",
+        "desc": "Abra o Threads, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Threads quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Threads FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Threads?",
+        "a": "Sim. Baixar conteúdos públicos do Threads para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Threads vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Threads para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Threads?",
+    "quickAnswerText": "Copie o link do Threads, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<div class=\"quick-answer\" style=\"background: rgba(255,255,255,0.04); border-left: 4px solid #ffffff; padding: 18px 22px; border-radius: 8px; margin-bottom: 30px;\">\n    <h3 style=\"margin-top: 0; color: #ffffff; font-size: 1.15rem;\"><i class=\"fas fa-bolt\" style=\"color: #ffffff; margin-right: 8px;\"></i> Resposta Rápida: Como Baixar Vídeos do Threads</h3>\n    <p style=\"margin-bottom: 0; font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;\">Para baixar qualquer vídeo, mensagem de voz ou álbum de fotos do Meta Threads, copie o link da postagem (threads.net/@user/post/...), cole em <strong>downsocial.net/threads-downloader/</strong>, clique em <strong>\"Baixar Vídeo\"</strong> e escolha <strong>Vídeo (HD MP4)</strong>, <strong>Foto</strong> ou <strong>Áudio (HQ MP3)</strong>. A ferramenta é 100% gratuita, sem anúncios e salva no iPhone, Android, Mac e Windows.</p>\n</div>\n\n<h2>O Baixador de Vídeos e Mídias do Meta Threads Mais Rápido e Seguro</h2>\n<p>Salve conversas marcantes, clipes virais, tutoriais, notas de voz e álbuns carrossel do Threads com o <strong>downsocial.net</strong>. Nossa ferramenta processa links do Threads em milissegundos sem spam, sem redirecionamentos e sem perda de qualidade.</p>\n\n<h3>Formatos de Links de Mídia do Threads Suportados</h3>\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Tipo de Mídia</th><th>Exemplo de Padrão da URL</th><th>Qualidade Suportada</th><th>Formato</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Postagem de Vídeo Padrão</strong></td><td><code>threads.net/@user/post/C...</code></td><td>1080p Full HD / 720p HD</td><td>Vídeo MP4</td></tr><tr><td><strong>Mensagem de Voz / Áudio</strong></td><td><code>threads.net/@user/post/C...</code></td><td>320 kbps / 192 kbps</td><td>Áudio MP3</td></tr><tr><td><strong>Carrossel de Várias Fotos</strong></td><td><code>threads.net/@user/post/C...</code></td><td>Resolução Original Máxima</td><td>JPG / MP4</td></tr><tr><td><strong>Vídeo de Post Citado</strong></td><td><code>threads.net/@user/post/C...</code></td><td>1080p Full HD</td><td>Vídeo MP4</td></tr><tr><td><strong>Link Curto Compartilhado</strong></td><td><code>threads.net/t/...</code></td><td>Qualidade Original</td><td>MP4 / MP3</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Por que Escolher o downsocial em vez do Threadster e SaveThreads?</h3>\n<p>Baixadores antigos como <em>Threadster</em> e <em>SaveThreads</em> incomodam com redirecionamentos invasivos e degradam a resolução. O downsocial foi projetado para garantir downloads ultrarrápidos e totalmente livres de anúncios.</p>\n\n<div class=\"seo-table-container\">\n    <table class=\"seo-table\">\n        <thead>\n            <tr><th>Comparação de Recursos</th><th>downsocial.net</th><th>Threadster.app</th><th>SaveThreads.io</th><th>ThreadsVid</th></tr>\n        </thead>\n        <tbody>\n            <tr><td><strong>Resolução Máxima de Vídeo</strong></td><td><span class=\"badge-highlight\">1080p Full HD</span></td><td>1080p</td><td>720p</td><td>720p</td></tr><tr><td><strong>Extração de Notas de Voz</strong></td><td><span class=\"badge-highlight\">MP3 HQ a 320kbps</span></td><td>Básico</td><td>Não disponível</td><td>Apenas Vídeo</td></tr><tr><td><strong>Anúncios e Pop-ups Invasivos</strong></td><td><span class=\"badge-highlight\">Zero Anúncios / 100% Limpo</span></td><td>Muitos Pop-ups</td><td>Anúncios Agressivos</td><td>Anúncios Frequentes</td></tr><tr><td><strong>Suporte a Álbuns Carrossel</strong></td><td><span class=\"badge-highlight\">Descompacta o álbum todo</span></td><td>Apenas 1ª foto</td><td>Instável</td><td>Não suportado</td></tr><tr><td><strong>Conta ou Login Necessário</strong></td><td><span class=\"badge-highlight\">Nenhum Login Necessário</span></td><td>Não</td><td>Não</td><td>Não</td></tr>\n        </tbody>\n    </table>\n</div>\n\n<h3>Instruções Passo a Passo para Baixar em Qualquer Dispositivo</h3>\n<ul>\n    <li><strong>No iPhone e iPad:</strong> Abra o Safari, acesse <code>downsocial.net/threads-downloader/</code>, cole o link do Threads e toque em \"Baixar Vídeo\". Quando terminar, salve o arquivo no Fotos do iOS.</li>\n    <li><strong>No Android:</strong> Cole o link no Chrome, clique em \"Baixar Vídeo\" e o arquivo será salvo na sua pasta <code>Downloads</code> e na Galeria.</li>\n    <li><strong>No Windows, Mac e Chromebook:</strong> Cole a URL em qualquer navegador e salve a mídia diretamente no seu computador sem instalar programas.</li>\n</ul>\n\n<h3>Download Seguro, Privado e 100% Anônimo</h3>\n<p>Não guardamos cópias dos arquivos nem rastreamos os links inseridos. Todas as requisições são protegidas com criptografia SSL avançada.</p>"
+  },
+  "private": {
+    "title": "Baixador de Vídeos Privados",
+    "tagline": "Baixe reels privados do Instagram, vídeos de grupos fechados do Facebook e posts restritos",
+    "placeholder": "Cole o código-fonte completo da página (HTML) aqui...",
+    "downloadBtn": "Extrair Vídeo Privado",
+    "features": [
+      {
+        "title": "Qualidade Original HD e 4K",
+        "desc": "Baixe mídias do Private Downloader na resolução original máxima, sem compressão extra ou perda visual.",
+        "blogIcon": "fas fa-film",
+        "blogTitle": "Captura de Alta Fidelidade no Private Downloader",
+        "blogP1": "Nossos servidores conectam-se diretamente às fontes oficiais de CDN para entregar streams impecáveis.",
+        "blogP2": "Aproveite imagens nítidas e cores autênticas em todos os seus dispositivos."
+      },
+      {
+        "title": "Sem Login e 100% Anônimo",
+        "desc": "Baixe com total liberdade sem precisar cadastrar e-mail, senhas ou vincular contas.",
+        "blogIcon": "fas fa-shield-halved",
+        "blogTitle": "Privacidade Blindada e Zero Logs",
+        "blogP1": "Respeitamos sua privacidade. Nenhum histórico de download ou dado pessoal é armazenado.",
+        "blogP2": "Todo o fluxo é processado na memória volátil e eliminado imediatamente após o término."
+      },
+      {
+        "title": "Áudio MP3 de Estúdio a 320kbps",
+        "desc": "Converta e extraia músicas, áudios virais e vozes do Private Downloader direto para MP3 cristalino.",
+        "blogIcon": "fas fa-headphones",
+        "blogTitle": "Motor de Áudio em Tempo Real",
+        "blogP1": "Conversão inteligente para MP3 de até 320kbps com excelente definição acústica.",
+        "blogP2": "Ideal para criar toques de celular, salvar podcasts e ouvir offline quando quiser."
+      }
+    ],
+    "howToTitle": "Como Baixar Vídeos e Áudios do Private Downloader Online",
+    "howToSteps": [
+      {
+        "title": "Passo 1: Copie o link do vídeo no Private Downloader",
+        "desc": "Abra o Private Downloader, localize o vídeo que deseja salvar, clique em Compartilhar e selecione \"Copiar Link\".",
+        "bullet": "O endereço da mídia já está na sua área de transferência."
+      },
+      {
+        "title": "Passo 2: Cole o link no campo de busca acima",
+        "desc": "Acesse downsocial.net e insira a URL copiada no campo principal do topo.",
+        "bullet": "Nosso sistema localiza imediatamente o fluxo de mídia correspondente."
+      },
+      {
+        "title": "Passo 3: Clique em \"Baixar Vídeo\"",
+        "desc": "Pressione o botão para liberar as resoluções e opções de áudio disponíveis.",
+        "bullet": "Os botões de formato serão exibidos em poucos segundos."
+      },
+      {
+        "title": "Passo 4: Escolha o formato (HD MP4 ou MP3 a 320kbps)",
+        "desc": "Opte por \"Vídeo (HD)\" para imagem nítida ou \"Áudio (HQ MP3)\" para a trilha sonora.",
+        "bullet": "Sem logos indesejados e mantendo a taxa de bits nativa."
+      }
+    ],
+    "howToHidden": [
+      {
+        "title": "Passo 5: Salve o arquivo em seu celular ou PC",
+        "desc": "O download será concluído e gravado direto no armazenamento do seu dispositivo.",
+        "bullets": [
+          "Android: O arquivo vai direto para a Galeria ou pasta Downloads.",
+          "iPhone/iPad: No Safari, toque na lista de downloads, selecione Compartilhar e \"Salvar Vídeo\".",
+          "Computador: O vídeo é salvo na sua pasta padrão de downloads."
+        ],
+        "tip": "Dica: Baixe quantos vídeos e músicas do Private Downloader quiser, sem limite de uso."
+      }
+    ],
+    "faqsTitle": "Private Downloader FAQ",
+    "faqs": [
+      {
+        "q": "É seguro e permitido baixar vídeos do Private Downloader?",
+        "a": "Sim. Baixar conteúdos públicos do Private Downloader para arquivamento pessoal e uso justo não comercial é seguro e plenamente aceito."
+      },
+      {
+        "q": "Os vídeos baixados do Private Downloader vêm com marca d’água?",
+        "a": "Não! O downsocial extrai o arquivo fonte limpo diretamente dos servidores oficiais, sem marcas d’água ou carimbos adicionados."
+      },
+      {
+        "q": "Consigo converter vídeos do Private Downloader para MP3?",
+        "a": "Com certeza! Cole o link e clique em \"Áudio (HQ MP3)\" para salvar o arquivo de som com taxa de até 320kbps."
+      },
+      {
+        "q": "Preciso instalar algum software ou app no celular?",
+        "a": "Não é necessário instalar nada. O downsocial funciona diretamente em navegadores como Chrome, Safari e Edge."
+      },
+      {
+        "q": "O autor do vídeo fica sabendo que eu baixei?",
+        "a": "Não. A solicitação é feita de modo 100% anônimo pelo servidor, sem gerar notificações para o perfil de origem."
+      },
+      {
+        "q": "Existe algum limite de downloads diários?",
+        "a": "Não há limites! Você pode baixar quantos vídeos e músicas quiser, de forma ilimitada e gratuita."
+      }
+    ],
+    "quickAnswerTitle": "Resposta Rápida: Como baixar do Private Downloader?",
+    "quickAnswerText": "Copie o link do Private Downloader, cole no downsocial.net e clique em \"Baixar Vídeo\" para obter arquivos em 1080p MP4 ou MP3 a 320kbps sem marcas d’água em segundos.",
+    "seoArticle": "<h2>Guia Completo para Download de Mídia do Private Downloader</h2>\n<p>Salvar vídeos com alta taxa de quadros e áudios de estúdio do Private Downloader é indispensável para quem busca praticidade. O downsocial.net oferece uma arquitetura rápida, confiável e livre de marcas d’água.</p>\n<h3>Captura em 1080p, 2K e 4K Ultra HD</h3>\n<p>Nossos servidores estabelecem conexão direta com as redes CDN de entrega do Private Downloader, entregando arquivos MP4 puros e com sincronia labial perfeita.</p>\n<h3>Transcodificação para MP3 a 320kbps</h3>\n<p>Extraia trilhas sonoras, vinhetas ou narrações em tempo real. O conversor integrado gera arquivos MP3 com reprodução impecável em qualquer player.</p>\n<h3>Privacidade Rigorosa sem Retenção de Dados</h3>\n<p>Processamento totalmente volátil na memória RAM, sem salvar mídias em disco e sem monitorar seu histórico de uso. Downloads gratuitos, ilimitados e seguros.</p>"
+  },
+  "about": {
+    "content": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Sobre downsocial — Baixador Gratuito Tudo-em-Um de Vídeos e Áudios</h1>\n        <p class=\"article-intro\">Bem-vindo ao downsocial.net. Desenvolvemos esta plataforma com uma missão direta: oferecer a todos uma maneira rápida, segura e sem esforço de baixar vídeos, reels, shorts e áudios MP3 do Facebook, Instagram, TikTok, YouTube, Snapchat e Threads — sem marcas d’água, sem cadastros e 100% gratuito.</p>\n        <h2>Nossa Missão</h2>\n        <p>Acreditamos que salvar vídeos públicos para aprendizado offline ou lembranças deve ser simples e privado. O downsocial elimina todas as barreiras com uma ferramenta moderna que roda direto no navegador.</p>\n        <h2>Suporte Multiplataforma Completo</h2>\n        <p>Uma única barra de pesquisa processa e extrai mídias dos principais canais sociais:</p>\n        <ul><li><strong>Facebook:</strong> Reels, vídeos do Watch, stories e posts em 1080p Full HD.</li><li><strong>Instagram:</strong> Reels de alta taxa de bits, carrosséis de fotos e Stories.</li><li><strong>TikTok:</strong> Vídeos sem a marca d’água flutuante e áudio MP3 original.</li><li><strong>YouTube:</strong> Vídeos em 1080p, 2K e 4K UHD, Shorts e conversão para MP3 a 320kbps.</li><li><strong>Snapchat:</strong> Vídeos do Spotlight e stories públicas antes de expirarem.</li><li><strong>Threads:</strong> Vídeos, mensagens de áudio e álbuns de fotos do Meta Threads.</li></ul>\n        <h2>Privacidade Rigorosa e Zero Registros</h2>\n        <p>Operamos com arquitetura de conhecimento zero. Sem contas, sem cookies invasivos e sem mídias armazenadas em nossos servidores. Tudo é criptografado com SSL de 256 bits.</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O downsocial é realmente gratuito?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, 100% gratuito com downloads ilimitados sem taxas ocultas.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Preciso criar uma conta para baixar vídeos?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, nenhum cadastro é necessário. Você faz downloads de forma anônima e instantânea.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Quais plataformas são suportadas?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Suportamos YouTube, TikTok (sem marca d’água), Instagram Reels, Facebook, Snapchat e Threads.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O downsocial armazena meus vídeos baixados?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não. Não mantemos nem armazenamos nenhum arquivo de mídia em nossos servidores.</p></div>\n</div></div>\n    </div>\n</div>",
+    "pageHtml": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Sobre downsocial — Baixador Gratuito Tudo-em-Um de Vídeos e Áudios</h1>\n        <p class=\"article-intro\">Bem-vindo ao downsocial.net. Desenvolvemos esta plataforma com uma missão direta: oferecer a todos uma maneira rápida, segura e sem esforço de baixar vídeos, reels, shorts e áudios MP3 do Facebook, Instagram, TikTok, YouTube, Snapchat e Threads — sem marcas d’água, sem cadastros e 100% gratuito.</p>\n        <h2>Nossa Missão</h2>\n        <p>Acreditamos que salvar vídeos públicos para aprendizado offline ou lembranças deve ser simples e privado. O downsocial elimina todas as barreiras com uma ferramenta moderna que roda direto no navegador.</p>\n        <h2>Suporte Multiplataforma Completo</h2>\n        <p>Uma única barra de pesquisa processa e extrai mídias dos principais canais sociais:</p>\n        <ul><li><strong>Facebook:</strong> Reels, vídeos do Watch, stories e posts em 1080p Full HD.</li><li><strong>Instagram:</strong> Reels de alta taxa de bits, carrosséis de fotos e Stories.</li><li><strong>TikTok:</strong> Vídeos sem a marca d’água flutuante e áudio MP3 original.</li><li><strong>YouTube:</strong> Vídeos em 1080p, 2K e 4K UHD, Shorts e conversão para MP3 a 320kbps.</li><li><strong>Snapchat:</strong> Vídeos do Spotlight e stories públicas antes de expirarem.</li><li><strong>Threads:</strong> Vídeos, mensagens de áudio e álbuns de fotos do Meta Threads.</li></ul>\n        <h2>Privacidade Rigorosa e Zero Registros</h2>\n        <p>Operamos com arquitetura de conhecimento zero. Sem contas, sem cookies invasivos e sem mídias armazenadas em nossos servidores. Tudo é criptografado com SSL de 256 bits.</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O downsocial é realmente gratuito?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, 100% gratuito com downloads ilimitados sem taxas ocultas.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Preciso criar uma conta para baixar vídeos?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, nenhum cadastro é necessário. Você faz downloads de forma anônima e instantânea.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Quais plataformas são suportadas?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Suportamos YouTube, TikTok (sem marca d’água), Instagram Reels, Facebook, Snapchat e Threads.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O downsocial armazena meus vídeos baixados?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não. Não mantemos nem armazenamos nenhum arquivo de mídia em nossos servidores.</p></div>\n</div></div>\n    </div>\n</div>"
+  },
+  "features": {
+    "content": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Recursos da Plataforma e Especificações Técnicas</h1>\n        <p class=\"article-intro\">Visão abrangente sobre nossa arquitetura em nuvem, desempenho de transcodificação e formatos suportados.</p>\n        <h2>Capacidades Principais e Destaques</h2>\n        <div class=\"features-detail-grid\"><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-globe\"></i></div>\n    <h3>6 Plataformas em Uma Ferramenta</h3>\n    <p>Suporte para YouTube, TikTok, Instagram, Facebook, Snapchat e Threads.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-tv\"></i></div>\n    <h3>Ultra HD 4K e 1080p</h3>\n    <p>Downloads nítidos em 1080p, 2K e 4K com fidelidade visual absoluta.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-magic\"></i></div>\n    <h3>Remoção de Marca d’Água sem Perda</h3>\n    <p>Vídeos do TikTok limpos e sem o logotipo flutuante.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-music\"></i></div>\n    <h3>Conversão para MP3 em Tempo Real</h3>\n    <p>Motor FFmpeg extrai faixas de áudio cristalinas em 320kbps.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-shield-alt\"></i></div>\n    <h3>Zero Anúncios, Popups e Logs</h3>\n    <p>Interface limpa, moderna e com total respeito à sua privacidade.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-bolt\"></i></div>\n    <h3>Streaming CDN Instantâneo</h3>\n    <p>Servidores de alta velocidade entregam seus arquivos sem espera.</p>\n</div></div>\n        <h2>Especificações Técnicas Detalhadas</h2>\n        <div class=\"seo-table-container\">\n            <table class=\"seo-table\">\n                <thead><tr><th>Atributo</th><th>Padrão e Capacidade</th></tr></thead>\n                <tbody><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Redes Sociais</td>\n    <td>YouTube, TikTok, Instagram, Facebook, Snapchat, Meta Threads</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Formatos de Vídeo</td>\n    <td>MP4 (4K, 2K, 1080p Full HD, 720p HD)</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Formatos de Áudio</td>\n    <td>MP3 Audio (192 kbps / 320 kbps Qualidade de Estúdio)</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Marca d’Água</td>\n    <td>100% Automático e Sem Marcas</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Álbuns e Carrosséis</td>\n    <td>Descompactação de carrosséis de fotos do Instagram e Threads</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Compatibilidade</td>\n    <td>Multiplataforma: Safari, Chrome, Firefox, Edge</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Autenticação</td>\n    <td>Sem necessidade de login, senha ou extensões</td>\n</tr></tbody>\n            </table>\n        </div>\n        <h2>Comparação Direta com Alternativas</h2>\n        <p>Veja por que o downsocial supera os baixadores tradicionais:</p>\n        <div class=\"seo-table-container\">\n            <table class=\"seo-table\">\n                <thead><tr><th>Critério</th><th>downsocial.net</th><th>Baixadores Convencionais (SaveFrom, SnapTik, Y2Mate)</th></tr></thead>\n                <tbody><tr>\n    <td><strong>Cobertura</strong></td>\n    <td><span class=\"badge-highlight\">Tudo-em-Um (6 Plataformas)</span></td>\n    <td>Fragmentado / Apenas uma</td>\n</tr><tr>\n    <td><strong>Marcas d’Água</strong></td>\n    <td><span class=\"badge-highlight\">100% Limpo e sem logo</span></td>\n    <td>Deixa marcas d’água</td>\n</tr><tr>\n    <td><strong>Segurança e Anúncios</strong></td>\n    <td><span class=\"badge-highlight\">Limpo e Seguro (Sem Popups)</span></td>\n    <td>Anúncios agressivos e invasivos</td>\n</tr><tr>\n    <td><strong>Extração de Áudio</strong></td>\n    <td><span class=\"badge-highlight\">MP3 de Estúdio 320kbps</span></td>\n    <td>Baixa qualidade ou indisponível</td>\n</tr><tr>\n    <td><strong>Conta de Usuário</strong></td>\n    <td><span class=\"badge-highlight\">Nenhuma (100% Anônimo)</span></td>\n    <td>Exige cadastro ou programas</td>\n</tr></tbody>\n            </table>\n        </div>\n    </div>\n</div>",
+    "pageHtml": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Recursos da Plataforma e Especificações Técnicas</h1>\n        <p class=\"article-intro\">Visão abrangente sobre nossa arquitetura em nuvem, desempenho de transcodificação e formatos suportados.</p>\n        <h2>Capacidades Principais e Destaques</h2>\n        <div class=\"features-detail-grid\"><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-globe\"></i></div>\n    <h3>6 Plataformas em Uma Ferramenta</h3>\n    <p>Suporte para YouTube, TikTok, Instagram, Facebook, Snapchat e Threads.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-tv\"></i></div>\n    <h3>Ultra HD 4K e 1080p</h3>\n    <p>Downloads nítidos em 1080p, 2K e 4K com fidelidade visual absoluta.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-magic\"></i></div>\n    <h3>Remoção de Marca d’Água sem Perda</h3>\n    <p>Vídeos do TikTok limpos e sem o logotipo flutuante.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-music\"></i></div>\n    <h3>Conversão para MP3 em Tempo Real</h3>\n    <p>Motor FFmpeg extrai faixas de áudio cristalinas em 320kbps.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-shield-alt\"></i></div>\n    <h3>Zero Anúncios, Popups e Logs</h3>\n    <p>Interface limpa, moderna e com total respeito à sua privacidade.</p>\n</div><div class=\"feature-detail-card\">\n    <div class=\"feature-detail-icon\"><i class=\"fas fa-bolt\"></i></div>\n    <h3>Streaming CDN Instantâneo</h3>\n    <p>Servidores de alta velocidade entregam seus arquivos sem espera.</p>\n</div></div>\n        <h2>Especificações Técnicas Detalhadas</h2>\n        <div class=\"seo-table-container\">\n            <table class=\"seo-table\">\n                <thead><tr><th>Atributo</th><th>Padrão e Capacidade</th></tr></thead>\n                <tbody><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Redes Sociais</td>\n    <td>YouTube, TikTok, Instagram, Facebook, Snapchat, Meta Threads</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Formatos de Vídeo</td>\n    <td>MP4 (4K, 2K, 1080p Full HD, 720p HD)</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Formatos de Áudio</td>\n    <td>MP3 Audio (192 kbps / 320 kbps Qualidade de Estúdio)</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Marca d’Água</td>\n    <td>100% Automático e Sem Marcas</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Álbuns e Carrosséis</td>\n    <td>Descompactação de carrosséis de fotos do Instagram e Threads</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Compatibilidade</td>\n    <td>Multiplataforma: Safari, Chrome, Firefox, Edge</td>\n</tr><tr>\n    <td style=\"font-weight: 600; width: 35%;\">Autenticação</td>\n    <td>Sem necessidade de login, senha ou extensões</td>\n</tr></tbody>\n            </table>\n        </div>\n        <h2>Comparação Direta com Alternativas</h2>\n        <p>Veja por que o downsocial supera os baixadores tradicionais:</p>\n        <div class=\"seo-table-container\">\n            <table class=\"seo-table\">\n                <thead><tr><th>Critério</th><th>downsocial.net</th><th>Baixadores Convencionais (SaveFrom, SnapTik, Y2Mate)</th></tr></thead>\n                <tbody><tr>\n    <td><strong>Cobertura</strong></td>\n    <td><span class=\"badge-highlight\">Tudo-em-Um (6 Plataformas)</span></td>\n    <td>Fragmentado / Apenas uma</td>\n</tr><tr>\n    <td><strong>Marcas d’Água</strong></td>\n    <td><span class=\"badge-highlight\">100% Limpo e sem logo</span></td>\n    <td>Deixa marcas d’água</td>\n</tr><tr>\n    <td><strong>Segurança e Anúncios</strong></td>\n    <td><span class=\"badge-highlight\">Limpo e Seguro (Sem Popups)</span></td>\n    <td>Anúncios agressivos e invasivos</td>\n</tr><tr>\n    <td><strong>Extração de Áudio</strong></td>\n    <td><span class=\"badge-highlight\">MP3 de Estúdio 320kbps</span></td>\n    <td>Baixa qualidade ou indisponível</td>\n</tr><tr>\n    <td><strong>Conta de Usuário</strong></td>\n    <td><span class=\"badge-highlight\">Nenhuma (100% Anônimo)</span></td>\n    <td>Exige cadastro ou programas</td>\n</tr></tbody>\n            </table>\n        </div>\n    </div>\n</div>"
+  },
+  "contact": {
+    "content": "<main class=\"page-container\" style=\"max-width: 800px; margin: 100px auto 40px; padding: 0 20px;\">\n    <article class=\"content-card\" style=\"background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 36px 32px; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);\">\n        <header class=\"page-header\" style=\"margin-bottom: 24px; border-bottom: 1px solid var(--card-border); padding-bottom: 16px;\">\n            <h1 style=\"font-size: 2rem; margin: 0 0 10px; font-family: 'Space Grotesk', sans-serif;\">Contato e Suporte downsocial</h1>\n            <p style=\"color: var(--text-secondary); margin: 0; font-size: 15px;\">Dúvidas sobre downloads do YouTube, TikTok, Instagram, Facebook, Snapchat ou Threads? Nossa equipe está pronta para ajudar.</p>\n        </header>\n        <section style=\"margin-bottom: 24px;\">\n            <p style=\"line-height: 1.7; color: var(--text-secondary);\">Se encontrar problemas para baixar vídeos ou tiver dúvidas sobre DMCA e direitos autorais, fale com nosso suporte técnico:</p>\n            <div style=\"background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-top: 18px;\">\n                <p style=\"margin: 0 0 10px; color: var(--text-primary); font-weight: 600;\"><i class=\"fas fa-envelope\" style=\"color: #4dabf7; margin-right: 8px;\"></i> Suporte por E-mail Direto:</p>\n                <a href=\"mailto:support@downsocial.net\" style=\"color: var(--accent-blue); font-size: 16px; font-weight: 700; text-decoration: none;\">support@downsocial.net</a>\n                <p style=\"margin: 8px 0 0; font-size: 13px; color: var(--text-secondary);\">Respondemos a todas as mensagens verificadas em até 24 a 48 horas.</p>\n            </div>\n        </section>\n        <section style=\"margin-bottom: 24px;\">\n            <h2 style=\"font-size: 1.2rem; color: var(--text-primary); margin-bottom: 12px;\">Como Notificar um Link Com Problemas</h2>\n            <p style=\"line-height: 1.6; color: var(--text-secondary); font-size: 14px;\">Ao relatar uma URL que não pôde ser baixada, inclua:</p>\n            <ul style=\"padding-left: 20px; line-height: 1.6; color: var(--text-secondary); font-size: 14px;\"><li>O link público completo do YouTube, TikTok, Instagram, Facebook, Snapchat ou Threads</li><li>Seu dispositivo e navegador (ex.: iPhone no Safari, Android no Chrome, PC Windows)</li><li>A mensagem de erro exibida (caso haja)</li></ul>\n        </section>\n        <section>\n            <h2 style=\"font-size: 1.2rem; color: var(--text-primary); margin-bottom: 12px;\">Avisos de DMCA e Remoção de Mídia</h2>\n            <p style=\"line-height: 1.6; color: var(--text-secondary); font-size: 14px;\">O downsocial não armazena arquivos em seus servidores. Titulares de direitos autorais podem solicitar remoções pelo e-mail com o assunto <strong>[Consulta DMCA]</strong> com provas de autoria e o link exato.</p>\n        </section>\n    </article>\n</main>",
+    "pageHtml": "<main class=\"page-container\" style=\"max-width: 800px; margin: 100px auto 40px; padding: 0 20px;\">\n    <article class=\"content-card\" style=\"background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 36px 32px; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);\">\n        <header class=\"page-header\" style=\"margin-bottom: 24px; border-bottom: 1px solid var(--card-border); padding-bottom: 16px;\">\n            <h1 style=\"font-size: 2rem; margin: 0 0 10px; font-family: 'Space Grotesk', sans-serif;\">Contato e Suporte downsocial</h1>\n            <p style=\"color: var(--text-secondary); margin: 0; font-size: 15px;\">Dúvidas sobre downloads do YouTube, TikTok, Instagram, Facebook, Snapchat ou Threads? Nossa equipe está pronta para ajudar.</p>\n        </header>\n        <section style=\"margin-bottom: 24px;\">\n            <p style=\"line-height: 1.7; color: var(--text-secondary);\">Se encontrar problemas para baixar vídeos ou tiver dúvidas sobre DMCA e direitos autorais, fale com nosso suporte técnico:</p>\n            <div style=\"background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 12px; padding: 20px; margin-top: 18px;\">\n                <p style=\"margin: 0 0 10px; color: var(--text-primary); font-weight: 600;\"><i class=\"fas fa-envelope\" style=\"color: #4dabf7; margin-right: 8px;\"></i> Suporte por E-mail Direto:</p>\n                <a href=\"mailto:support@downsocial.net\" style=\"color: var(--accent-blue); font-size: 16px; font-weight: 700; text-decoration: none;\">support@downsocial.net</a>\n                <p style=\"margin: 8px 0 0; font-size: 13px; color: var(--text-secondary);\">Respondemos a todas as mensagens verificadas em até 24 a 48 horas.</p>\n            </div>\n        </section>\n        <section style=\"margin-bottom: 24px;\">\n            <h2 style=\"font-size: 1.2rem; color: var(--text-primary); margin-bottom: 12px;\">Como Notificar um Link Com Problemas</h2>\n            <p style=\"line-height: 1.6; color: var(--text-secondary); font-size: 14px;\">Ao relatar uma URL que não pôde ser baixada, inclua:</p>\n            <ul style=\"padding-left: 20px; line-height: 1.6; color: var(--text-secondary); font-size: 14px;\"><li>O link público completo do YouTube, TikTok, Instagram, Facebook, Snapchat ou Threads</li><li>Seu dispositivo e navegador (ex.: iPhone no Safari, Android no Chrome, PC Windows)</li><li>A mensagem de erro exibida (caso haja)</li></ul>\n        </section>\n        <section>\n            <h2 style=\"font-size: 1.2rem; color: var(--text-primary); margin-bottom: 12px;\">Avisos de DMCA e Remoção de Mídia</h2>\n            <p style=\"line-height: 1.6; color: var(--text-secondary); font-size: 14px;\">O downsocial não armazena arquivos em seus servidores. Titulares de direitos autorais podem solicitar remoções pelo e-mail com o assunto <strong>[Consulta DMCA]</strong> com provas de autoria e o link exato.</p>\n        </section>\n    </article>\n</main>"
+  },
+  "privacy": {
+    "content": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Política de Privacidade — downsocial Video Downloader HD</h1>\n        <p style=\"font-size: 13px; color: #94a3b8; margin-bottom: 25px;\">Última atualização: 3 de outubro de 2026</p>\n        <p class=\"article-intro\">No downsocial.net, sua privacidade é prioridade absoluta. Conheça nossas diretrizes de proteção de dados ao usar nosso baixador gratuito.</p>\n        <h2>1. Isenção de Responsabilidade de Ferramenta Independente</h2>\n        <p>O downsocial é independente e não possui vínculo com Google, ByteDance, Meta ou Snap Inc.</p>\n        <h2>2. Zero Coleta de Dados Pessoais</h2>\n        <p>Não exigimos contas e não registramos históricos. Links são processados em memória volátil.</p>\n        <h2>3. Sem Armazenamento de Arquivos</h2>\n        <p>Não hospedamos mídias em nossos servidores; os arquivos vão direto ao seu dispositivo.</p>\n        <h2>4. Segurança e Criptografia</h2>\n        <p>Todas as conexões são protegidas com criptografia SSL de 256 bits (HTTPS).</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Vocês salvam as URLs enviadas?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, os links são descartados imediatamente após a extração.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Os vídeos ficam salvos nos servidores?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, nenhum arquivo permanece em nossos servidores.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>A conexão é segura?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, 100% protegida com SSL de ponta a ponta.</p></div>\n</div></div>\n    </div>\n</div>",
+    "pageHtml": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Política de Privacidade — downsocial Video Downloader HD</h1>\n        <p style=\"font-size: 13px; color: #94a3b8; margin-bottom: 25px;\">Última atualização: 3 de outubro de 2026</p>\n        <p class=\"article-intro\">No downsocial.net, sua privacidade é prioridade absoluta. Conheça nossas diretrizes de proteção de dados ao usar nosso baixador gratuito.</p>\n        <h2>1. Isenção de Responsabilidade de Ferramenta Independente</h2>\n        <p>O downsocial é independente e não possui vínculo com Google, ByteDance, Meta ou Snap Inc.</p>\n        <h2>2. Zero Coleta de Dados Pessoais</h2>\n        <p>Não exigimos contas e não registramos históricos. Links são processados em memória volátil.</p>\n        <h2>3. Sem Armazenamento de Arquivos</h2>\n        <p>Não hospedamos mídias em nossos servidores; os arquivos vão direto ao seu dispositivo.</p>\n        <h2>4. Segurança e Criptografia</h2>\n        <p>Todas as conexões são protegidas com criptografia SSL de 256 bits (HTTPS).</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Vocês salvam as URLs enviadas?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, os links são descartados imediatamente após a extração.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Os vídeos ficam salvos nos servidores?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, nenhum arquivo permanece em nossos servidores.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>A conexão é segura?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, 100% protegida com SSL de ponta a ponta.</p></div>\n</div></div>\n    </div>\n</div>"
+  },
+  "terms": {
+    "content": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Termos e Condições — downsocial Video Downloader</h1>\n        <p style=\"font-size: 13px; color: #94a3b8; margin-bottom: 25px;\">Última atualização: 3 de outubro de 2026</p>\n        <p class=\"article-intro\">Ao acessar e utilizar o downsocial.net, você concorda com estes Termos e Condições.</p>\n        <h2>1. Uso Pessoal e Uso Justo</h2>\n        <p>O downsocial destina-se ao uso pessoal e não comercial para visualização offline de vídeos públicos.</p>\n        <h2>2. Direitos Autorais e Marcas</h2>\n        <p>Todas as marcas registradas pertencem aos seus respectivos proprietários.</p>\n        <h2>3. Usos Proibidos</h2>\n        <p>É expressamente proibido redistribuir mídias comercialmente sem permissão.</p>\n        <h2>4. Limitação de Responsabilidade</h2>\n        <p>O serviço é fornecido no estado em que se encontra, sem retenção de arquivos.</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Posso baixar vídeos para uso pessoal?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, salvar vídeos públicos para fins de estudo ou arquivo pessoal é considerado uso justo.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O site tem vínculo com as redes sociais?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, é uma ferramenta técnica independente.</p></div>\n</div></div>\n    </div>\n</div>",
+    "pageHtml": "<div class=\"page-content-wrapper\">\n    <div class=\"article-container\">\n        <h1>Termos e Condições — downsocial Video Downloader</h1>\n        <p style=\"font-size: 13px; color: #94a3b8; margin-bottom: 25px;\">Última atualização: 3 de outubro de 2026</p>\n        <p class=\"article-intro\">Ao acessar e utilizar o downsocial.net, você concorda com estes Termos e Condições.</p>\n        <h2>1. Uso Pessoal e Uso Justo</h2>\n        <p>O downsocial destina-se ao uso pessoal e não comercial para visualização offline de vídeos públicos.</p>\n        <h2>2. Direitos Autorais e Marcas</h2>\n        <p>Todas as marcas registradas pertencem aos seus respectivos proprietários.</p>\n        <h2>3. Usos Proibidos</h2>\n        <p>É expressamente proibido redistribuir mídias comercialmente sem permissão.</p>\n        <h2>4. Limitação de Responsabilidade</h2>\n        <p>O serviço é fornecido no estado em que se encontra, sem retenção de arquivos.</p>\n    </div>\n    <div class=\"faq-section\" style=\"max-width: 900px; margin: 30px auto 40px; padding: 25px 20px;\">\n        <h2 class=\"section-title\">Perguntas Frequentes</h2>\n        <div class=\"accordion\"><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>Posso baixar vídeos para uso pessoal?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Sim, salvar vídeos públicos para fins de estudo ou arquivo pessoal é considerado uso justo.</p></div>\n</div><div class=\"accordion-item\">\n    <div class=\"accordion-header\"><span>O site tem vínculo com as redes sociais?</span><i class=\"fas fa-plus\"></i></div>\n    <div class=\"accordion-body\"><p>Não, é uma ferramenta técnica independente.</p></div>\n</div></div>\n    </div>\n</div>"
+  }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <path fill="#bd3d44" d="M0 0h640v480H0z"/>
+  <path stroke="#fff" stroke-width="37" d="M0 55.5h640M0 129.5h640M0 203.5h640M0 277.5h640M0 351.5h640M0 425.5h640"/>
+  <path fill="#192f5d" d="M0 0h260v259H0z"/>
+  <!-- Stars pattern -->
+  <g fill="#fff">
+    <g id="s1">
+      <g id="s2">
+        <polygon id="star" points="0,-10 2.9,-2.2 9.5,-2.2 4.1,1.8 6.2,8.1 0,4 -6.2,8.1 -4.1,1.8 -9.5,-2.2 -2.9,-2.2"/>
+        <use href="#star" x="43.3"/>
+        <use href="#star" x="86.6"/>
+        <use href="#star" x="130"/>
+        <use href="#star" x="173.3"/>
+        <use href="#star" x="216.6"/>
+      </g>
+      <use href="#s2" y="56"/>
+      <use href="#s2" y="112"/>
+      <use href="#s2" y="168"/>
+      <use href="#s2" y="224"/>
+    </g>
+    <g id="s3" transform="translate(21.6, 28)">
+      <polygon points="0,-10 2.9,-2.2 9.5,-2.2 4.1,1.8 6.2,8.1 0,4 -6.2,8.1 -4.1,1.8 -9.5,-2.2 -2.9,-2.2"/>
+      <use href="#star" x="43.3"/>
+      <use href="#star" x="86.6"/>
+      <use href="#star" x="130"/>
+      <use href="#star" x="173.3"/>
+      <use href="#star" x="216.6" y="0"/>
+    </g>
+    <use href="#s3" y="56"/>
+    <use href="#s3" y="112"/>
+    <use href="#s3" y="168"/>
+  </g>
+</svg>

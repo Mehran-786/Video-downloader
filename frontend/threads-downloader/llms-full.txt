@@ -1,0 +1,59 @@
+# downsocial Threads Video Downloader
+Source: https://downsocial.net/threads-downloader/
+Last Updated: October 3, 2026
+
+## Quick Answer
+To download a Meta Threads video, voice note, or photo post, copy the post link (threads.net/@user/post/...), paste it into the search box at downsocial.net/threads-downloader/, click "Download Video", and select HD MP4 video, photo JPG, or 320kbps MP3 audio. The service is 100% free, requires no login or application installation, adds no watermark, and works seamlessly across iPhone, Android, Windows, Mac, and Linux. Only public Threads content can be downloaded.
+
+## Product Overview
+downsocial Threads Video Downloader is a high-speed web utility dedicated to converting public Meta Threads video, voice clips, and multi-photo carousel links into downloadable media. Files are streamed in real time without permanent server-side storage, watermarks, or user account requirements. It acts as an ad-free, high-speed alternative to Threadster, SaveThreads, and ThreadsVid.
+
+## At a Glance Specifications
+- Supported content: Public Meta Threads videos, voice notes, audio tracks, multi-photo carousels, and quote-thread clips.
+- Accepted URL formats: threads.net/@user/post/..., threads.net/t/..., and mobile share links.
+- Output formats: MP4 video (original 1080p Full HD and 720p), JPG images (original resolution), MP3 audio (320 kbps and 192 kbps).
+- Audio conversion: Dedicated real-time voice note and speech extraction engine.
+- Pricing: 100% Free with unlimited downloads.
+- Authentication: No Threads or Instagram credentials, session cookies, or tokens required.
+- Watermark: Zero watermarks added.
+- Compatibility: Safari (iOS/macOS), Chrome (Android/Windows/macOS), Firefox, Edge, Opera.
+- File storage: Zero permanent server storage. Transient, direct stream pipeline only.
+- Limitations: Only public Threads posts are supported. Private profiles requiring follow approvals cannot be fetched.
+
+## Supported Threads Link Types
+| Link Type | Format Pattern | Status |
+| --- | --- | --- |
+| Standard Video Post | `threads.net/@user/post/C...` | Supported (Public HD MP4) |
+| Voice Note Clip | `threads.net/@user/post/C...` | Supported (Public HQ MP3) |
+| Multi-Photo Carousel | `threads.net/@user/post/C...` | Supported (All slides unpacked) |
+| Short Share Link | `threads.net/t/...` | Supported (Public) |
+| Quote Thread Video | `threads.net/@user/post/C...` | Supported (Public) |
+
+## How to Copy a Threads Link
+- Threads Mobile App (iOS & Android): Tap the "Paper Airplane" / Share icon below any Threads post, then tap "Copy Link".
+- Threads on Web (Desktop): Click the three dots (...) at the top right of the post or copy the URL directly from your browser's address bar.
+
+## How to Download Threads Videos by Device
+- iPhone & iPad: Open downsocial.net/threads-downloader/ in Safari. Paste the link and tap "Download Video". Safari prompts you to download the MP4 or MP3 file. Once downloaded, open Safari Downloads, tap the Share icon, and select "Save Video" to export directly to the iOS Photos Camera Roll.
+- Android: Open Chrome or any mobile browser, paste the Threads link, click "Download Video", and select "Download HD MP4". The file downloads instantly into your Downloads folder and syncs directly into Google Photos / Gallery.
+- Windows & Mac: Paste the link into the downloader field in any web browser, click "Download Video", and click your preferred format (HD MP4, JPG, or MP3). The file is saved directly to your Downloads folder.
+
+## Private Video Policy
+downsocial only processes public media accessible on open Meta web servers. Private profiles requiring follower approvals cannot be downloaded. downsocial strictly adheres to user privacy and will never request your Instagram or Threads login details.
+
+## Frequently Asked Questions (FAQ)
+
+### Q1. How do I download a video from Meta Threads?
+Copy the post link from the Threads app or website, paste it into downsocial.net/threads-downloader/, click "Download Video", and choose Video (HD MP4) or Audio (HQ MP3). The file saves instantly to your device.
+
+### Q2. Is this Threads video downloader completely free?
+Yes! downsocial is 100% free with unlimited downloads, no subscription fees, and no account requirements.
+
+### Q3. Can I download Threads voice notes as MP3?
+Yes. Our specialized server-side FFmpeg pipeline extracts speech clips and background music into clean, high-bitrate MP3 audio files.
+
+### Q4. Does downsocial add a watermark to downloaded Threads videos?
+No. downsocial never adds watermarks, stamps, or logos. You receive the pristine, untouched original file.
+
+### Q5. Can I download multiple photos from a Threads carousel post?
+Yes. When you paste an album link, downsocial unpacks every slide so you can download each photo in high-resolution JPG.

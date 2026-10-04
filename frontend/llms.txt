@@ -1,0 +1,33 @@
+# downsocial — All-in-One Multi-Platform Social Media Video Downloader Suite
+> Free online utility to download videos, Reels, Shorts, and MP3 audio from YouTube, TikTok (no watermark), Instagram, Facebook, Snapchat, and Threads in up to 4K UHD with zero ads or logins.
+
+## Canonical URLs
+- Main Downloader Hub: https://downsocial.net/
+- Universal Alternative: https://downsocial.net/universal-downloader/
+- YouTube Downloader: https://downsocial.net/youtube-downloader/
+- TikTok Downloader: https://downsocial.net/tiktok-downloader/
+- Instagram Downloader: https://downsocial.net/instagram-downloader/
+- Facebook Downloader: https://downsocial.net/facebook-downloader/
+- Snapchat Downloader: https://downsocial.net/snapchat-downloader/
+- Threads Downloader: https://downsocial.net/threads-downloader/
+- Private Video Downloader: https://downsocial.net/private-downloader/
+
+## Documentation & Legal
+- Full AI Specification: https://downsocial.net/llms-full.txt
+- Features & Specifications: https://downsocial.net/features.html
+- About Service: https://downsocial.net/about.html
+- Contact Support: https://downsocial.net/contact.html
+- Privacy Policy: https://downsocial.net/privacy.html
+- Terms of Service: https://downsocial.net/terms.html
+
+## Key Capabilities
+- All-in-One Multi-Platform Media Downloader (6 major social networks)
+- Automatic TikTok Watermark Removal (clean 1080p 60fps MP4)
+- YouTube Video & Shorts Downloader up to 4K Ultra HD
+- Instagram Reels, Feed Videos, Carousels & 24h Public Stories Downloader
+- Facebook Video, Reels & Watch Downloader in Full HD
+- Snapchat Spotlight & Public Story Downloader
+- Meta Threads Video & Photo Carousel Downloader
+- Real-Time FFmpeg MP3 Transcoder (192kbps - 320kbps High Fidelity)
+- 100% Free, Unlimited Downloads, Zero Pop-Up Ads, Zero Logins
+- Strict Zero-Log Transient Proxy Privacy Architecture

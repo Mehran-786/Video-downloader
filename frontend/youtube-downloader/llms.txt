@@ -1,0 +1,19 @@
+# downsocial YouTube Video Downloader
+> Free online tool to download YouTube Videos, Shorts, and 320kbps MP3 audio in up to 4K UHD resolution without watermarks, ads, or logins.
+
+## Canonical URL
+- https://downsocial.net/youtube-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/youtube-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/youtube-downloader/terms.html
+- Privacy Policy: https://downsocial.net/youtube-downloader/privacy.html
+- About Service: https://downsocial.net/youtube-downloader/about.html
+
+## Key Capabilities
+- YouTube Video Downloader in 720p, 1080p Full HD, 2K, and 4K UHD
+- YouTube Shorts 1-Click Fast Downloader with original audio sync
+- High-fidelity YouTube to MP3 audio converter (192kbps - 320kbps)
+- Zero added watermarks, zero pop-up ads, zero subscription fees
+- No Google account login or software installation required
+- Ultra-fast cloud streaming proxy across iPhone, Android, and PC

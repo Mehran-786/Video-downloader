@@ -1,0 +1,20 @@
+# downsocial Instagram Video Downloader
+> Free online tool to download Instagram Videos, Reels, Stories, IGTV, Carousels, and Audio clips in HD MP4, JPG, and MP3 without watermarks or login.
+
+## Canonical URL
+- https://downsocial.net/instagram-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/instagram-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/instagram-downloader/terms.html
+- Privacy Policy: https://downsocial.net/instagram-downloader/privacy.html
+- About Service: https://downsocial.net/instagram-downloader/about.html
+
+## Key Capabilities
+- Instagram Reels Downloader with synchronized original audio
+- Instagram Story Saver for active public stories (24h)
+- Instagram Carousel Downloader for multi-slide photos & videos
+- Instagram to MP3 Audio extraction (up to 320kbps)
+- No login required, zero cookies, zero permanent server storage
+- No watermarks added to downloaded files
+- High speed, mobile and desktop responsive

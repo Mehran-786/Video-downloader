@@ -1,0 +1,24 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Local environments & configs
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive local cookies (do not commit to public git repo)
+cookies*
+**/cookies*
+cookies*.txt
+**/cookies*.txt
+cookies *.txt
+**/cookies *.txt
