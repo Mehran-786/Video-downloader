@@ -402,6 +402,7 @@ def get_ydl_options(url=None):
         'nocheckcertificate': False,
         'extract_flat': False,
         'geo_bypass': True,
+        'format': 'best',
         'extractor_args': {
             'youtube': {
                 # ios and mweb clients bypass YouTube's SABR-only streaming
@@ -616,44 +617,65 @@ def download_video():
         formats = info.get('formats', [])
 
         if formats:
-            # 1. Pre-merged formats (contain both video and audio)
-            merged_formats = [
+            # 1. Complete progressive video formats (contain BOTH video and audio)
+            # A format has video and audio if:
+            # - It has a direct URL
+            # - Its extension is a video format (mp4, webm, mov, mkv)
+            # - Its video codec is NOT 'none' and resolution is NOT 'audio only'
+            # - Its audio codec is NOT 'none' (literal string 'none' means silent stream)
+            # - Its format_note is NOT 'DASH video' (which is video-only)
+            complete_video_formats = [
                 f for f in formats 
-                if f.get('vcodec') and f.get('vcodec') != 'none' 
-                and f.get('acodec') and f.get('acodec') != 'none'
-                and f.get('url')
+                if f.get('url')
+                and f.get('vcodec') != 'none' 
+                and f.get('acodec') != 'none'
+                and f.get('ext') in ['mp4', 'webm', 'mkv', 'mov']
+                and f.get('resolution') != 'audio only'
+                and (f.get('format_note') or '') != 'DASH video'
             ]
             
-            # 2. All video streams (progressive, DASH, or container formats)
-            all_video_formats = [
-                f for f in formats 
-                if (f.get('vcodec') and f.get('vcodec') != 'none')
-                or (f.get('ext') in ['mp4', 'webm', 'mkv', 'mov'] and not (f.get('vcodec') == 'none' and f.get('acodec') != 'none'))
-                and f.get('url')
-            ]
-            
-            # 3. Audio-only formats
+            # 2. Audio-only formats (for dedicated audio extraction)
             audio_only_formats = [
                 f for f in formats 
-                if (not f.get('vcodec') or f.get('vcodec') == 'none') 
+                if (f.get('vcodec') == 'none' or f.get('resolution') == 'audio only')
                 and f.get('acodec') and f.get('acodec') != 'none'
                 and f.get('url')
             ]
             
-            # 4. Any format with audio
+            # 3. Any format containing audio (fallback for audio extraction)
             any_audio_formats = [
                 f for f in formats 
                 if f.get('acodec') and f.get('acodec') != 'none'
                 and f.get('url')
             ]
 
+            # 4. Fallback video-only streams (ONLY used if NO stream with audio exists anywhere)
+            silent_video_formats = [
+                f for f in formats 
+                if f.get('url')
+                and f.get('vcodec') != 'none'
+                and f.get('ext') in ['mp4', 'webm', 'mkv', 'mov']
+                and f.get('resolution') != 'audio only'
+            ]
+
             # Map Video High & Normal
-            if merged_formats:
-                sorted_merged = sorted(merged_formats, key=lambda x: (x.get('height') or 0, x.get('tbr') or 0), reverse=True)
-                video_high = sorted_merged[0].get('url')
-                video_normal = sorted_merged[-1].get('url') if len(sorted_merged) > 1 else video_high
-            elif all_video_formats:
-                sorted_videos = sorted(all_video_formats, key=lambda x: (x.get('height') or 0, x.get('tbr') or 0), reverse=True)
+            if complete_video_formats:
+                sorted_videos = sorted(
+                    complete_video_formats,
+                    key=lambda x: (x.get('height') or 0, x.get('tbr') or 0, x.get('filesize') or 0),
+                    reverse=True
+                )
+                video_high = sorted_videos[0].get('url')
+                video_normal = sorted_videos[-1].get('url') if len(sorted_videos) > 1 else video_high
+            elif info.get('url'):
+                video_high = info.get('url')
+                video_normal = info.get('url')
+            elif silent_video_formats:
+                sorted_videos = sorted(
+                    silent_video_formats,
+                    key=lambda x: (x.get('height') or 0, x.get('tbr') or 0, x.get('filesize') or 0),
+                    reverse=True
+                )
                 video_high = sorted_videos[0].get('url')
                 video_normal = sorted_videos[-1].get('url') if len(sorted_videos) > 1 else video_high
             else:
@@ -662,13 +684,24 @@ def download_video():
 
             # Map Audio High & Normal
             if audio_only_formats:
-                sorted_audios = sorted(audio_only_formats, key=lambda x: (x.get('abr') or 0, x.get('filesize') or 0), reverse=True)
+                sorted_audios = sorted(
+                    audio_only_formats,
+                    key=lambda x: (x.get('abr') or 0, x.get('filesize') or 0, x.get('tbr') or 0),
+                    reverse=True
+                )
                 audio_high = sorted_audios[0].get('url')
                 audio_normal = sorted_audios[-1].get('url') if len(sorted_audios) > 1 else audio_high
             elif any_audio_formats:
-                sorted_audios = sorted(any_audio_formats, key=lambda x: (x.get('abr') or 0, x.get('tbr') or 0), reverse=True)
+                sorted_audios = sorted(
+                    any_audio_formats,
+                    key=lambda x: (x.get('abr') or 0, x.get('tbr') or 0),
+                    reverse=True
+                )
                 audio_high = sorted_audios[0].get('url')
                 audio_normal = sorted_audios[-1].get('url') if len(sorted_audios) > 1 else audio_high
+            elif complete_video_formats:
+                audio_high = complete_video_formats[0].get('url')
+                audio_normal = complete_video_formats[-1].get('url')
             else:
                 audio_high = video_high
                 audio_normal = video_normal
