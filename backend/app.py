@@ -352,48 +352,42 @@ def get_ydl_options(url=None):
     is_threads = bool(url) and ('threads.com' in url.lower() or 'threads.net' in url.lower())
     cookies_file = None
 
-    # --- YouTube cookies ---
-    if is_youtube:
-        possible_cookie_paths = [
-            '/etc/secrets/cookies.txt',
-            '/etc/secrets/cookies',
-            '/etc/secrets/cookies 1.txt',
-            '/etc/secrets/cookies_1.txt',
-            '/etc/secrets/cookies 1',
-            '/etc/secrets/cookies 2.txt',
-            '/etc/secrets/cookies_2.txt',
-            '/etc/secrets/cookies 2',
-            '/etc/secrets/cookies 3.txt',
-            '/etc/secrets/cookies_3.txt',
-            '/etc/secrets/cookies 3',
-            os.path.join(os.path.dirname(__file__), 'cookies.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies 1.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies_1.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies 2.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies_2.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies 3.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies_3.txt'),
-            os.path.join(os.path.dirname(__file__), 'cookies'),
-            os.path.join(os.path.dirname(__file__), 'cookies 1'),
-            os.path.join(os.path.dirname(__file__), 'cookies 2'),
-            os.path.join(os.path.dirname(__file__), 'cookies 3'),
-        ]
-        
-        existing_cookie_files = [p for p in possible_cookie_paths if os.path.exists(p) and os.path.isfile(p)]
-        source_cookie_file = existing_cookie_files[0] if existing_cookie_files else None
+def get_youtube_cookie_file():
+    possible_cookie_paths = [
+        '/etc/secrets/cookies.txt',
+        '/etc/secrets/cookies',
+        '/etc/secrets/cookies 1.txt',
+        '/etc/secrets/cookies_1.txt',
+        '/etc/secrets/cookies 1',
+        '/etc/secrets/cookies 2.txt',
+        '/etc/secrets/cookies_2.txt',
+        '/etc/secrets/cookies 2',
+        '/etc/secrets/cookies 3.txt',
+        '/etc/secrets/cookies_3.txt',
+        '/etc/secrets/cookies 3',
+        os.path.join(os.path.dirname(__file__), 'cookies.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies 1.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies_1.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies 2.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies_2.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies 3.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies_3.txt'),
+        os.path.join(os.path.dirname(__file__), 'cookies'),
+    ]
+    existing = [p for p in possible_cookie_paths if os.path.exists(p) and os.path.isfile(p)]
+    if existing:
+        try:
+            import tempfile
+            writable = os.path.join(tempfile.gettempdir(), 'yt_cookies.txt')
+            shutil.copyfile(existing[0], writable)
+            return writable
+        except Exception:
+            return existing[0]
+    return None
 
-        if source_cookie_file:
-            # On Render, /etc/secrets is mounted read-only.
-            # Copy to temp directory ensures yt-dlp has a writable cookie jar.
-            try:
-                import tempfile
-                temp_dir = tempfile.gettempdir()
-                writable_cookie_path = os.path.join(temp_dir, 'yt_cookies.txt')
-                shutil.copyfile(source_cookie_file, writable_cookie_path)
-                cookies_file = writable_cookie_path
-            except Exception as copy_err:
-                logging.warning(f"[COOKIES] Could not copy to temp, using source directly: {copy_err}")
-                cookies_file = source_cookie_file
+def get_ydl_options(url=None):
+    is_instagram = bool(url) and ('instagram.com' in url.lower() or 'instagr.am' in url.lower())
+    is_threads = bool(url) and ('threads.com' in url.lower() or 'threads.net' in url.lower())
 
     opts = {
         'quiet': True,
@@ -431,19 +425,6 @@ def get_ydl_options(url=None):
         logging.warning("[JS_RUNTIME] No JS runtime found on PATH — YouTube n-challenge solving unavailable")
     if js_runtimes:
         opts['js_runtimes'] = js_runtimes
-
-    if is_youtube:
-        if cookies_file:
-            opts['cookiefile'] = cookies_file
-            opts['extractor_args']['youtube'] = {
-                'player_client': ['tv_downgraded', 'android', 'web_safari', 'tv_embedded']
-            }
-            logging.info(f"[COOKIES] Auto-loaded cookies for YouTube from: {cookies_file}")
-        else:
-            opts['extractor_args']['youtube'] = {
-                'player_client': ['tv_embedded', 'android', 'web_safari']
-            }
-            logging.warning("[COOKIES] No cookies.txt found — using tv_embedded/android clients")
 
     # --- Instagram / Threads cookies ---
     # Instagram and Threads require a logged-in session on datacenter IPs to avoid 429.
@@ -592,21 +573,20 @@ def download_video():
             is_threads = 'threads.net' in resolved_url.lower() or 'threads.com' in resolved_url.lower()
             post_m = re.search(r'/(?:post|share|t)/([A-Za-z0-9_\-]+)', resolved_url)
 
-            # Fallback 1: YouTube bot check / auth rejection retry
-            if is_youtube and any(k in err_str for k in ['bot', 'sign in', 'cookies', 'requested format']):
-                logging.warning(f"[YOUTUBE FALLBACK] Bot/auth issue on primary extractor ({first_extract_err}). Retrying with tv_embedded/android fallback...")
-                try:
-                    yt_fallback_opts = get_ydl_options(resolved_url)
-                    yt_fallback_opts.pop('cookiefile', None)
-                    yt_fallback_opts['extractor_args'] = {
-                        'youtube': {
-                            'player_client': ['tv_embedded', 'android', 'android_creator']
-                        }
-                    }
-                    with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
-                        info = fallback_ydl.extract_info(resolved_url, download=False)
-                except Exception as yt_fb_err:
-                    logging.warning(f"[YOUTUBE FALLBACK FAILED] {yt_fb_err}")
+            # Fallback 1: YouTube retry with cookies if video is age-restricted or private
+            if is_youtube and any(k in err_str for k in ['age', 'confirm your age', 'private', 'sign in to view', 'login']):
+                yt_cookie_file = get_youtube_cookie_file()
+                if yt_cookie_file:
+                    logging.info(f"[YOUTUBE FALLBACK] Age-gate/login required. Retrying with cookies: {yt_cookie_file}")
+                    try:
+                        yt_fallback_opts = get_ydl_options(resolved_url)
+                        yt_fallback_opts['cookiefile'] = yt_cookie_file
+                        with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
+                            info = fallback_ydl.extract_info(resolved_url, download=False)
+                    except Exception as yt_fb_err:
+                        logging.warning(f"[YOUTUBE COOKIE FALLBACK FAILED] {yt_fb_err}")
+                        raise first_extract_err
+                else:
                     raise first_extract_err
             # Fallback 2: Threads mapping to Instagram
             elif is_threads and post_m:
@@ -953,7 +933,7 @@ def direct_download():
 
 @app.route('/', methods=['GET'])
 def health_check():
-    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.2-yt-fix"}), 200
+    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.3-yt-clean"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, threaded=True)
