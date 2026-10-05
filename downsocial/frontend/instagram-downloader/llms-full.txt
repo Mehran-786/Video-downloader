@@ -1,0 +1,69 @@
+# downsocial Instagram Video Downloader
+Source: https://downsocial.net/instagram-downloader/
+Last Updated: October 3, 2026
+
+## Quick Answer
+To download an Instagram video, Reel, Story, or Carousel photo, copy the share link from Instagram, paste it into the box at downsocial.net/instagram-downloader/, click "Download Video", and choose HD MP4 video, original JPG photo, or 320kbps MP3 audio. The service is 100% free, requires no login or app installation, adds no watermark, and works seamlessly across iPhone, Android, Windows, Mac, and Linux. Only public Instagram content can be downloaded.
+
+## Product Overview
+downsocial Instagram Video Downloader is a high-speed, privacy-first web utility engineered to fetch and convert public Instagram media into permanent offline files. It acts as an ultra-fast alternative to tools like SaveInsta, iGram, and SnapInsta without pop-ups, malware, watermarks, or account credential requirements.
+
+## At a Glance Specifications
+- Supported content: Public Instagram Videos, Reels, Stories (within active 24h), IGTV, Carousel multi-slide albums (photos & videos), Audio clips.
+- Accepted URL formats: instagram.com/reel/..., instagram.com/p/..., instagram.com/stories/..., instagram.com/tv/..., and instagr.am short links.
+- Output formats: MP4 video (Original 1080p Full HD & 720p), JPG images (high-resolution up to 1080x1350), MP3 audio (320 kbps & 192 kbps).
+- Audio extraction: Dedicated Instagram audio transcode directly from Reels and music clips.
+- Pricing: 100% Free with unlimited downloads.
+- Authentication: No account, username, password, or session cookies required.
+- Watermark: Zero watermarks added.
+- Compatibility: Safari (iOS/macOS), Chrome (Android/Windows/macOS), Firefox, Edge, Brave, Opera.
+- File storage: Zero permanent server storage. Transient, direct stream pipeline only.
+- Limitations: Only public Instagram posts and public stories are supported. Cannot download from private accounts without credentials (which downsocial will never ask for).
+
+## Supported Instagram Link Types
+| Link Type | Format Pattern | Status |
+| --- | --- | --- |
+| Instagram Reel | `instagram.com/reel/C...` | Supported (Public HD MP4) |
+| Post Video / Photo | `instagram.com/p/C...` | Supported (Public MP4 / JPG) |
+| Carousel / Multi-Slide Album | `instagram.com/p/C...` | Supported (All slides unpacked) |
+| Public Story | `instagram.com/stories/username/123...` | Supported (Active 24h) |
+| IGTV Video | `instagram.com/tv/C...` | Supported (Public MP4) |
+| Short Share Link | `instagr.am/p/...` or `/share/...` | Supported (Public) |
+
+## How to Copy an Instagram Link
+- Instagram Mobile App (iOS & Android): Tap the "Paper Airplane" / Share icon below any Reel, post, or Story, then tap "Copy Link".
+- Instagram Web (Desktop/Browser): Click the three dots (...) at the top-right of the post and select "Copy Link", or copy the URL directly from your browser's address bar.
+
+## How to Download Instagram Videos by Device
+- iPhone & iPad: Open downsocial.net/instagram-downloader/ in Safari. Paste the link and tap "Download Video". Safari prompts you to download the MP4 or JPG file. Once downloaded, open Safari Downloads, tap the Share icon, and select "Save Video" to export directly to the iOS Photos Camera Roll.
+- Android: Open Chrome or any mobile browser, paste the Instagram link, click "Download Video", and select "Download HD MP4". The file downloads instantly into your Downloads folder and syncs directly into Google Photos / Gallery.
+- Windows & Mac: Paste the link into the downloader field in any web browser, click "Download Video", and click your preferred format (HD MP4, JPG, or MP3). The file is saved directly to your Downloads folder.
+
+## Private Video Policy
+downsocial only processes public media accessible on open Instagram web servers. Private profiles requiring follower approvals cannot be downloaded. downsocial strictly adheres to user privacy and will never request your Instagram username, password, or session tokens.
+
+## Frequently Asked Questions (FAQ)
+
+### Q1. How do I download an Instagram video or Reel?
+Copy the link of the Reel or post from Instagram (tap Share > Copy Link), paste it into the search box on downsocial.net/instagram-downloader/, click "Download Video", and choose your quality (HD MP4 or MP3 audio). The file downloads instantly to your device.
+
+### Q2. Is this Instagram video downloader completely free?
+Yes! downsocial is 100% free with unlimited downloads. There are no registration forms, no subscription fees, no countdown timers, and no usage caps.
+
+### Q3. Can I download Instagram Reels with audio in original quality?
+Yes. Every Reel downloaded through downsocial retains its full original high-definition audio track synchronized with the 1080p MP4 video. You can also choose to extract just the MP3 audio file.
+
+### Q4. Does downsocial add a watermark to saved Instagram videos?
+No. downsocial never adds any watermarks, logos, or branding overlays. You receive the pristine, untouched original file exactly as published by the creator.
+
+### Q5. Can I download Instagram Stories?
+Yes, as long as the story is posted by a public account and is currently active (within its 24-hour window). Copy the Story link and paste it into downsocial.
+
+### Q6. How do I download Carousel posts (multiple photos and videos)?
+When you paste an Instagram Carousel link, downsocial extracts every individual slide. You can download specific photos in full-resolution JPG or videos in MP4, or save all slides one by one.
+
+### Q7. Can I download videos from a private Instagram account?
+No. To protect user privacy and security, downsocial only downloads media from publicly accessible Instagram profiles. We never ask for your login or password.
+
+### Q8. Where are downloaded Instagram videos saved on my phone?
+On iPhone, downloads go to Safari's Downloads folder inside the Files app, from where you can tap "Save Video" to add it to your Photos camera roll. On Android, files are saved directly to your device's "Downloads" folder and appear automatically in your Gallery.

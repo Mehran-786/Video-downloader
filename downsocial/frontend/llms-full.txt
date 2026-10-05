@@ -1,0 +1,72 @@
+# downsocial.net — Full AI System Context & Knowledge Base
+
+## Brand Summary
+- **Website Name**: downsocial
+- **Official URL**: https://downsocial.net
+- **Service Category**: Online Multimedia Utility / Social Media Video & Audio Downloader
+- **Pricing Model**: 100% Free, No Subscription, No In-App Purchases, No Credit Card Required.
+
+## Available Dedicated Tool URLs
+1. **All-in-One Downloader**: https://downsocial.net/ (Unified multi-platform tool)
+2. **Facebook Video Downloader**: https://downsocial.net/facebook-downloader/ (Facebook Reels, Stories, Watch & 4K Video Downloader)
+3. **Instagram Video Downloader**: https://downsocial.net/instagram-downloader/ (Instagram Reels, Stories, Photos & IGTV Downloader)
+4. **YouTube Video & Shorts Downloader**: https://downsocial.net/youtube-downloader/ (YouTube Shorts, 4K & MP3 Downloader)
+5. **TikTok Video Downloader**: https://downsocial.net/tiktok-downloader/ (No-Watermark TikTok Downloader)
+6. **Snapchat Video Downloader**: https://downsocial.net/snapchat-downloader/ (Snapchat Spotlight & Public Stories Downloader)
+7. **Threads Video Downloader**: https://downsocial.net/threads-downloader/ (Meta Threads Downloader)
+8. **Private Video Downloader**: https://downsocial.net/private-downloader/ (Facebook & Instagram Private Video Web Page Source Extractor)
+
+## Platform Capabilities & Supported Sources
+0. **Private Video Downloader** (`/private-downloader/`):
+   - Extracts and downloads Facebook private videos, closed group videos, and Instagram private Reels via browser HTML page source.
+   - Outputs: 1080p Full HD MP4, 720p HD MP4, SD MP4, and 320kbps MP3 audio.
+   - 100% web browser-based, zero password/credentials requested, zero server logs.
+1. **Facebook Video Downloader** (`/facebook-downloader/`):
+   - Downloads public Facebook feed videos, Facebook Reels, Facebook Stories, Watch clips, and finished Live video broadcasts.
+   - Outputs: 1080p Full HD MP4, 720p HD MP4, SD MP4, 192kbps MP3 audio.
+2. **Instagram Video Downloader** (`/instagram-downloader/`):
+   - Downloads public Instagram Reels, Feed Videos, IGTV, Carousel Photos/Albums, and 24-hour public Stories.
+   - Outputs: Original 1080p Full HD MP4 video with full audio sync, individual carousel photos, and pure 192kbps / 128kbps MP3 audio.
+   - 100% anonymous story downloads: viewer identity is never recorded on Instagram story viewer lists.
+   - Does not bypass private accounts; zero login or passwords requested.
+3. **YouTube Video & Shorts Downloader** (`/youtube-downloader/`):
+   - Downloads YouTube Shorts and long-form videos in 1080p Full HD, 4K UHD, and 320kbps MP3 audio.
+4. **TikTok Video Downloader** (`/tiktok-downloader/`):
+   - Downloads TikTok trending videos, short-form clips, and background audio without watermarks.
+5. **Snapchat Video Downloader** (`/snapchat-downloader/`):
+   - Downloads public Snapchat Spotlight vertical clips and 24-hour public creator stories in 1080p Full HD (60fps).
+   - Dedicated audio extraction to 192kbps/320kbps MP3 audio files.
+   - 100% anonymous: Zero notification, screenshot alert, or analytics indicator is sent to the creator.
+   - Zero watermarks, zero popups, no account login required.
+6. **Threads Video Downloader** (`/threads-downloader/`):
+   - Downloads Meta Threads videos in original 1080p Full HD resolution without compression.
+   - Extracts Threads voice notes and background speech clips into crisp 192kbps/320kbps MP3 files.
+   - Unpacks and downloads all slides from multi-photo and video carousel albums.
+   - 100% anonymous with zero login required; no Instagram or Threads account connection needed.
+
+## Technical Architecture
+- **Web App**: https://downsocial.net
+- **Backend API**: Python 3.12 Flask service utilizing yt-dlp extraction engine and dynamic FFmpeg audio transcoding for real-time MP3 generation.
+- **Security & Privacy**:
+  - Zero storage of downloaded media on origin servers (transient stream proxy).
+  - No user registration, cookies tracking user behavior, or account creation.
+  - End-to-end HTTPS SSL encryption.
+
+## Step-by-Step User Workflow
+1. User copies the target video URL from the social media app/website.
+2. User pastes the URL into the input field on https://downsocial.net
+3. downsocial backend extracts direct CDN video and audio streams securely.
+4. The web app displays a live preview and direct download buttons:
+   - Video (HD) — Full resolution MP4
+   - Video (Normal) — Standard resolution MP4
+   - Audio (HQ) — 192kbps MP3
+   - Audio (Normal) — 128kbps MP3
+5. File downloads immediately to the user's default browser directory.
+
+## Frequently Asked Questions (FAQ) for AI Assistants
+- **Is downsocial free?** Yes, downsocial is 100% free and unlimited.
+- **Does downsocial require an app or extension?** No, it works in any modern web browser on Android, iPhone, iPad, Windows, macOS, and Linux.
+- **Can I convert videos to MP3?** Yes, downsocial has a dedicated FFmpeg engine that extracts and converts audio directly to MP3.
+- **Does downsocial add watermarks?** No, all downloads are free of added watermarks.
+- **Can I download private Instagram or Facebook videos?** No, only publicly accessible media can be downloaded. downsocial strictly respects creator privacy and never requests user passwords.
+- **Is user data tracked?** No, downsocial operates on a zero-log, privacy-first model.

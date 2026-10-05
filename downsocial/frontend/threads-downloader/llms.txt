@@ -1,0 +1,19 @@
+# downsocial Threads Video Downloader
+> Free online tool to download Meta Threads Videos, Voice Notes, Carousel Photos, and Audio clips in HD MP4 and MP3 without watermarks or login.
+
+## Canonical URL
+- https://downsocial.net/threads-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/threads-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/threads-downloader/terms.html
+- Privacy Policy: https://downsocial.net/threads-downloader/privacy.html
+- About Service: https://downsocial.net/threads-downloader/about.html
+
+## Key Capabilities
+- Meta Threads Video Downloader in original 1080p Full HD
+- Threads Voice Note & Speech Clip extraction to 320kbps MP3
+- Threads Carousel Multi-Photo post downloader
+- Zero watermarks, zero branding overlays
+- No Threads or Instagram account login required
+- High-speed cloud streaming, safe and anonymous

@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/facebook-video-downloader.html", "destination": "/facebook-downloader/", "permanent": true },
+    { "source": "/instagram-video-downloader.html", "destination": "/instagram-downloader/", "permanent": true },
+    { "source": "/tiktok-video-downloader.html", "destination": "/tiktok-downloader/", "permanent": true },
+    { "source": "/youtube-video-downloader.html", "destination": "/youtube-downloader/", "permanent": true },
+    { "source": "/snapchat-video-downloader.html", "destination": "/snapchat-downloader/", "permanent": true },
+    { "source": "/threads-video-downloader.html", "destination": "/threads-downloader/", "permanent": true }
+  ]
+}

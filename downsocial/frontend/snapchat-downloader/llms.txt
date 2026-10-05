@@ -1,0 +1,19 @@
+# downsocial Snapchat Video Downloader
+> Free online tool to download Snapchat Spotlight Videos, Public Stories, and MP3 audio clips without watermarks, logins, or creator notifications.
+
+## Canonical URL
+- https://downsocial.net/snapchat-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/snapchat-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/snapchat-downloader/terms.html
+- Privacy Policy: https://downsocial.net/snapchat-downloader/privacy.html
+- About Service: https://downsocial.net/snapchat-downloader/about.html
+
+## Key Capabilities
+- Snapchat Spotlight Video Downloader in original 1080p Full HD (60fps)
+- Public Snapchat Story Saver (within active 24h window)
+- Spotlight to MP3 audio converter (192kbps - 320kbps)
+- 100% Anonymous: Zero notifications or screenshot alerts to creators
+- Zero watermarks added, zero ads, zero accounts required
+- Fast, secure cloud-powered extraction across iOS, Android, and PC

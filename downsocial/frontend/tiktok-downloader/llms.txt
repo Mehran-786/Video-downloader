@@ -1,0 +1,19 @@
+# downsocial TikTok Video Downloader
+> Free online tool to download TikTok Videos without watermark in 1080p Full HD MP4 and 320kbps MP3 audio without ads, logos, or logins.
+
+## Canonical URL
+- https://downsocial.net/tiktok-downloader/
+
+## Documentation & Full Information
+- Full specification: https://downsocial.net/tiktok-downloader/llms-full.txt
+- Terms of Service: https://downsocial.net/tiktok-downloader/terms.html
+- Privacy Policy: https://downsocial.net/tiktok-downloader/privacy.html
+- About Service: https://downsocial.net/tiktok-downloader/about.html
+
+## Key Capabilities
+- TikTok Video Downloader Without Watermark in original 1080p Full HD
+- TikTok Photo Slideshow & Multi-Image Album Downloader in high resolution
+- High-fidelity TikTok Sound & Music to MP3 audio converter (320kbps)
+- Zero added watermarks, zero pop-up ads, zero subscription fees
+- No TikTok account login or software installation required
+- Ultra-fast cloud streaming proxy across iPhone, Android, and PC
