@@ -404,12 +404,6 @@ def get_ydl_options(url=None):
         'geo_bypass': True,
         'format': 'best',
         'extractor_args': {
-            'youtube': {
-                # ios and mweb clients bypass YouTube's SABR-only streaming
-                # experiment that causes 'Requested format is not available'
-                # on the android client. ios is tried first as it's most reliable.
-                'player_client': ['ios', 'mweb', 'android'],
-            },
             'tiktok': {
                 'app_version': ['34.1.2'],
                 'manifest_app_version': ['34.1.2']
@@ -438,11 +432,18 @@ def get_ydl_options(url=None):
     if js_runtimes:
         opts['js_runtimes'] = js_runtimes
 
-    if cookies_file:
-        opts['cookiefile'] = cookies_file
-        logging.info(f"[COOKIES] Auto-loaded cookies for YouTube from: {cookies_file}")
-    elif is_youtube:
-        logging.warning("[COOKIES] No cookies.txt found — YouTube requests may hit bot detection on datacenter IPs")
+    if is_youtube:
+        if cookies_file:
+            opts['cookiefile'] = cookies_file
+            opts['extractor_args']['youtube'] = {
+                'player_client': ['tv_downgraded', 'android', 'web_safari', 'tv_embedded']
+            }
+            logging.info(f"[COOKIES] Auto-loaded cookies for YouTube from: {cookies_file}")
+        else:
+            opts['extractor_args']['youtube'] = {
+                'player_client': ['tv_embedded', 'android', 'web_safari']
+            }
+            logging.warning("[COOKIES] No cookies.txt found — using tv_embedded/android clients")
 
     # --- Instagram / Threads cookies ---
     # Instagram and Threads require a logged-in session on datacenter IPs to avoid 429.
@@ -586,11 +587,29 @@ def download_video():
                         except Exception:
                             pass
         except Exception as first_extract_err:
-            # Fallback for Threads: map the post shortcode to Instagram /p/ format
-            # so yt-dlp's Instagram extractor can process it with insta_cookies
+            err_str = str(first_extract_err).lower()
+            is_youtube = 'youtube.com' in resolved_url.lower() or 'youtu.be' in resolved_url.lower()
             is_threads = 'threads.net' in resolved_url.lower() or 'threads.com' in resolved_url.lower()
             post_m = re.search(r'/(?:post|share|t)/([A-Za-z0-9_\-]+)', resolved_url)
-            if is_threads and post_m:
+
+            # Fallback 1: YouTube bot check / auth rejection retry
+            if is_youtube and any(k in err_str for k in ['bot', 'sign in', 'cookies', 'requested format']):
+                logging.warning(f"[YOUTUBE FALLBACK] Bot/auth issue on primary extractor ({first_extract_err}). Retrying with tv_embedded/android fallback...")
+                try:
+                    yt_fallback_opts = get_ydl_options(resolved_url)
+                    yt_fallback_opts.pop('cookiefile', None)
+                    yt_fallback_opts['extractor_args'] = {
+                        'youtube': {
+                            'player_client': ['tv_embedded', 'android', 'android_creator']
+                        }
+                    }
+                    with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
+                        info = fallback_ydl.extract_info(resolved_url, download=False)
+                except Exception as yt_fb_err:
+                    logging.warning(f"[YOUTUBE FALLBACK FAILED] {yt_fb_err}")
+                    raise first_extract_err
+            # Fallback 2: Threads mapping to Instagram
+            elif is_threads and post_m:
                 post_id = post_m.group(1)
                 ig_fallback_url = f"https://www.instagram.com/p/{post_id}/"
                 logging.info(f"[THREADS FALLBACK] Trying Instagram mapping for Threads: {ig_fallback_url}")
