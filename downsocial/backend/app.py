@@ -756,7 +756,11 @@ def download_video():
 
     except yt_dlp.utils.DownloadError as de:
         logging.error(f"[EXTRACTION ERROR] yt-dlp error: {str(de)}")
-        return jsonify({"success": False, "error": "Could not extract video. It might be private, deleted, or require login."}), 400
+        return jsonify({
+            "success": False, 
+            "error": "Could not extract video. It might be private, deleted, or require login.",
+            "details": str(de)
+        }), 400
     except Exception as e:
         error_msg = str(e)
         logging.error(f"[SERVER ERROR] Unexpected error: {error_msg}")
@@ -949,7 +953,7 @@ def direct_download():
 
 @app.route('/', methods=['GET'])
 def health_check():
-    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0"}), 200
+    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.2-yt-fix"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, threaded=True)
