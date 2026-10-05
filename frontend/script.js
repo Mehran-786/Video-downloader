@@ -665,7 +665,7 @@ class DownloadManager {
                         window.location.hostname === '127.0.0.1' || 
                         window.location.hostname === '' || 
                         window.location.protocol === 'file:';
-        this.baseUrl = isLocal ? "http://127.0.0.1:5000" : "https://video-downloader-pxhf.onrender.com";
+        this.baseUrl = isLocal ? "http://127.0.0.1:5000" : "https://video-downloader-uvw1.onrender.com";
         this.btn = document.getElementById('downloadBtn');
         this.input = document.getElementById('videoUrl');
         this.status = document.getElementById('statusMessage');
