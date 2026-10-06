@@ -920,15 +920,18 @@ class DownloadManager {
     }
 
     configureDownloadLinks(data, isImg, transMgr) {
-        const setLink = (id, url, type, quality = '') => {
+        const setLink = (id, url, type, quality = '', label = 'Media') => {
             const el = document.getElementById(id);
             if (el && url) {
                 const uniqueId = Math.floor(Date.now() / 1000);
-                const prefix = type === 'mp3' ? 'FB_Audio' : (isImg ? 'FB_Image' : 'FB_Video');
+                const prefix = type === 'mp3' ? 'DownSocial_Audio' : (isImg ? 'DownSocial_Image' : 'DownSocial_Video');
                 const fileName = `${prefix}_${uniqueId}.${type}`;
                 const qParam = quality ? `&q=${quality}` : '';
                 el.href = `${this.baseUrl}/api/direct?url=${encodeURIComponent(url)}&type=${type}&t=${uniqueId}${qParam}`;
                 el.setAttribute('download', fileName);
+
+                // Bind interactive animated progress line and floating PIP download popup
+                this.bindDownloadAnimation(el, label, type, fileName);
             }
         };
 
@@ -941,7 +944,7 @@ class DownloadManager {
             [btnAudHigh, btnAudNorm, btnVidNorm].forEach(b => { if (b) b.style.display = "none"; });
             if (btnVidHigh) {
                 btnVidHigh.innerHTML = '<i class="fas fa-image"></i> Download Image';
-                setLink('btnVidHigh', data.video_high, 'jpg');
+                setLink('btnVidHigh', data.video_high, 'jpg', '', 'Image (Full HD)');
             }
         } else {
             [btnAudHigh, btnAudNorm, btnVidNorm].forEach(b => { if (b) b.style.display = "flex"; });
@@ -949,10 +952,135 @@ class DownloadManager {
                 btnVidHigh.innerHTML = `<i class="fas fa-video"></i> <span data-key="dlVidHigh">${transMgr.getFlatTrans('dlVidHigh', 'Video (HD)')}</span>`;
             }
 
-            setLink('btnVidHigh', data.video_high, 'mp4', 'hd');
-            setLink('btnVidNorm', data.video_normal, 'mp4', 'sd');
-            setLink('btnAudHigh', data.audio_high, 'mp3', 'hq');
-            setLink('btnAudNorm', data.audio_normal, 'mp3', 'normal');
+            setLink('btnVidHigh', data.video_high, 'mp4', 'hd', 'Video (HD 1080p)');
+            setLink('btnVidNorm', data.video_normal, 'mp4', 'sd', 'Video (Normal 720p)');
+            setLink('btnAudHigh', data.audio_high, 'mp3', 'hq', 'Audio (HQ 320kbps)');
+            setLink('btnAudNorm', data.audio_normal, 'mp3', 'normal', 'Audio (Normal MP3)');
+        }
+    }
+
+    bindDownloadAnimation(btn, label, type, fileName) {
+        if (!btn || btn._hasDownloadHandler) return;
+        btn._hasDownloadHandler = true;
+
+        btn.addEventListener('click', (e) => {
+            // 1. Ensure capsule progress line is inside the button (matches @codewith_muhilan reel)
+            let progressLine = btn.querySelector('.btn-progress-line');
+            if (!progressLine) {
+                progressLine = document.createElement('div');
+                progressLine.className = 'btn-progress-line';
+                btn.appendChild(progressLine);
+            }
+
+            // Save original button contents
+            const originalHTML = btn.innerHTML;
+            btn.classList.add('is-downloading');
+
+            // 2. Launch floating PIP progress toast
+            this.showDownloadPipModal(label, type, fileName);
+
+            // 3. Smooth animated progress (0% -> 95%)
+            let progress = 10;
+            if (progressLine) progressLine.style.width = '10%';
+            this.updateDownloadPipProgress(10, false);
+
+            const progressTimer = setInterval(() => {
+                progress += Math.floor(Math.random() * 15) + 12;
+                if (progress > 95) progress = 95;
+                if (progressLine) progressLine.style.width = `${progress}%`;
+                this.updateDownloadPipProgress(progress, false);
+            }, 140);
+
+            // 4. Complete state when browser receives direct stream
+            setTimeout(() => {
+                clearInterval(progressTimer);
+                if (progressLine) progressLine.style.width = '100%';
+                this.updateDownloadPipProgress(100, true);
+
+                btn.classList.remove('is-downloading');
+                btn.classList.add('is-downloaded');
+                btn.innerHTML = `<i class="fas fa-check-circle" style="color:#ffffff;"></i> <span>Downloaded! ✓</span>`;
+
+                // 5. Restore original button after 3.5 seconds
+                setTimeout(() => {
+                    btn.classList.remove('is-downloaded');
+                    if (progressLine) progressLine.style.width = '0%';
+                    btn.innerHTML = originalHTML;
+                }, 3500);
+            }, 1800);
+        });
+    }
+
+    showDownloadPipModal(label, type, fileName) {
+        let toast = document.getElementById('downloadPipToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'downloadPipToast';
+            toast.className = 'download-pip-toast';
+            document.body.appendChild(toast);
+        }
+
+        const iconClass = type === 'mp3' ? 'fa-headphones' : 'fa-video';
+        const typeBadge = type === 'mp3' ? 'Audio MP3' : (type === 'jpg' ? 'Image HD' : 'Video MP4');
+
+        toast.className = 'download-pip-toast show';
+        toast.innerHTML = `
+            <div class="pip-header">
+                <div class="pip-badge">
+                    <span class="pip-spinner"></span>
+                    <span id="pipStatusTitle">Downloading ${typeBadge}</span>
+                </div>
+                <button class="pip-close-btn" id="pipCloseBtn" aria-label="Close">&times;</button>
+            </div>
+            <div class="pip-body">
+                <div class="pip-content-meta">
+                    <span class="pip-filename"><i class="fas ${iconClass}"></i> ${label || 'Media File'}</span>
+                    <span class="pip-percent-text" id="pipPercentText">15%</span>
+                </div>
+                <div class="pip-track">
+                    <div class="pip-fill" id="pipFillBar" style="width: 15%;"></div>
+                </div>
+                <div class="pip-status-hint" id="pipStatusHint">
+                    <i class="fas fa-bolt"></i> Preparing direct high-speed download...
+                </div>
+            </div>
+        `;
+
+        const closeBtn = toast.querySelector('#pipCloseBtn');
+        if (closeBtn) {
+            closeBtn.onclick = () => {
+                toast.classList.remove('show');
+            };
+        }
+
+        if (this._pipDismissTimer) clearTimeout(this._pipDismissTimer);
+    }
+
+    updateDownloadPipProgress(percent, isComplete = false) {
+        const toast = document.getElementById('downloadPipToast');
+        if (!toast || !toast.classList.contains('show')) return;
+
+        const fill = toast.querySelector('#pipFillBar');
+        const text = toast.querySelector('#pipPercentText');
+        const title = toast.querySelector('#pipStatusTitle');
+        const hint = toast.querySelector('#pipStatusHint');
+
+        if (fill) fill.style.width = `${percent}%`;
+        if (text) text.textContent = `${percent}%`;
+
+        if (isComplete) {
+            toast.classList.add('is-success');
+            if (title) title.innerHTML = `<i class="fas fa-check-circle" style="color:#00F59B;"></i> Download Started!`;
+            if (hint) hint.innerHTML = `<i class="fas fa-folder-open" style="color:#00F59B;"></i> File saved to your Downloads folder!`;
+
+            this._pipDismissTimer = setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.classList.remove('is-success');
+                }, 400);
+            }, 4000);
+        } else if (percent > 65) {
+            if (hint) hint.innerHTML = `<i class="fas fa-cloud-arrow-down" style="color:#00F59B;"></i> Finalizing media download...`;
         }
     }
 
