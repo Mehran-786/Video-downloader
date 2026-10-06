@@ -411,6 +411,12 @@ def get_ydl_options(url=None):
         }
     }
 
+    # Optional proxy support for bypassing datacenter IP blocks (e.g. Render / AWS -> residential/datacenter proxy)
+    proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTP_PROXY") or os.environ.get("HTTPS_PROXY")
+    if proxy_url:
+        opts['proxy'] = proxy_url
+        logging.info("[PROXY] Outbound proxy configured for yt-dlp")
+
     # YouTube: Use mobile/VR clients (android_vr, android_pro, android_creator) by default.
     # On datacenter IPs (like Render), web clients trigger 'Sign in to confirm you're not a bot'.
     # Mobile/VR clients bypass Google Botguard challenges and do not require cookies.
