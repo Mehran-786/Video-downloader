@@ -411,6 +411,16 @@ def get_ydl_options(url=None):
         }
     }
 
+    # YouTube: Use mobile/VR clients (android_vr, android_pro, android_creator) by default.
+    # On datacenter IPs (like Render), web clients trigger 'Sign in to confirm you're not a bot'.
+    # Mobile/VR clients bypass Google Botguard challenges and do not require cookies.
+    is_youtube = bool(url) and ('youtube.com' in url.lower() or 'youtu.be' in url.lower())
+    if is_youtube:
+        opts['extractor_args']['youtube'] = {
+            'player_client': ['android_vr', 'android_pro', 'android_creator', 'tv_embedded']
+        }
+        logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android_pro, android_creator, tv_embedded")
+
     # Enable JS runtimes for YouTube signature / n-challenge solving (Deno on Render, Node locally)
     js_runtimes = {}
     deno_path = shutil.which('deno')
@@ -573,21 +583,39 @@ def download_video():
             is_threads = 'threads.net' in resolved_url.lower() or 'threads.com' in resolved_url.lower()
             post_m = re.search(r'/(?:post|share|t)/([A-Za-z0-9_\-]+)', resolved_url)
 
-            # Fallback 1: YouTube retry with cookies if video is age-restricted or private
-            if is_youtube and any(k in err_str for k in ['age', 'confirm your age', 'private', 'sign in to view', 'login']):
-                yt_cookie_file = get_youtube_cookie_file()
-                if yt_cookie_file:
-                    logging.info(f"[YOUTUBE FALLBACK] Age-gate/login required. Retrying with cookies: {yt_cookie_file}")
+            # Fallback 1: YouTube retry logic
+            if is_youtube:
+                # 1a. If video explicitly requires login or is age-restricted, try with cookies
+                if any(k in err_str for k in ['age', 'confirm your age', 'private', 'sign in to view', 'login']):
+                    yt_cookie_file = get_youtube_cookie_file()
+                    if yt_cookie_file:
+                        logging.info(f"[YOUTUBE FALLBACK] Age-gate/login required. Retrying with cookies: {yt_cookie_file}")
+                        try:
+                            yt_fallback_opts = get_ydl_options(resolved_url)
+                            yt_fallback_opts['cookiefile'] = yt_cookie_file
+                            yt_fallback_opts['extractor_args']['youtube'] = {
+                                'player_client': ['tv_downgraded', 'web_safari']
+                            }
+                            with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
+                                info = fallback_ydl.extract_info(resolved_url, download=False)
+                        except Exception as yt_fb_err:
+                            logging.warning(f"[YOUTUBE COOKIE FALLBACK FAILED] {yt_fb_err}")
+                            raise first_extract_err
+                    else:
+                        raise first_extract_err
+                else:
+                    # 1b. If primary client encountered a temporary glitch, retry with secondary clients
+                    logging.warning(f"[YOUTUBE FALLBACK] Primary extraction failed ({first_extract_err}). Retrying with tv_embedded/android fallback...")
                     try:
                         yt_fallback_opts = get_ydl_options(resolved_url)
-                        yt_fallback_opts['cookiefile'] = yt_cookie_file
+                        yt_fallback_opts['extractor_args']['youtube'] = {
+                            'player_client': ['tv_embedded', 'android']
+                        }
                         with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
                             info = fallback_ydl.extract_info(resolved_url, download=False)
                     except Exception as yt_fb_err:
-                        logging.warning(f"[YOUTUBE COOKIE FALLBACK FAILED] {yt_fb_err}")
+                        logging.warning(f"[YOUTUBE FALLBACK FAILED] {yt_fb_err}")
                         raise first_extract_err
-                else:
-                    raise first_extract_err
             # Fallback 2: Threads mapping to Instagram
             elif is_threads and post_m:
                 post_id = post_m.group(1)
@@ -933,7 +961,7 @@ def direct_download():
 
 @app.route('/', methods=['GET'])
 def health_check():
-    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.3-yt-clean"}), 200
+    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.4-yt-android-vr"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, threaded=True)
