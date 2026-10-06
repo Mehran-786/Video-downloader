@@ -694,11 +694,8 @@ class UIManager {
 // ---------------------------------------------------------
 class DownloadManager {
     constructor() {
-        const isLocal = window.location.hostname === 'localhost' || 
-                        window.location.hostname === '127.0.0.1' || 
-                        window.location.hostname === '' || 
-                        window.location.protocol === 'file:';
-        this.baseUrl = isLocal ? "http://127.0.0.1:5000" : "https://video-downloader-uvw1.onrender.com";
+        const isLocalHost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        this.baseUrl = isLocalHost ? "http://127.0.0.1:5000" : "https://video-downloader-uvw1.onrender.com";
         this.btn = document.getElementById('downloadBtn');
         this.input = document.getElementById('videoUrl');
         this.status = document.getElementById('statusMessage');
