@@ -411,12 +411,6 @@ def get_ydl_options(url=None):
         }
     }
 
-    # Optional proxy support for bypassing datacenter IP blocks (e.g. Render / AWS -> residential/datacenter proxy)
-    proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTP_PROXY") or os.environ.get("HTTPS_PROXY")
-    if proxy_url:
-        opts['proxy'] = proxy_url
-        logging.info("[PROXY] Outbound proxy configured for yt-dlp")
-
     # YouTube: Use mobile/VR clients (android_vr, android_pro, android_creator) by default.
     # On datacenter IPs (like Render), web clients trigger 'Sign in to confirm you're not a bot'.
     # Mobile/VR clients bypass Google Botguard challenges and do not require cookies.
@@ -426,6 +420,16 @@ def get_ydl_options(url=None):
             'player_client': ['android_vr', 'android_pro', 'android_creator', 'tv_embedded']
         }
         logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android_pro, android_creator, tv_embedded")
+
+        # Optional proxy support specifically for YouTube (bypasses datacenter IP bot detection)
+        # Keeps Instagram, TikTok, Threads, Facebook on direct connection so they never fail.
+        proxy_env = os.environ.get("PROXY_URL") or os.environ.get("HTTP_PROXY") or os.environ.get("HTTPS_PROXY")
+        if proxy_env:
+            clean_proxy = proxy_env.strip()
+            if not any(clean_proxy.startswith(pfx) for pfx in ("http://", "https://", "socks5://", "socks4://")):
+                clean_proxy = "http://" + clean_proxy
+            opts['proxy'] = clean_proxy
+            logging.info("[PROXY] Outbound proxy configured specifically for YouTube extraction")
 
     # Enable JS runtimes for YouTube signature / n-challenge solving (Deno on Render, Node locally)
     js_runtimes = {}
@@ -610,10 +614,11 @@ def download_video():
                     else:
                         raise first_extract_err
                 else:
-                    # 1b. If primary client encountered a temporary glitch, retry with secondary clients
-                    logging.warning(f"[YOUTUBE FALLBACK] Primary extraction failed ({first_extract_err}). Retrying with tv_embedded/android fallback...")
+                    # 1b. If primary client encountered a proxy failure or temporary glitch, retry without proxy
+                    logging.warning(f"[YOUTUBE FALLBACK] Primary extraction failed ({first_extract_err}). Retrying without proxy / secondary clients...")
                     try:
                         yt_fallback_opts = get_ydl_options(resolved_url)
+                        yt_fallback_opts.pop('proxy', None)
                         yt_fallback_opts['extractor_args']['youtube'] = {
                             'player_client': ['tv_embedded', 'android']
                         }
@@ -967,7 +972,7 @@ def direct_download():
 
 @app.route('/', methods=['GET'])
 def health_check():
-    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.4-yt-android-vr"}), 200
+    return jsonify({"status": "active", "service": "downsocial - All-in-One Video Downloader API v3.0", "version": "3.1.5-proxy-scoped"}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, threaded=True)
