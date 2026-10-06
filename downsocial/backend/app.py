@@ -417,9 +417,9 @@ def get_ydl_options(url=None):
     is_youtube = bool(url) and ('youtube.com' in url.lower() or 'youtu.be' in url.lower())
     if is_youtube:
         opts['extractor_args']['youtube'] = {
-            'player_client': ['android_vr', 'android_pro', 'android_creator', 'tv_embedded']
+            'player_client': ['android_vr', 'android']
         }
-        logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android_pro, android_creator, tv_embedded")
+        logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android")
 
         # Optional proxy support specifically for YouTube (bypasses datacenter IP bot detection)
         # Keeps Instagram, TikTok, Threads, Facebook on direct connection so they never fail.
