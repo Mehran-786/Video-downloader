@@ -346,16 +346,15 @@ def get_platform_request_headers(url, extra_headers=None):
         headers.update(extra_headers)
     return headers
 
-def get_ydl_options(url=None):
-    is_youtube = bool(url) and ('youtube.com' in url.lower() or 'youtu.be' in url.lower())
-    is_instagram = bool(url) and ('instagram.com' in url.lower() or 'instagr.am' in url.lower())
-    is_threads = bool(url) and ('threads.com' in url.lower() or 'threads.net' in url.lower())
-    cookies_file = None
-
 def get_youtube_cookie_file():
     possible_cookie_paths = [
         '/etc/secrets/cookies.txt',
         '/etc/secrets/cookies',
+        '/etc/secrets/youtube_cookies.txt',
+        '/etc/secrets/youtube_cookies',
+        '/etc/secrets/yt_cookies.txt',
+        '/etc/secrets/yt_cookies',
+        '/etc/secrets/yt-cookies.txt',
         '/etc/secrets/cookies 1.txt',
         '/etc/secrets/cookies_1.txt',
         '/etc/secrets/cookies 1',
@@ -383,9 +382,23 @@ def get_youtube_cookie_file():
             return writable
         except Exception:
             return existing[0]
+
+    # Check environment variable YOUTUBE_COOKIES or COOKIES
+    for env_var in ['YOUTUBE_COOKIES', 'COOKIES', 'COOKIES_CONTENT', 'COOKIE_DATA']:
+        raw_cookies = os.environ.get(env_var)
+        if raw_cookies and len(raw_cookies.strip()) > 50:
+            try:
+                import tempfile
+                writable = os.path.join(tempfile.gettempdir(), 'yt_env_cookies.txt')
+                with open(writable, 'w', encoding='utf-8') as cf:
+                    cf.write(raw_cookies.strip())
+                return writable
+            except Exception:
+                pass
     return None
 
 def get_ydl_options(url=None):
+    is_youtube = bool(url) and ('youtube.com' in url.lower() or 'youtu.be' in url.lower())
     is_instagram = bool(url) and ('instagram.com' in url.lower() or 'instagr.am' in url.lower())
     is_threads = bool(url) and ('threads.com' in url.lower() or 'threads.net' in url.lower())
 
@@ -411,15 +424,20 @@ def get_ydl_options(url=None):
         }
     }
 
-    # YouTube: Use mobile/VR clients (android_vr, android_pro, android_creator) by default.
-    # On datacenter IPs (like Render), web clients trigger 'Sign in to confirm you're not a bot'.
-    # Mobile/VR clients bypass Google Botguard challenges and do not require cookies.
-    is_youtube = bool(url) and ('youtube.com' in url.lower() or 'youtu.be' in url.lower())
+    # YouTube: check cookies & apply anti-bot client configurations
     if is_youtube:
-        opts['extractor_args']['youtube'] = {
-            'player_client': ['android_vr', 'android']
-        }
-        logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android")
+        yt_cookie_file = get_youtube_cookie_file()
+        if yt_cookie_file:
+            opts['cookiefile'] = yt_cookie_file
+            opts['extractor_args']['youtube'] = {
+                'player_client': ['web', 'mweb', 'android_vr', 'android']
+            }
+            logging.info(f"[COOKIES] Auto-loaded YouTube cookies from: {yt_cookie_file}")
+        else:
+            opts['extractor_args']['youtube'] = {
+                'player_client': ['android_vr', 'android']
+            }
+            logging.info("[YOUTUBE CONFIG] Applied anti-bot player clients: android_vr, android")
 
         # Optional proxy support specifically for YouTube (bypasses datacenter IP bot detection)
         # Keeps Instagram, TikTok, Threads, Facebook on direct connection so they never fail.
@@ -429,7 +447,7 @@ def get_ydl_options(url=None):
             if not any(clean_proxy.startswith(pfx) for pfx in ("http://", "https://", "socks5://", "socks4://")):
                 clean_proxy = "http://" + clean_proxy
             opts['proxy'] = clean_proxy
-            logging.info("[PROXY] Outbound proxy configured specifically for YouTube extraction")
+            logging.info(f"[PROXY] Outbound proxy configured specifically for YouTube extraction: {clean_proxy}")
 
     # Enable JS runtimes for YouTube signature / n-challenge solving (Deno on Render, Node locally)
     js_runtimes = {}
@@ -593,39 +611,52 @@ def download_video():
             is_threads = 'threads.net' in resolved_url.lower() or 'threads.com' in resolved_url.lower()
             post_m = re.search(r'/(?:post|share|t)/([A-Za-z0-9_\-]+)', resolved_url)
 
-            # Fallback 1: YouTube retry logic
+            # Fallback 1: YouTube intelligent tiered retry logic
             if is_youtube:
-                # 1a. If video explicitly requires login or is age-restricted, try with cookies
-                if any(k in err_str for k in ['age', 'confirm your age', 'private', 'sign in to view', 'login']):
-                    yt_cookie_file = get_youtube_cookie_file()
-                    if yt_cookie_file:
-                        logging.info(f"[YOUTUBE FALLBACK] Age-gate/login required. Retrying with cookies: {yt_cookie_file}")
-                        try:
-                            yt_fallback_opts = get_ydl_options(resolved_url)
-                            yt_fallback_opts['cookiefile'] = yt_cookie_file
-                            yt_fallback_opts['extractor_args']['youtube'] = {
-                                'player_client': ['tv_downgraded', 'web_safari']
-                            }
-                            with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
-                                info = fallback_ydl.extract_info(resolved_url, download=False)
-                        except Exception as yt_fb_err:
-                            logging.warning(f"[YOUTUBE COOKIE FALLBACK FAILED] {yt_fb_err}")
-                            raise first_extract_err
-                    else:
-                        raise first_extract_err
-                else:
-                    # 1b. If primary client encountered a proxy failure or temporary glitch, retry without proxy
-                    logging.warning(f"[YOUTUBE FALLBACK] Primary extraction failed ({first_extract_err}). Retrying without proxy / secondary clients...")
+                logging.warning(f"[YOUTUBE FALLBACK] Primary extraction failed ({first_extract_err}). Entering intelligent fallback...")
+                yt_cookie_file = get_youtube_cookie_file()
+                had_proxy = bool(os.environ.get("PROXY_URL") or os.environ.get("HTTP_PROXY") or os.environ.get("HTTPS_PROXY"))
+                info = None
+
+                # Fallback Step 1: If proxy was configured and threw bot check / 429 / connection error, retry WITHOUT proxy!
+                if had_proxy:
+                    logging.info("[YOUTUBE FALLBACK 1] Retrying on direct connection without proxy...")
                     try:
-                        yt_fallback_opts = get_ydl_options(resolved_url)
-                        yt_fallback_opts.pop('proxy', None)
-                        yt_fallback_opts['extractor_args']['youtube'] = {
-                            'player_client': ['tv_embedded', 'android']
-                        }
-                        with yt_dlp.YoutubeDL(yt_fallback_opts) as fallback_ydl:
+                        fb_opts = get_ydl_options(resolved_url)
+                        fb_opts.pop('proxy', None)
+                        if yt_cookie_file:
+                            fb_opts['cookiefile'] = yt_cookie_file
+                            fb_opts['extractor_args']['youtube'] = {'player_client': ['web', 'android_vr', 'android']}
+                        else:
+                            fb_opts['extractor_args']['youtube'] = {'player_client': ['android_vr', 'android']}
+                        with yt_dlp.YoutubeDL(fb_opts) as fallback_ydl:
                             info = fallback_ydl.extract_info(resolved_url, download=False)
-                    except Exception as yt_fb_err:
-                        logging.warning(f"[YOUTUBE FALLBACK FAILED] {yt_fb_err}")
+                    except Exception as fb1_err:
+                        logging.warning(f"[YOUTUBE FALLBACK 1 FAILED] {fb1_err}")
+
+                # Fallback Step 2: If still not extracted and cookies exist, retry with cookies + web/mweb clients
+                if not info and yt_cookie_file:
+                    logging.info(f"[YOUTUBE FALLBACK 2] Retrying with cookies: {yt_cookie_file}")
+                    try:
+                        fb_opts = get_ydl_options(resolved_url)
+                        fb_opts['cookiefile'] = yt_cookie_file
+                        fb_opts['extractor_args']['youtube'] = {'player_client': ['web', 'mweb', 'android']}
+                        with yt_dlp.YoutubeDL(fb_opts) as fallback_ydl:
+                            info = fallback_ydl.extract_info(resolved_url, download=False)
+                    except Exception as fb2_err:
+                        logging.warning(f"[YOUTUBE FALLBACK 2 FAILED] {fb2_err}")
+
+                # Fallback Step 3: Try mobile client fallback (android, ios) without proxy
+                if not info:
+                    logging.info("[YOUTUBE FALLBACK 3] Retrying with secondary mobile clients...")
+                    try:
+                        fb_opts = get_ydl_options(resolved_url)
+                        fb_opts.pop('proxy', None)
+                        fb_opts['extractor_args']['youtube'] = {'player_client': ['android', 'ios']}
+                        with yt_dlp.YoutubeDL(fb_opts) as fallback_ydl:
+                            info = fallback_ydl.extract_info(resolved_url, download=False)
+                    except Exception as fb3_err:
+                        logging.warning(f"[YOUTUBE FALLBACK 3 FAILED] {fb3_err}")
                         raise first_extract_err
             # Fallback 2: Threads mapping to Instagram
             elif is_threads and post_m:
