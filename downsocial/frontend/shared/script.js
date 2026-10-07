@@ -1067,8 +1067,8 @@ class DownloadManager {
 
         if (isComplete) {
             toast.classList.add('is-success');
-            if (title) title.innerHTML = `<i class="fas fa-check-circle" style="color:#00F59B;"></i> Download Started!`;
-            if (hint) hint.innerHTML = `<i class="fas fa-folder-open" style="color:#00F59B;"></i> File saved to your Downloads folder!`;
+            if (title) title.innerHTML = `<i class="fas fa-check-circle" style="color:#38bdf8;"></i> Download Started!`;
+            if (hint) hint.innerHTML = `<i class="fas fa-folder-open" style="color:#38bdf8;"></i> File saved to your Downloads folder!`;
 
             this._pipDismissTimer = setTimeout(() => {
                 toast.classList.remove('show');
@@ -1077,7 +1077,7 @@ class DownloadManager {
                 }, 400);
             }, 4000);
         } else if (percent > 65) {
-            if (hint) hint.innerHTML = `<i class="fas fa-cloud-arrow-down" style="color:#00F59B;"></i> Finalizing media download...`;
+            if (hint) hint.innerHTML = `<i class="fas fa-cloud-arrow-down" style="color:#38bdf8;"></i> Finalizing media download...`;
         }
     }
 
